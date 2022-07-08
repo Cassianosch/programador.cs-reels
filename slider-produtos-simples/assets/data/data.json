@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Kit 5 Camisetas Masculinas Básicas Manga Curta",
         "price": 4249.00,
-        "classificacao": 4.5,
+        "classificacao": 4,
         "imagens": {
             "1": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/1-1.webp",
             "2": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/1-2.webp"
@@ -33,7 +33,7 @@
         "id": 4,
         "name": "Fritadeira Elétrica - Airfryer Ichef Polishop - AllSpace - Exclusive - Preto",
         "price": 89996.00,
-        "classificacao": 4.5,
+        "classificacao": 4,
         "imagens": {
             "1": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/4-1.webp",
             "2": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/4-2.webp"
@@ -43,7 +43,7 @@
         "id": 5,
         "name": "Smart TV 43'' LG 43LM631C0SB.BWZ Full HD Wi-Fi + 2 USB 3 HDMI",
         "price": 187110.00,
-        "classificacao": 4.5,
+        "classificacao": 4,
         "imagens": {
             "1": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/5-1.webp",
             "2": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/5-2.webp"
@@ -53,7 +53,7 @@
         "id": 6,
         "name": "Tablet Samsung Galaxy A7 Lite 4g 32GB 3GB RAM SM-T225NZAPZTO",
         "price": 102899.00,
-        "classificacao": 4.5,
+        "classificacao": 4,
         "imagens": {
             "1": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/6-1.webp",
             "2": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/6-2.webp"
@@ -73,7 +73,7 @@
         "id": 8,
         "name": "Sofá 3 Lugares Retrátil e Reclinável Cama inBox Compact 1,80m Velusoft Café",
         "price": 88899.00,
-        "classificacao": 4.5,
+        "classificacao": 4,
         "imagens": {
             "1": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/8-1.webp",
             "2": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/8-2.webp"
@@ -83,7 +83,7 @@
         "id": 9,
         "name": "Cadeira para Auto Snugfix 360º Rotacional Preta Fisher Price - Fisher-Price",
         "price": 97592.00,
-        "classificacao": 4.5,
+        "classificacao": 3,
         "imagens": {
             "1": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/9-1.webp",
             "2": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/9-2.webp"
