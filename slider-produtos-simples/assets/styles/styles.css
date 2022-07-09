@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
 * {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -66,10 +67,52 @@ h2::after {
   transition: 0.3s all ease;
   cursor: pointer;
 }
+
 .slider .card .like:hover {
   background-image: url("https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/ic-heart-red.png");
 }
 
-.slider .card .product {
+.slider .card img.product {
   width: 100%;
+}
+
+.slider .card .title {
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0.5rem 0;
+}
+
+.slider .card .rating {
+  color: #ffc002;
+}
+
+.slider .card .price {
+  display: flex;
+  gap: 10px;
+  margin: 0.5rem 0;
+}
+
+.slider .card .price h5:first-child {
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #d0d2d6;
+}
+
+.slider .card .price h5:last-child {
+  font-weight: 600;
+  color: #747d89;
+}
+
+.slider .card a.button {
+  border: 1px solid #7ac402;
+  border-radius: 30px;
+  color: #7ac402;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+.slider .card a.button:hover {
+  background-color: #7ac402;
+  color: white;
 }
