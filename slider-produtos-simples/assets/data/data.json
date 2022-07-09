@@ -4,69 +4,69 @@
         "name": "Kit 5 Camisetas Masculinas Básicas Manga Curta",
         "price": 4249.00,
         "classificacao": 4,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/1-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/1-1.webp"
     },
     {
         "id": 2,
         "name": "Nutella pote especial 350G ferrero",
         "price": 1999.00,
         "classificacao": 5,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/2-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/2-1.webp"
     },
     {
         "id": 3,
         "name": "Console Xbox Series S 500gb Ssd",
         "price": 227610.00,
         "classificacao": 5,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/3-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/3-1.webp"
     },
     {
         "id": 4,
         "name": "Fritadeira Elétrica - Airfryer Ichef Polishop - AllSpace - Exclusive - Preto",
         "price": 89996.00,
         "classificacao": 4,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/4-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/4-1.webp"
     },
     {
         "id": 5,
         "name": "Smart TV 43'' LG 43LM631C0SB.BWZ Full HD Wi-Fi + 2 USB 3 HDMI",
         "price": 187110.00,
         "classificacao": 4,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/5-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/5-1.webp"
     },
     {
         "id": 6,
         "name": "Tablet Samsung Galaxy A7 Lite 4g 32GB 3GB RAM SM-T225NZAPZTO",
         "price": 102899.00,
         "classificacao": 4,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/6-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/6-1.webp"
     },
     {
         "id": 7,
         "name": "Kit Máquina de Cortar Cabelos Dual Action Titanium e Multigroom 7 em 1 - Philco",
         "price": 14999.00,
         "classificacao": 3,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/7-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/7-1.webp"
     },
     {
         "id": 8,
         "name": "Sofá 3 Lugares Retrátil e Reclinável Cama inBox Compact 1,80m Velusoft Café",
         "price": 88899.00,
         "classificacao": 4,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/8-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/8-1.webp"
     },
     {
         "id": 9,
         "name": "Cadeira para Auto Snugfix 360º Rotacional Preta Fisher Price - Fisher-Price",
         "price": 97592.00,
         "classificacao": 3,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/9-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/9-1.webp"
     },
     {
         "id": 10,
         "name": "Kit de Ferramentas Fasterr 129 peças Bits e Chaves emergênciais",
         "price": 7790.00,
         "classificacao": 3,
-        "imagens": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/10-1.webp"
+        "imagen": "https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/10-1.webp"
     }
 ]
