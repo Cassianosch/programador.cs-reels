@@ -58,9 +58,9 @@ h2::after {
 
 .slider .card .like {
   background-image: url("https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/ic-heart.png");
-  height: 30px;
-  width: 30px;
-  background-size: 30px;
+  height: 20px;
+  width: 20px;
+  background-size: 20px;
   display: flex;
   place-self: flex-end;
   margin-bottom: 0.3rem;
@@ -108,6 +108,7 @@ h2::after {
   border-radius: 30px;
   color: #7ac402;
   padding: 0.5rem 1rem;
+  margin-bottom: 0.8rem;
   cursor: pointer;
   transition: 0.3s all ease;
 }
