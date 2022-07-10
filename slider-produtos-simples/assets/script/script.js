@@ -3,6 +3,7 @@ $(document).ready(function () {
     dots: false,
     infinite: true,
     speed: 300,
+    arrows: false,
     slidesToShow: 4,
     slidesToScroll: 4,
     responsive: [
@@ -36,7 +37,51 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
-    data.forEach((element) => {
-      $(".js-slider").slick("slickAdd", `<h1>@programador.cs</h1>`);
+    data.forEach((el) => {
+      $(".js-slider").slick(
+        "slickAdd",
+        `
+        <div class="card">
+            <div class="like"></div>
+            <img class="product"
+                src="${el.image}" alt="Foto do produtos - ${el.name}" />
+            <h4 class="title" title="${el.name}">${el.name}</h4>
+            <div class="rating">
+                ${handleRating(el.rating)}
+            </div>
+            <div class="price">
+                <h5>${handlePrice(el.price, true)}</h5>
+                <h5>${handlePrice(el.price)}</h5>
+            </div>
+            <a class="button">Adicionar ao Carrinho</a>
+        </div>
+      `
+      );
     });
   });
+
+function handleRating(rating) {
+  let htmlToReturn = "";
+  const maximumRatingStars = 5;
+
+  for (let i = 0; i < rating; i++) {
+    htmlToReturn = htmlToReturn + "&#9733;";
+  }
+
+  for (let j = 0; j < maximumRatingStars - rating; j++) {
+    htmlToReturn = htmlToReturn + "&#9734;";
+  }
+
+  return htmlToReturn;
+}
+
+function handlePrice(price, discount = false) {
+  if (discount) {
+    price = price * 0.9;
+    // price *= 0.9;
+  }
+  return price.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+}
