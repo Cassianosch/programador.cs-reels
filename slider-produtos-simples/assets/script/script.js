@@ -50,8 +50,8 @@ fetch(
                 ${handleRating(el.rating)}
             </div>
             <div class="price">
-                <h5>${handlePrice(el.price, true)}</h5>
                 <h5>${handlePrice(el.price)}</h5>
+                <h5>${handlePrice(el.price, true)}</h5>
             </div>
             <a class="button">Adicionar ao Carrinho</a>
         </div>

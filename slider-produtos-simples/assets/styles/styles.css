@@ -113,8 +113,8 @@ h2::after {
   color: #7ac402;
   padding: 0.5rem 1rem;
   margin-bottom: 0.8rem;
-  text-align: center;
   cursor: pointer;
+  text-align: center;
   transition: 0.3s all ease;
 }
 

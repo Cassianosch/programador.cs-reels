@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkbox - @programador.cs</title>
+    <style>
+        .sliderWrapper {
+            text-align: center;
+        }
+
+        .sliderWrapper .customSlider {
+            opacity: 0;
+            display: none;
+        }
+
+        input[type=checkbox] {
+            width: unset;
+            vertical-align: middle;
+        }
+
+        .sliderWrapper .customSlider+label {
+            position: relative;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .sliderWrapper .customSlider+label:after,
+        .sliderWrapper .customSlider+label:before {
+            position: absolute;
+            content: "";
+        }
+
+        .sliderWrapper .customSlider+label:before {
+            width: 40px;
+            height: 20px;
+            border-radius: 3em;
+            border: 1px solid #0294ff;
+            transition: background .75s;
+        }
+
+        .sliderWrapper .customSlider+label:after {
+            background: #fff;
+            height: 8px;
+            width: 8px;
+            top: 5px;
+            left: 26px;
+            border-radius: 50%;
+            transition: all .5s;
+            box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, .1);
+            border: 2px solid rgba(0, 0, 0, .1);
+        }
+
+        .sliderWrapper .customSlider:checked+label:before {
+            background: #0294ff;
+            border: 1px solid #c5c5c5;
+        }
+
+        .sliderWrapper .customSlider:checked+label:before {
+            background: #0294ff;
+            border: 1px solid #c5c5c5;
+        }
+
+        .sliderWrapper .customSlider:checked+label:after {
+            left: 4px;
+            background: white;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sliderWrapper">
+        <span class="element__sliderWrapper--span1">Sim</span>
+        <input id="checkbox_button" class="customSlider" type="checkbox">
+        <label for="checkbox_button"></label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="element__sliderWrapper--span2">Não</span>
+    </div>
+</body>
+
+</html>

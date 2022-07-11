@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Popping - @programador.cs</title>
+    <style>
+        .animation__loading {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            border: 10px solid #5ABB63;
+            border-top-color: white;
+            border-bottom-color: white;
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .number__pop {
+            color: #00BA00;
+            font-family: "Roboto", Sans-serif;
+            font-size: 84px;
+            font-weight: 600;
+            animation: numberPop .7s linear infinite;
+        }
+
+        @keyframes numberPop {
+            0% {
+                /* font-size: 84px; */
+                color: #00BA00;
+            }
+
+            50% {
+                /* font-size: 90px; */
+                color: white;
+
+            }
+
+            100% {
+                /* font-size: 84px; */
+                color: #00BA00;
+            }
+        }
+
+        .button__pop {
+            font-family: "Roboto", Sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            fill: #000000;
+            color: #000000;
+            background-color: #30FF00;
+            border-radius: 10px 10px 10px 10px;
+            padding: 20px 50px 20px 50px;
+            animation: buttonPop .7s linear infinite;
+        }
+
+        @keyframes buttonPop {
+            0% {
+                font-size: 18px;
+            }
+
+            50% {
+                font-size: 20px;
+
+            }
+
+            100% {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation__loading"></div>
+    <div class="number__pop">
+        25%
+    </div>
+
+    <a class="button__pop">
+        Enviar
+    </a>
+</body>
+
+</html>
