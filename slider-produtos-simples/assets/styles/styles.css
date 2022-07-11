@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  letter-spacing: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e3eaf0;
+  color: #747d89;
+  font-size: 16px;
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+h2 {
+  color: #000;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 3px;
+  background-color: #7ac402;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+}
+
+.slider .card {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: 4px 4px 5px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 5px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 4px 5px -5px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  max-width: 300px;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider .card .like {
+  background-image: url("https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/ic-heart.png");
+  height: 20px;
+  width: 20px;
+  background-size: 20px;
+  display: flex;
+  place-self: flex-end;
+  margin-bottom: 0.3rem;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+
+.slider .card .like:hover {
+  background-image: url("https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/develop/slider-produtos-simples/assets/images/ic-heart-red.png");
+}
+
+.slider .card img.product {
+  width: 100%;
+}
+
+.slider .card .title {
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.slider .card .rating {
+  color: #ffc002;
+}
+
+.slider .card .price {
+  display: flex;
+  gap: 10px;
+  margin: 0.5rem 0;
+}
+
+.slider .card .price h5:first-child {
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #d0d2d6;
+}
+
+.slider .card .price h5:last-child {
+  font-weight: 600;
+  color: #747d89;
+}
+
+.slider .card a.button {
+  border: 1px solid #7ac402;
+  border-radius: 30px;
+  color: #7ac402;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s all ease;
+}
+
+.slider .card a.button:hover {
+  background-color: #7ac402;
+  color: white;
+}
