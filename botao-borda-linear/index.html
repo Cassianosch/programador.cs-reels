@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Botão Borda Linear - @programador.cs</title>
+    <style>
+        button {
+            font-size: 3rem;
+            color: #000;
+            line-height: 1;
+            border-radius: 4rem;
+            padding: 2rem;
+            border: none;
+            cursor: pointer;
+            /* curva que eles faz para entrada ou saida */
+            transition: all 0.18s ease;
+            --color1: #ffc600;
+            --color2: #f654ae;
+
+            /* x, y, blur(desfoco) / spread-radius(propagacao do raio -- tamanho) */
+            --bs1: -2px -2px 0 2px var(--color1);
+            --bs2: 0 0 0 4px var(--color2);
+            --bs3: 0 0 2px 7px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--bs1), var(--bs2), var(--bs3);
+        }
+
+        .button:hover,
+        button:hover {
+            --color1: #f654ae;
+            --color2: #ffc600;
+            transform: scale(1.01);
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <button>Programador CS</button>
+</body>
+
+</html>

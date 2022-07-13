@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Placa efeito vento - @programador.cs</title>
+    <style>
+        .cards {
+            display: grid;
+            grid-column: 1/-1;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            background: #fff;
+            grid-gap: 2rem;
+            padding: 2rem;
+            perspective: 1000px;
+        }
+
+        .framework-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 1rem;
+            text-align: center;
+            padding-top: 3rem;
+            position: relative;
+            transform-origin: top center;
+            --rotate: 10deg;
+            transform: rotateX(var(--rotate));
+            transition: transform 0.2s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .framework-card:before {
+            right: auto;
+            left: 20px;
+        }
+
+        .framework-card:hover {
+            transform: rotateX(-20deg);
+        }
+
+        card:before,
+        .framework-card:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #5c0dac;
+            border: 1px solid #000;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+            top: 15px;
+            right: 20px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .framework-card:before,
+        .framework-card:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #5c0dac;
+            border: 1px solid #000;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+            top: 15px;
+            right: 20px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .framework-card img {
+            height: 80px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .framework-card p {
+            font-family: 'radnika-next';
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <div class="framework-card"><img src="https://beginnerjavascript.com/images/BJS/logo-react.svg">
+            <p>React</p>
+        </div>
+        <div class="framework-card"><img src="https://beginnerjavascript.com/images/BJS/logo-node.png">
+            <p>Node</p>
+        </div>
+        <div class="framework-card"><img src="https://beginnerjavascript.com/images/BJS/logo-vue.png">
+            <p>Vue</p>
+        </div>
+        <div class="framework-card"><img src="https://beginnerjavascript.com/images/BJS/logo-angular.png">
+            <p>Angular</p>
+        </div>
+        <div class="framework-card"><img src="https://beginnerjavascript.com/images/BJS/logo-vanila.png">
+            <p>Vanilla</p>
+        </div>
+        <div class="framework-card"><img src="https://beginnerjavascript.com/images/BJS/logo-typescript.png">
+            <p>Typescript</p>
+        </div>
+    </div>
+</body>
+
+</html>

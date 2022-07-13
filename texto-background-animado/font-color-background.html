@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Background Text - @programador.cs</title>
+    <style>
+        #background {
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, .1);
+            background: linear-gradient(to right,
+                    rgb(76, 217, 105),
+                    rgb(52, 170, 220),
+                    rgb(88, 86, 217),
+                    rgb(255, 45, 83),
+                    rgb(255, 45, 83),
+                    rgb(88, 86, 217),
+                    rgb(52, 170, 220),
+                    rgb(76, 217, 105));
+            background-size: 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 10em;
+            text-align: left;
+            animation: sTransition 10s linear infinite;
+        }
+
+        @keyframes sTransition {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="background">@PROGRAMADOR.CS</h1>
+</body>
+
+</html>

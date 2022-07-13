@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button com loader - @programador.cs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        a {
+            border: 1px solid #8b80f9;
+            border-radius: 3px;
+            padding: 1rem 2rem;
+            display: inline-block;
+            font-family: Verdana;
+            letter-spacing: -1px;
+            user-select: none;
+            color: #8b80f9;
+        }
+
+        a:hover {
+            color: #fff;
+            position: relative;
+            transition: 1.5s all ease;
+        }
+
+        a:hover::before {
+            content: '';
+            background-color: #8b80f9;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            animation: bgColorButton 1s ease-in-out;
+        }
+
+        @keyframes bgColorButton {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a>Programador CS</a>
+</body>
+
+</html>

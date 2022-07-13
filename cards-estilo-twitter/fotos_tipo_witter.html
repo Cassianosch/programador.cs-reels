@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cards estilo Twitter - @programador.cs</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex__mod {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            margin-right: .5rem;
+        }
+
+        img {
+            margin-right: -.5rem;
+            height: 2.5rem;
+            max-width: 100%;
+            border-radius: 9999px;
+            border: solid 2px #fc5374;
+            transition: .3s all ease;
+        }
+
+        img:hover {
+            transform: scale(1.3);
+        }
+
+        *,
+        ::after,
+        ::before {
+            border-width: 0;
+            border-style: solid;
+            border-color: #dae1e7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="flex__mod">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+            <img src="https://randomuser.me/api/portraits/women/31.jpg">
+            <img src="https://randomuser.me/api/portraits/men/33.jpg">
+            <img src="https://randomuser.me/api/portraits/women/32.jpg">
+            <img src="https://randomuser.me/api/portraits/men/44.jpg">
+            <img src="https://randomuser.me/api/portraits/women/42.jpg">
+        </div>
+        <!-- <span class="flex items-center justify-center text-sm text-grey-darker font-semibold border-2 border-grey-light rounded-full h-10 w-10">+3</span> -->
+    </div>
+</body>
+
+</html>
