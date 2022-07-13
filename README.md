@@ -1,9 +1,5 @@
 ## Repositório com códigos dos Reels
 
-- Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
-- Os projetos dentro do repositório estão organizados em pastas com o mesmo título da postagem.
-- Sinta-se livre utilizar os códigos.
-
 ### Para mais conteúdo, siga o @programador.cs no instagram.
 
 Clique na imagem para ser redirecionado ao código:
@@ -31,3 +27,7 @@ Click on the image to be redirected to the code:
 [![IMG_1831](https://user-images.githubusercontent.com/28737079/178619603-4f597f22-b87f-4fb1-a746-f077c30ca2e8.PNG)](https://github.com/Cassianosch/programador.cs-reels/tree/master/button-com-loader)
 
 [![IMG_1833](https://user-images.githubusercontent.com/28737079/178619781-972e0e5e-2256-4e78-ae0c-8cfd3f1da610.PNG)](https://github.com/Cassianosch/programador.cs-reels/tree/master/cards-estilo-twitter)
+
+- Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
+- Os projetos dentro do repositório estão organizados em pastas com o mesmo título da postagem.
+- Sinta-se livre utilizar os códigos.
