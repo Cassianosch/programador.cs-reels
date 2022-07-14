@@ -44,7 +44,14 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/ideias-de-botoes-para-CTA">
     <img src="https://user-images.githubusercontent.com/28737079/178973630-a3df21e4-cdc6-4594-bf2e-a070d7dec1b8.png"  width="300"/>
 </a>
+<p>
+    <img src="https://user-images.githubusercontent.com/28737079/179079455-6217b727-8cb7-42fe-8bda-c8d4f576f9f5.png" width="300"/>
 
+- [1](https://github.com/Cassianosch/programador.cs-reels/tree/master/checkbox-rouded)
+- [2](https://github.com/Cassianosch/programador.cs-reels/tree/master/button-checkbox)
+- [3, 4, 5](https://github.com/Cassianosch/programador.cs-reels/tree/master/loading-button-text-popping)
+- [6](https://github.com/Cassianosch/programador.cs-reels/tree/master/detalhe-fita)
+</p>
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
