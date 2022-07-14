@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Checkbox rounded - @programador.cs</title>
+  <style>
+    .round {
+      position: relative;
+    }
+
+    .round label {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 28px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 28px;
+    }
+
+    .round label:after {
+      border: 2px solid #188FA6;
+      border-top: none;
+      border-right: none;
+      content: "";
+      height: 6px;
+      left: 7px;
+      opacity: 0;
+      position: absolute;
+      top: 8px;
+      transform: rotate(-45deg);
+      width: 12px;
+    }
+
+    .round input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    .round input[type="checkbox"]:checked+label {
+      background-color: white;
+      border-color: #188FA6;
+    }
+
+    .round input[type="checkbox"]:checked+label:after {
+      opacity: 1;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background-color: #212123;
+    }
+
+    body {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background-color: #212123;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .container {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="round">
+      <input type="checkbox" checked id="checkbox" />
+      <label for="checkbox"></label>
+    </div>
+  </div>
+</body>
+
+</html>
