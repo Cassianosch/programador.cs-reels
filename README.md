@@ -42,7 +42,7 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/178619781-972e0e5e-2256-4e78-ae0c-8cfd3f1da610.PNG"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/ideias-de-botoes-para-CTA">
-    <img src="https://user-images.githubusercontent.com/28737079/178860024-574d8029-b307-4d83-b152-0b1658e04d92.png"  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/178973630-a3df21e4-cdc6-4594-bf2e-a070d7dec1b8.png"  width="300"/>
 </a>
 
 </p>
