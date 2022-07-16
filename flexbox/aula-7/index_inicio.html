@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - align-content - @programador.cs</title>
+
+    <style>
+        .container {
+            display: flex;
+            border: 10px solid red;
+            min-height: 100vh;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .caixa {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .caixa-par {
+            background-color: #8B80F9;
+        }
+
+        .caixa-impar {
+            background-color: #ED8607;
+        }
+
+        .caixa1 {
+            font-size: 50px;
+        }
+
+        .caixa2 {
+            font-size: 65px;
+        }
+
+        .caixa3 {
+            font-size: 80px;
+        }
+
+        .caixa7 {
+            font-size: 15px;
+        }
+
+        * {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="caixa caixa-impar caixa1">@</div>
+        <div class="caixa caixa-par caixa2">P</div>
+        <div class="caixa caixa-impar caixa3">R</div>
+        <div class="caixa caixa-par">O</div>
+        <div class="caixa caixa-impar">G</div>
+        <div class="caixa caixa-par">R</div>
+        <div class="caixa caixa-impar">A</div>
+        <div class="caixa caixa-par caixa7">M</div>
+        <div class="caixa caixa-impar">A</div>
+        <div class="caixa caixa-par">D</div>
+        <div class="caixa caixa-impar">O</div>
+        <div class="caixa caixa-par">R</div>
+        <div class="caixa caixa-impar">.</div>
+        <div class="caixa caixa-par">C</div>
+        <div class="caixa caixa-impar">S</div>
+    </div>
+</body>
+
+</html>
