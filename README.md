@@ -52,6 +52,9 @@ Click on the image to be redirected to the code:
 - [3, 4, 5](https://github.com/Cassianosch/programador.cs-reels/tree/master/loading-button-text-popping)
 - [6](https://github.com/Cassianosch/programador.cs-reels/tree/master/detalhe-fita)
 </p>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/flexbox">
+    <img src="https://user-images.githubusercontent.com/28737079/180332588-eaccefae-07c6-48af-bcb7-ee09185b3ebe.png"  width="300"/>
+</a>
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
