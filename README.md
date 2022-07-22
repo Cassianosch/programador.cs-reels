@@ -55,6 +55,9 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/flexbox">
     <img src="https://user-images.githubusercontent.com/28737079/180332588-eaccefae-07c6-48af-bcb7-ee09185b3ebe.png"  width="300"/>
 </a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/fullscreen-slider">
+    <img src="https://user-images.githubusercontent.com/28737079/180572699-ceee5b9f-d63d-4a1b-adee-d303ef0bd3bb.png"  width="300"/>
+</a>
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
