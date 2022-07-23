@@ -14,6 +14,7 @@ Português - Brazil
 [Javascript](https://github.com/Cassianosch/programador.cs-reels/tree/master/entrevistas/javascript)
 
 -- English
+
 Soon...
 
 Nota: Lembre que muitas as perguntas e respostas são bem objetivas, mas você pode explicar um pouco melhor, levando a uma discusão interessante.
