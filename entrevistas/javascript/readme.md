@@ -1,7 +1,7 @@
 ### Diferença entre var, let e const?
 
-var - é global, a menos que você utiliza strict e você pode setar um valor e fazer a troca desse valor
-let - restrito ao escopo, você pode setar um valor e fazer a troca desse valor, foi liberado em es2015/es6
+var - é global, a menos que você utiliza strict e você pode setar um valor e fazer a troca desse valor  
+let - restrito ao escopo, você pode setar um valor e fazer a troca desse valor, foi liberado em es2015/es6  
 const - scopped, você pode setar um valor e não pode fazer a troca dele, a não ser em objetos ou arrays, entretanto há formar de bloquear utilizando o freeze
 
 ##### Quais são os tipos primitivos em javascript?
