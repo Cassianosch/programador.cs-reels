@@ -1,7 +1,3 @@
-##### which selector has more importancy (id, class or type(body, h1))?
-
-id > class > type
-
 ### Diferença entre var, let e const?
 
 var - é global, a menos que você utiliza strict e você pode setar um valor e fazer a troca desse valor
