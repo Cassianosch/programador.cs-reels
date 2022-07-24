@@ -1,5 +1,3 @@
-REACT
-
 #### O que é Tree Shaking?
 
 É uma prática de remover conteúdo não necessário do arquivos package.json
