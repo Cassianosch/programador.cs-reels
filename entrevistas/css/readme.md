@@ -1,5 +1,3 @@
-p
-
 #### O que é o CSS e para que ele serve?
 
 O CSS é o acrônimo de Cascading Style Sheet ou Folha de Estilo em cascata. Ele é utilizado para fazer a estilização de uma página HTML.

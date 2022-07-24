@@ -7,13 +7,14 @@ Esta pasta contém uma série de perguntas e respostas para lhe ajudar compreend
 - será preenchido com mais questão ao passar do tempo
 - caso queira contribuir, faça um fork/pr, me envie mensagem no instagram etc
 
-pt-BR  
+### pt-BR
+
 [HTML](https://github.com/Cassianosch/programador.cs-reels/tree/master/entrevistas/html)  
 [CSS](https://github.com/Cassianosch/programador.cs-reels/tree/master/entrevistas/css)  
 [Javascript](https://github.com/Cassianosch/programador.cs-reels/tree/master/entrevistas/javascript)  
 [React](https://github.com/Cassianosch/programador.cs-reels/tree/master/entrevistas/react)
 
--- US
+### US
 
 Soon...
 
