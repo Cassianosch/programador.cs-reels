@@ -1,4 +1,29 @@
-### Diferença entre var, let e const?
+#### O que o operador typeof faz?
+
+O operador typeof mostra o tipo daquele elemento passado na sequência.
+
+#### Qual a diferença entre arrays e objetos?
+
+objectos - são um conjunto de valores separados por uma chave, então você consegue buscar o valor exato de uma chave buscando por ela.  
+array - são uma sequência de valores que não são organizados por chaves, para buscar um valor você deverá utilizar o index dele. É muito comum termos um array de objetos dentro do js.
+
+#### O que é o strict mode?
+
+É uma forma de colocar o formato de strict dentro de uma função. Veio a partir do ES5.
+
+#### Qual a importância de utilizar um debbuger?
+
+O debugger auxilia na busca de erros e também na identificação do por que deles.
+
+#### O que é o escopo dentro do javascript?
+
+O escopo é o formato de encapsular(deixar dentro) valor em um local. O contexto daquela função/local vai determinar a acessibilidade das variáveis ali.
+
+#### O que é o um callback?
+
+Callback é uma função que será executada apos outra função/lógica ter terminado, pode ser confundido com promises.
+
+#### Diferença entre var, let e const?
 
 var - é global, a menos que você utilize 'use strict', além de você poder setar um valor e fazer a troca desse valor  
 let - é restrito ao escopo, você pode setar um valor e fazer a troca desse valor, foi liberado em es2015/es6  
