@@ -58,9 +58,6 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/fullscreen-slider">
     <img src="https://user-images.githubusercontent.com/28737079/181121942-4716a188-61b3-42e4-af52-76cd4077462e.jpg"  width="300"/>
 </a>
-<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/fullscreen-slider">
-    <img src="https://user-images.githubusercontent.com/28737079/181121942-4716a188-61b3-42e4-af52-76cd4077462e.jpg"  width="300"/>
-</a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/relogio-embacado">
     <img src="https://user-images.githubusercontent.com/28737079/181121991-5dc6d8bf-bcb8-4175-9273-332446761674.jpg"  width="300"/>
 </a>
