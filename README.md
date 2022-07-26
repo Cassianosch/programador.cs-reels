@@ -56,7 +56,13 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/180332588-eaccefae-07c6-48af-bcb7-ee09185b3ebe.png"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/fullscreen-slider">
-    <img src="https://user-images.githubusercontent.com/28737079/180572699-ceee5b9f-d63d-4a1b-adee-d303ef0bd3bb.png"  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/181121942-4716a188-61b3-42e4-af52-76cd4077462e.jpg"  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/fullscreen-slider">
+    <img src="https://user-images.githubusercontent.com/28737079/181121942-4716a188-61b3-42e4-af52-76cd4077462e.jpg"  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/relogio-embacado">
+    <img src="https://user-images.githubusercontent.com/28737079/181121991-5dc6d8bf-bcb8-4175-9273-332446761674.jpg"  width="300"/>
 </a>
 </p>
 
