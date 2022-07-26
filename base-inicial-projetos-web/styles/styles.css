@@ -1,0 +1,17 @@
+:root {
+  --cor-background: #16357a;
+  --cor-background-card: #204286;
+  --cor-texto: #fefefe;
+  --cor-reflexo: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  font-family: "Verdana", sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  margin: 0;
+}
