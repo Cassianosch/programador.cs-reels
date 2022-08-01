@@ -1,0 +1,173 @@
+:root {
+  --cor-background: #16357a;
+  --cor-background-card: #204286;
+  --cor-texto: #fefefe;
+  --cor-sombra: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  font-family: "Verdana", sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+html,
+body {
+  background-color: var(--cor-background);
+  position: relative;
+}
+
+.bg__textos {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.textos__background::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  font-size: 15rem;
+  color: var(--cor-texto);
+  font-weight: 900;
+  opacity: 0.02;
+}
+
+.textos__background.tb-1::after {
+  content: "dicionário";
+  top: 0;
+  transform: translate(5%, -45%);
+}
+
+.textos__background.tb-2::after {
+  content: "@programador.cs";
+  top: 0;
+  bottom: 0;
+  font-size: 9rem;
+  transform: translate(5%, 40%);
+}
+
+.textos__background.tb-3::after {
+  content: "online";
+  bottom: 0;
+  transform: translate(50%, 50%);
+}
+
+.conteudo {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.conteudo .card {
+  background-color: var(--cor-background-card);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 0 0 10px var(--cor-sombra);
+}
+
+.conteudo .card header.cabecalho {
+  background-color: var(--cor-texto);
+  height: 27px;
+  border-radius: 5px 5px 0 0;
+}
+
+.conteudo .card main.corpo {
+  padding: 3rem 1rem;
+}
+
+.conteudo .card main.corpo form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteudo .card main.corpo form input[type="text"] {
+  background-color: var(--cor-background-card);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--cor-texto);
+  color: var(--cor-texto);
+  width: 70%;
+}
+
+.conteudo .card main.corpo form input[type="text"]::placeholder {
+  color: var(--cor-texto);
+  opacity: 1; /* para firefox */
+  font-family: "Courier New", Courier, monospace;
+}
+
+.conteudo .card main.corpo form input[type="submit"] {
+  background-color: var(--cor-texto);
+  color: var(--cor-background-card);
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.conteudo .card main.corpo form input[type="submit"]:hover {
+  box-shadow: 0 0 5px var(--cor-texto);
+}
+
+.conteudo .card main.corpo .resultado {
+  padding: 3rem 0.5rem 1rem 0.5rem;
+}
+
+.conteudo .card main.corpo .resultado .carregamento {
+  height: 50px;
+  width: 50px;
+  border: 5px solid var(--cor-texto);
+  margin: 0 auto;
+  border-radius: 50%;
+  border-left-color: var(--cor-background-card);
+  border-right-color: var(--cor-background-card);
+  animation: carregamento 1s linear infinite;
+}
+
+@keyframes carregamento {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.conteudo .card main.corpo .resultado h3.resultado__titulo {
+  color: var(--cor-texto);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.conteudo .card main.corpo .resultado span.resultado__descricao {
+  color: var(--cor-texto);
+}
+
+@media screen and (max-width: 550px) {
+  .conteudo .card main.corpo form {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .conteudo .card main.corpo form input[type="text"] {
+    width: 100%;
+  }
+}
