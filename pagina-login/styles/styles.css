@@ -1,0 +1,25 @@
+:root {
+  --cor-background: #f7f8fa;
+  --cor-branco: #fff;
+  --cor-texto: #241a52;
+  --cor-texto-fraco: #c4bfd4;
+  --cor-borda-input-desabilitado: #f2f1f6;
+  --cor-roxo-puro: #7e63ff;
+  --cor-placeholder: #837dff;
+  --cor-linear-1: #8dacff;
+  --cor-linear-2: #7c5dff;
+  --cor-background-desfocado: rgba(255, 255, 255, 0.15);
+  --cor-shadow-desfocado: rgba(0, 0, 0, 0.1);
+  --cor-borda-desfocado: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  font-family: "Verdana", sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  margin: 0;
+}
