@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;800&display=swap");
+:root {
+  --cor-background: #f7f8fa;
+  --cor-branco: #fff;
+  --cor-texto: #241a52;
+  --cor-texto-fraco: #c4bfd4;
+  --cor-borda-input-desabilitado: #f2f1f6;
+  --cor-roxo-puro: #7e63ff;
+  --cor-placeholder: #837dff;
+  --cor-linear-1: #8dacff;
+  --cor-linear-2: #7c5dff;
+  --cor-background-desfocado: rgba(255, 255, 255, 0.15);
+  --cor-shadow-desfocado: rgba(0, 0, 0, 0.1);
+  --cor-borda-desfocado: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--cor-background);
+}
+
+main.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--cor-branco);
+  column-gap: 20px;
+  padding: 2rem 3rem;
+  border-radius: 30px;
+}
+
+main.card section.esquerda .imagem__logo {
+  width: 50px;
+  margin-bottom: 0.5rem;
+}
+
+main.card section.esquerda h3.titulo__login {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--cor-texto);
+}
+
+main.card section.esquerda span.subtitulo {
+  font-size: 0.9rem;
+  color: var(--cor-texto-fraco);
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+main.card section.esquerda form .caixa__input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+main.card section.esquerda form .caixa__input label {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+main.card section.esquerda form .caixa__input label::after {
+  content: "*";
+  color: var(--cor-roxo-puro);
+}
+
+main.card section.esquerda form .caixa__input input {
+  color: var(--cor-texto);
+  border-radius: 30px;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--cor-branco), var(--cor-branco)),
+    linear-gradient(
+      to right,
+      var(--cor-borda-input-desabilitado),
+      var(--cor-borda-input-desabilitado)
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  caret-color: var(--cor-linear-1);
+}
+
+main.card section.esquerda form .caixa__input input:focus {
+  background-image: linear-gradient(var(--cor-branco), var(--cor-branco)),
+    linear-gradient(to right, var(--cor-linear-1), var(--cor-linear-2));
+}
+
+main.card section.esquerda .controle__salvamento {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+main.card section.esquerda .controle__salvamento span.esqueceu__senha {
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  background: linear-gradient(
+    to right,
+    var(--cor-linear-1),
+    var(--cor-linear-2)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main.card section.esquerda .controle__acesso {
+  display: flex;
+  flex-direction: column;
+}
+
+main.card section.esquerda .controle__acesso button {
+  border-radius: 30px;
+  height: 43px;
+  margin-bottom: 1rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+main.card section.esquerda .controle__acesso button[type="submit"] {
+  background: linear-gradient(
+    to right,
+    var(--cor-linear-1),
+    var(--cor-linear-2)
+  );
+  color: var(--cor-branco);
+}
+
+main.card section.esquerda .controle__acesso button.botao__registrar {
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--cor-branco), var(--cor-branco)),
+    linear-gradient(to right, var(--cor-linear-1), var(--cor-linear-2));
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+main.card
+  section.esquerda
+  .controle__acesso
+  button.botao__registrar
+  .botao__registrar--texto {
+  background: linear-gradient(
+    to right,
+    var(--cor-linear-1),
+    var(--cor-linear-2)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main.card section.esquerda .separador {
+  display: grid;
+  grid-template-columns: 0.6fr 1.5fr 0.6fr;
+  align-items: center;
+  text-align: center;
+  margin: 0.8rem 0;
+}
+
+main.card section.esquerda .separador span:nth-child(1),
+main.card section.esquerda .separador span:nth-child(3) {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--cor-texto-fraco);
+}
+
+main.card section.esquerda .separador span:nth-child(2) {
+  color: var(--cor-texto-fraco);
+  font-size: 0.9rem;
+}
+
+main.card section.esquerda .controle__login_social {
+  display: flex;
+  flex-direction: column;
+}
+
+main.card section.esquerda .controle__login_social a {
+  border: 1px solid var(--cor-texto-fraco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.8rem 0;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+main.card section.esquerda .controle__login_social a img {
+  width: 18px;
+  margin-right: 0.5rem;
+}
+
+main.card section.direita .background__imagem {
+  background: linear-gradient(
+    to right,
+    var(--cor-linear-1),
+    var(--cor-linear-2)
+  );
+  height: 100%;
+  width: 100%;
+  min-width: 360px;
+  border-radius: 20px;
+  position: relative;
+}
+
+main.card section.direita .background__imagem .detalhe__vidro {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  z-index: 1;
+}
+
+main.card section.direita .background__imagem .detalhe__vidro--interno {
+  background-color: var(--cor-background-desfocado);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px var(--cor-shadow-desfocado);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid var(--cor-borda-desfocado);
+  padding: 15px;
+}
+
+main.card section.direita .background__imagem .detalhe__vidro--interno span {
+  font-weight: 800;
+  color: var(--cor-branco);
+  text-shadow: 0 0 5px var(--cor-texto);
+}
+
+main.card section.direita .background__imagem img {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  max-width: 75%;
+}
+
+@media screen and (max-width: 800px) {
+  main.card {
+    grid-template-columns: 1fr;
+  }
+  main.card section.direita .background__imagem {
+    height: 150px;
+    margin-bottom: 2rem;
+  }
+  main.card section.direita .background__imagem img {
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    height: unset;
+  }
+
+  main.card {
+    padding: 2rem 1rem;
+  }
+}
