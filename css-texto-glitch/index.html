@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Efeito Glitch - @programador.cs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+        * {
+            font-family: "Satisfy", cursive;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        html {
+            padding: 3rem;
+            background-color: #212123;
+            color: #EFEFEF;
+        }
+
+        span {
+            font-size: 4rem;
+            transition: .3s all ease;
+            cursor: pointer;
+            letter-spacing: 8px;
+            text-shadow: #ff0000 0 0,
+                #00ffff 0 0;
+        }
+
+        span:hover {
+            text-shadow:
+                #ff0000 -3px 0,
+                #00ffff 3px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        @programador.cs
+    </span>
+</body>
+
+</html>
