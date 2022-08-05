@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título Efeito Espaçamento - @programador.cs</title>
+    <style>
+        * {
+            font-family: "Verdana", sans-serif;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        html {
+            padding: 3rem;
+            background-color: #212123;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #EFEFEF;
+        }
+
+        .conteudo {
+            display: flex;
+            width: 350px;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 25px;
+            column-gap: 20px;
+        }
+
+        .card {
+            flex: 0 0 100%;
+            padding: 30px;
+            scroll-snap-align: start;
+            border-radius: 30px;
+        }
+
+        .card h1 {
+            margin-bottom: 2rem;
+        }
+
+        .card:nth-child(1) {
+            background: linear-gradient(-229deg, #00DBDE, #FC00FF);
+        }
+
+        .card:nth-child(2) {
+            background: linear-gradient(-229deg, #0093E9, #80D0C7);
+        }
+
+        .card:nth-child(3) {
+            background: linear-gradient(-229deg, #50d990, #d4d054);
+        }
+
+        .card:nth-child(4) {
+            background: linear-gradient(-229deg, #D9AFD9, #97D9E1);
+        }
+
+        .card:nth-child(5) {
+            background: linear-gradient(-229deg, #FBAB7E, #F7CE68);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="conteudo">
+        <article class="card">
+            <h1>HTML</h1>
+            <span>
+                HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser
+                interpretados por navegadores.
+            </span>
+        </article>
+        <article class="card">
+            <h1>CSS</h1>
+            <span>
+                Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web.
+            </span>
+        </article>
+        <article class="card">
+            <h1>JS</h1>
+            <span>
+                JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem
+                dinâmica fraca e multiparadigma.
+            </span>
+        </article>
+        <article class="card">
+            <h1>GIT</h1>
+            <span>
+                Git ₍ₒᵤ em inglês britânico₎ é um sistema de controle de versões distribuído, usado principalmente no
+                desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo
+                de arquivo.
+            </span>
+        </article>
+        <article class="card">
+            <h1>React JS</h1>
+            <span>
+                O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas
+                web.
+            </span>
+        </article>
+    </main>
+</body>
+
+</html>
