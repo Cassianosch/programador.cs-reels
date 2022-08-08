@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor da seleção de texto - @programador.cs</title>
+    <style>
+        * {
+            font-family: "Verdana", cursive;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        html {
+            padding: 3rem;
+            background-color: #212123;
+            color: #EFEFEF;
+        }
+
+        h4::selection {
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>
+        @programador.cs - Aprendendo a modificar a cor do texto na seleção do mouse utilizando CSS puro.
+    </h4>
+</body>
+
+</html>
