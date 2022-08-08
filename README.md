@@ -67,6 +67,9 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-scroll-snap">
     <img src="https://user-images.githubusercontent.com/28737079/183213663-f58378d3-e650-4a02-afb3-18802a69f4c2.jpeg"  width="300"/>
 </a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-selection">
+    <img src="https://user-images.githubusercontent.com/28737079/183527676-2831b9b0-c405-4925-8765-c415248bbdf3.png"  width="300"/>
+</a>
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
