@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS efeito Hover Progressivo - @programador.cs</title>
+    <style>
+        * {
+            font-family: "Verdana", cursive;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            margin: 0;
+            cursor: url('./ic-varinha.png'), auto !important;
+        }
+
+        html {
+            padding: 3rem;
+            background-color: #212123;
+            color: #EFEFEF;
+        }
+
+        span {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .tipo__1,
+        .tipo__2,
+        .tipo__3 {
+            background-image: linear-gradient(#8B80F9, #8B80F9);
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-position-x: right;
+            transition: background-size .8s;
+        }
+
+        .tipo__1:hover,
+        .tipo__2:hover,
+        .tipo__3:hover {
+            background-size: 100% 100%;
+            background-position-x: left;
+        }
+
+        .tipo__4 {
+            background-image: linear-gradient(#8B80F9, #8B80F9);
+            background-repeat: no-repeat;
+            background-size: 100% 0%;
+            background-position-x: left;
+            transition: background-size .4s;
+        }
+
+        .tipo__4:hover {
+            background-size: 100% 100%;
+            background-position-x: right;
+        }
+
+        .tipo__5 {
+            background-image: linear-gradient(#8B80F9, #8B80F9);
+            background-repeat: no-repeat;
+            background-size: 0% 0%;
+            background-position-x: left;
+            transition: background-size .4s;
+        }
+
+        .tipo__5:hover {
+            background-size: 100% 100%;
+            background-position-y: right;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="tipo__1">@programador.cs</span>
+    <span class="tipo__2">@programador.cs</span>
+    <span class="tipo__3">@programador.cs</span>
+    <br />
+    <br />
+    <span class="tipo__4">@programador.cs</span>
+    <br />
+    <br />
+    <span class="tipo__5">@programador.cs</span>
+</body>
+
+</html>
