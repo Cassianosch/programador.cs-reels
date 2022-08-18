@@ -1,0 +1,30 @@
+:root {
+  --cor-background: #ecf0f3;
+  --cor-branco: #ffffff;
+  --cor-sombra-padrao: rgba(0, 0, 0, 0.16);
+  --cor-botao-normal: #78797a;
+  --cor-botao-normal-hover: #afafaf;
+  --cor-botao-topo-cinza-escuro: #5e5e60;
+  --cor-botao-topo-cinza-escuro-hover: #7b797a;
+  --cor-botao-laranja: #ff9e0b;
+  --cor-botao-laranja-hover: #c97c02;
+  --cor-input-resultado: #504b52;
+  --cor-botao-fechar: #fe5f56;
+  --cor-botao-minimizar: #fdbc2e;
+  --cor-botao-maximizar: #28c840;
+  --cor-borda-botoes: rgba(0, 0, 0, 0.4);
+  --cor-borda-calculadora: rgba(0, 0, 0, 1);
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  margin: 0;
+  background: var(--cor-background);
+  outline: none;
+}
