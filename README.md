@@ -76,6 +76,12 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/calculadora">
     <img src="https://user-images.githubusercontent.com/28737079/185515060-54cee494-f038-4ae1-baa0-5505e95bf7a1.png"  width="300"/>
 </a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/icones-flutuantes">
+    <img src="https://user-images.githubusercontent.com/28737079/186989855-f147376d-19c3-4ab1-8fd9-e9b6b2824643.png"  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/pagina-login">
+    <img src="https://user-images.githubusercontent.com/28737079/186989883-ff63b2e5-0c1a-4ce0-9031-69098d1841c4.png"  width="300"/>
+</a>
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
