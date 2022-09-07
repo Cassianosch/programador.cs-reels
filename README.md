@@ -85,9 +85,9 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-cursor-imagem">
     <img src="https://user-images.githubusercontent.com/28737079/187558844-84fae9b1-17e3-4c9d-861c-11c01ca97875.PNG"  width="300"/>
 </a>
-<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/titulo-efeito-espacamento">
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/titulo-efeito-espacamento">
     <img src="https://user-images.githubusercontent.com/28737079/187558875-f7c2ab4f-fa6d-4b8d-832a-56d50a73e094.PNG"  width="300"/>
-</a> -->
+</a>
 <!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/caixa-borda-arco-iris">
     <img src="https://user-images.githubusercontent.com/28737079/187558903-59ac2a66-542e-4fb1-9144-ba27fa4c04cd.PNG"  width="300"/>
 </a> -->
