@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico Chart JS - @programador.cs</title>
+</head>
+
+<body>
+    <div>
+        <!-- cria um char com id, ou algum tipo de identificado que vai ser usado lá no js -->
+        <canvas id="grafico-chart"></canvas>
+    </div>
+    <!-- import o script do chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // insere os dados que vão ser representados no gráfico
+        const labels = [
+            'Janeiro',
+            'Fevereiro',
+            'Março',
+            'Abril',
+            'Maio',
+            'Junho',
+        ];
+
+        // criação das formas
+        const data = {
+            // qual vai ser o rótulo da informação, daonde ele vai puxar as infos, no nosso caso da variável const labels
+            labels: labels,
+            datasets: [{
+                // nome do gráfico
+                label: 'Gráfico Simples',
+                // cor de fundo
+                backgroundColor: 'rgb(255, 99, 132)',
+                // cor de borda
+                borderColor: 'rgb(255, 99, 132)',
+                // a informação propriamente, aqui que ficaria os dados que você puxa do banco de dados por exemplo
+                data: [0, 10, 5, 2, 20, 30, 45],
+            }]
+        };
+
+        const config = {
+            // tipo do gráfico, aqui você pode ir mudando, vou deixar alguns exemplos (line | bar | doughnut | polarArea) type: 'line', || type: 'polarArea',
+            type: 'line',
+            // informação criada na variável data
+            data: data,
+            options: {}
+        };
+
+        // aqui que é feito a inserção do gráfico no html mesmo
+        const myChart = new Chart(
+            document.getElementById('grafico-chart'),
+            config
+        );
+    </script>
+</body>
+
+</html>
