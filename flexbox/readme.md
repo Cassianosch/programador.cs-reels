@@ -2,7 +2,7 @@
 
 Códigos utilizados nos vídeos.
 
-Link da aula: https://www.youtube.com/playlist?list=PLllQzCld5ufjGNvx3GdX8VJKvPjqw2dI_
+Link da aula: [https://www.youtube.com/playlist?list=PLllQzCld5ufjGNvx3GdX8VJKvPjqw2dI\_](https://www.youtube.com/playlist?list=PLllQzCld5ufjGNvx3GdX8VJKvPjqw2dI_)
 
 - 1 - Flexbox - flex - Parte 1
 - 2 - Flexbox - flex-direction - Parte 2
