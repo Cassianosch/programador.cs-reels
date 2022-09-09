@@ -11,51 +11,74 @@
 <body>
     <div>
         <!-- cria um char com id, ou algum tipo de identificado que vai ser usado lá no js -->
-        <canvas id="grafico-chart"></canvas>
-    </div>
-    <!-- import o script do chart -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // insere os dados que vão ser representados no gráfico
-        const labels = [
-            'Janeiro',
-            'Fevereiro',
-            'Março',
-            'Abril',
-            'Maio',
-            'Junho',
-        ];
+        <div style="height:400px; width:400px;">
+            <canvas id="grafico-chart"></canvas>
+        </div>
+        <div>
+            <button onclick="mudarTamanhoDoGrafico(400,200)">
+                Width:400px,
+                Height:200px
+            </button>
+            <button onclick="mudarTamanhoDoGrafico(600,400)">
+                Width:600px,
+                Height:400px
+            </button>
+            <button onclick="mudarTamanhoDoGrafico(800,400)">
+                Width:800px,
+                Height:400px
+            </button>
+        </div>
+        <!-- import o script do chart -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            let elementoDoGrafico = document.getElementById('grafico-chart');
 
-        // criação das formas
-        const data = {
-            // qual vai ser o rótulo da informação, daonde ele vai puxar as infos, no nosso caso da variável const labels
-            labels: labels,
-            datasets: [{
-                // nome do gráfico
-                label: 'Gráfico Simples',
-                // cor de fundo
-                backgroundColor: 'rgb(255, 99, 132)',
-                // cor de borda
-                borderColor: 'rgb(255, 99, 132)',
-                // a informação propriamente, aqui que ficaria os dados que você puxa do banco de dados por exemplo
-                data: [0, 10, 5, 2, 20, 30, 45],
-            }]
-        };
+            // insere os dados que vão ser representados no gráfico
+            const labels = [
+                'Janeiro',
+                'Fevereiro',
+                'Março',
+                'Abril',
+                'Maio',
+                'Junho',
+            ];
 
-        const config = {
-            // tipo do gráfico, aqui você pode ir mudando, vou deixar alguns exemplos (line | bar | doughnut | polarArea) type: 'line', || type: 'polarArea',
-            type: 'line',
-            // informação criada na variável data
-            data: data,
-            options: {}
-        };
+            // criação das formas
+            const data = {
+                // qual vai ser o rótulo da informação, daonde ele vai puxar as infos, no nosso caso da variável const labels
+                labels: labels,
+                datasets: [{
+                    // nome do gráfico
+                    label: 'Gráfico Simples',
+                    // cor de fundo
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    // cor de borda
+                    borderColor: 'rgb(255, 99, 132)',
+                    // a informação propriamente, aqui que ficaria os dados que você puxa do banco de dados por exemplo
+                    data: [0, 10, 5, 2, 20, 30, 45],
+                }]
+            };
 
-        // aqui que é feito a inserção do gráfico no html mesmo
-        const myChart = new Chart(
-            document.getElementById('grafico-chart'),
-            config
-        );
-    </script>
+            const config = {
+                // tipo do gráfico, aqui você pode ir mudando, vou deixar alguns exemplos (line | bar | doughnut | polarArea) type: 'line', || type: 'polarArea',
+                type: 'line',
+                // informação criada na variável data
+                data: data,
+                options: {}
+            };
+
+            // aqui que é feito a inserção do gráfico no html mesmo
+            const myChart = new Chart(
+                elementoDoGrafico,
+                config
+            );
+
+            function mudarTamanhoDoGrafico(width, height) {
+                elementoDoGrafico.style.width = width + "px";
+                elementoDoGrafico.style.height = height + "px";
+                elementoDoGrafico.resize();
+            }
+        </script>
 </body>
 
 </html>
