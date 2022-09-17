@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - @Programador.cs</title>
+</head>
+
+<body>
+    <form class="js-formulario">
+        <label>Nome
+            <input type="text" name="nome">
+        </label>
+        <label>CPF
+            <input type="text" name="cpf">
+        </label>
+        <label>Idade
+            <input type="number" name="idade">
+        </label>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        //seleciona o elemento formulario
+        let elementoFormulario = document.querySelector('.js-formulario');
+
+        // adiciona um escutador no formulario, escutando o evento de submit
+        elementoFormulario.addEventListener('submit', (evento) => {
+
+            //comenta envia o envia o form para ver que vai resultar em aparecer o console.log mas logo sumir pois ocorre o refresh da pagina
+
+            // evento.preventDefault();
+
+            //pega o formulario corrente e coloca em uma classe formulario
+            const formularioData = new FormData(evento.target);
+
+            //busca as propriedades(input/valores) que est'ao dentro do form
+            const formularioPropriedades = Object.fromEntries(formularioData);
+            console.log('====================================');
+            console.log(formularioPropriedades);
+            console.log('====================================');
+        })
+    </script>
+</body>
+
+</html>
