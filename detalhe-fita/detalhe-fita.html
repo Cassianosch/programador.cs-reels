@@ -7,73 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhe Fita - @programador.cs</title>
     <style>
-        .box {
-            width: 500px;
-            height: 500px;
-            position: relative;
-            border: 1px solid #BBB;
-            background: #EEE;
+        .conteudo {
+            margin-top: 1rem;
+            margin-right: 2rem;
+            margin-bottom: 3rem;
+            margin-left: 4rem;
         }
 
-        .ribbon {
-            position: absolute;
-            right: -5px;
-            top: -5px;
-            z-index: 1;
-            overflow: hidden;
-            width: 75px;
-            height: 75px;
-            text-align: right;
-            cursor: pointer;
-            transition: 1s all ease;
-        }
-
-        .ribbon:hover {
-            opacity: 0;
-        }
-
-        span {
-            font-size: 10px;
-            font-weight: bold;
-            color: #FFF;
-            text-transform: uppercase;
-            text-align: center;
-            line-height: 20px;
-            font-family: Verdana;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-            width: 100px;
-            display: block;
-            background: #79A70A;
-            background: linear-gradient(#8B80F9 0%, #5F58AB 100%);
-            box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
-            position: absolute;
-            top: 19px;
-            right: -21px;
-        }
-
-        .ribbon span::before {
-            content: "";
-            position: absolute;
-            left: 0px;
-            top: 100%;
-            z-index: -1;
-            border-left: 3px solid #5F58AB;
-            border-right: 3px solid transparent;
-            border-bottom: 3px solid transparent;
-            border-top: 3px solid #5F58AB;
-        }
-
-        .ribbon span::after {
-            content: "";
-            position: absolute;
-            right: 0px;
-            top: 100%;
-            z-index: -1;
-            border-left: 3px solid transparent;
-            border-right: 3px solid #5F58AB;
-            border-bottom: 3px solid transparent;
-            border-top: 3px solid #5F58AB;
+        .conteudo {
+            margin: 1rem 2rem 3rem 4rem;
         }
     </style>
 </head>
@@ -82,6 +24,26 @@
     <div class="box">
         <div class="ribbon"><span>Ganhador</span></div>
     </div>
+    <script>
+        // let array1 = [33, 35, 1, 3, 5];
+        // let array2 = [];
+
+        // const arrayEstaVazio = array => !(Array.isArray(array) && array.length > 0);
+
+        // console.log(arrayEstaVazio(array1)); // false
+        // console.log(arrayEstaVazio(array2)); // true
+
+        // const redirecionar = url => location.href = url;
+        // redirecionar('https://www.google.com.br');
+
+        let nome = 'Cassiano';
+        let nomes = ['Cassiano', 'Suelen', 'João'];
+
+        const eUmArray = valor => Array.isArray(valor);
+
+        console.log(eUmArray(nome)); // false
+        console.log(eUmArray(nomes)); // true
+    </script>
 </body>
 
 </html>
