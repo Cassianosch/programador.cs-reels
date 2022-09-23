@@ -91,6 +91,9 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/caixa-borda-arco-iris">
     <img src="https://user-images.githubusercontent.com/28737079/187558903-59ac2a66-542e-4fb1-9144-ba27fa4c04cd.PNG"  width="300"/>
 </a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-rotacao">
+    <img src="https://user-images.githubusercontent.com/28737079/192057922-997bb682-0e11-47ce-8ec0-e037aa71fe8d.jpg"  width="300"/>
+</a>
 <!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/colunas-responsivas">
     <img src="https://user-images.githubusercontent.com/28737079/187558940-993bad38-ecf2-4eb2-a00e-f137edad4405.PNG"  width="300"/>
 </a> -->
