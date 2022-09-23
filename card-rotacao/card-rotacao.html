@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Rotação - @programador.cs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            background: #212123;
+            margin: 4rem;
+        }
+
+        .card__giratorio {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+        }
+
+        .card__giratorio-conteudo {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card__giratorio:hover .card__giratorio-conteudo {
+            transform: rotateY(180deg);
+        }
+
+        .card__giratorio-conteudo--frente,
+        .card__giratorio-conteudo--traseira {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card__giratorio-conteudo--frente {
+            background: linear-gradient(-229deg, #0093E9, #80D0C7);
+        }
+
+        .card__giratorio-conteudo--traseira {
+            background: linear-gradient(229deg, #0093E9, #80D0C7);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .card__giratorio-conteudo--traseira h1,
+        .card__giratorio-conteudo--traseira p {
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card__giratorio-conteudo--traseira h1 {
+            font-size: 1.7rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            filter: drop-shadow(2px 2px 5px black);
+            opacity: .7;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div class="card__giratorio">
+    <div class="card__giratorio-conteudo">
+        <div class="card__giratorio-conteudo--frente">
+            <img src="./ic-logo.png" alt="Logo Programador CS" class="logo">
+        </div>
+        <div class="card__giratorio-conteudo--traseira">
+            <img src="./ic-logo.png" alt="Logo Programador CS" class="logo">
+            <h1>Programador CS</h1>
+            <p>🧑‍💻 Web e Mobile</p>
+            <p>Segue na base!</p>
+        </div>
+    </div>
+</div>
+
+</html>
