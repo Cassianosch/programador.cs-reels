@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel CSS Grid - @programador.cs</title>
+    <style>
+        * {
+            font-family: "Verdana", sans-serif;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            margin: 0;
+            color: #fff;
+        }
+
+        body {
+            margin: 2rem;
+            background-color: #212123;
+        }
+
+        .conteudo {
+            width: 450px;
+        }
+
+        .carrousel {
+            display: grid;
+            grid-auto-flow: column;
+            scroll-behavior: auto;
+            gap: 1.2rem;
+            overflow-y: auto;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+
+        .carrousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            scroll-snap-align: start;
+            border-radius: 30px;
+            min-height: 200px;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .card:nth-child(1) {
+            background: linear-gradient(-229deg, #FBD52D, #EF3A7B);
+        }
+
+        .card:nth-child(2) {
+            background: linear-gradient(-229deg, #FF70AF, #5FA8F5);
+        }
+
+        .card:nth-child(3) {
+            background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+        }
+
+        .card:nth-child(4) {
+            background: linear-gradient(-229deg, #88F7F9, #048FFF);
+        }
+
+        .card:nth-child(5) {
+            background: linear-gradient(-229deg, #0093E9, #80D0C7);
+        }
+
+        .card:nth-child(6) {
+            background: linear-gradient(-229deg, #cf91ff, #5782F5);
+        }
+
+        .card:nth-child(7) {
+            background: linear-gradient(-229deg, #642B73, #C6426E);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteudo">
+        <div class="carrousel">
+            <article class="card">
+                <h1>HTML</h1>
+            </article>
+            <article class="card">
+                <h1>CSS</h1>
+            </article>
+            <article class="card">
+                <h1>JS</h1>
+            </article>
+            <article class="card">
+                <h1>React JS</h1>
+            </article>
+            <article class="card">
+                <h1>GIT</h1>
+            </article>
+            <article class="card">
+                <h1>LÓGICA</h1>
+            </article>
+            <article class="card">
+                <h1>SEGUE NA BASE!</h1>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>
