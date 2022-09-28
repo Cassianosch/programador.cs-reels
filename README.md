@@ -98,7 +98,7 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/187558940-993bad38-ecf2-4eb2-a00e-f137edad4405.PNG"  width="300"/>
 </a> -->
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/carrosel-css-grid">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/192892225-b94824f5-5721-49c9-ae9c-34eb73aa0a4c.jpg"  width="300"/>
 </a>
 </p>
 
