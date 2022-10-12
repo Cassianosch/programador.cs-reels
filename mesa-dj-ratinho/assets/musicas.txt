@@ -1,0 +1,18 @@
+<audio data-musica="epa"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-epa.mp3?raw=true"></audio>
+    <audio data-musica="irra"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-irra.mp3?raw=true"></audio>
+    <audio data-musica="jesus"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-jesus.mp3?raw=true"></audio>
+    <audio data-musica="nao-e-o-pai"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-nao-e-o-pai.mp3?raw=true"></audio>
+    <audio data-musica="pare"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-pare.mp3?raw=true"></audio>
+    <audio data-musica="rapaiz"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-rapaiz.mp3?raw=true"></audio>
+    <audio data-musica="ratinho"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-ratinho.mp3?raw=true"></audio>
+    <audio data-musica="uepa"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-uepa.mp3?raw=true"></audio>
+    <audio data-musica="vai-sombra"
+        src="https://github.com/Cassianosch/programador.cs-reels/blob/master/mesa-dj-ratinho/assets/audio/audio-vai-sombra.mp3?raw=true"></audio>
