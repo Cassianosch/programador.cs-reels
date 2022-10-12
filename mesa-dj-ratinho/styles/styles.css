@@ -21,3 +21,76 @@
   scroll-behavior: smooth;
   margin: 0;
 }
+
+html,
+body {
+  background-color: var(--cor-background);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.mesa__dj {
+  background-color: var(--cor-fundo-mesa);
+  border: 10px solid var(--cor-borda);
+  padding: 2rem;
+  width: 500px;
+  position: relative;
+}
+
+.mesa__dj .corpo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.mesa__dj .corpo button {
+  background-color: var(--cor-botao-impar);
+  border: 10px solid var(--cor-borda);
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s all ease;
+}
+
+.mesa__dj .corpo button:nth-child(even) {
+  background-color: var(--cor-botao-par);
+}
+
+.mesa__dj .corpo button:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.mesa__dj .imagem__ratinho {
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-90deg);
+  width: 300px;
+  transition: 0.3s all ease;
+}
+
+.mesa__dj .imagem__ratinho.aparecer {
+  margin-left: -250px;
+}
+
+.mesa__dj .pe__mesa {
+  position: absolute;
+  background-color: var(--cor-pe-mesa);
+  border: 10px solid var(--cor-borda);
+  width: 300px;
+  height: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: skew(30deg);
+}
+
+.mesa__dj .pe__mesa.topo {
+  top: -50px;
+}
+
+.mesa__dj .pe__mesa.rodape {
+  bottom: -50px;
+}
