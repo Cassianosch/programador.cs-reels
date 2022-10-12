@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel Automático - @programador.cs</title>
+    <style>
+        body {
+            background-color: #212123;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carrousel-automatico">
+        <img class="js-image"
+            src="https://i.picsum.photos/id/669/200/300.jpg?hmac=ypH3d7OM0ROvll045TKXPpwkg24nCbbWckekDHVyH0U" />
+    </div>
+    <script>
+
+        //busca o elemento no HTML
+        let elementoImagem = document.querySelector('.js-image');
+
+        //array com a url das imagens utilizadas
+        const images = [
+            'https://i.picsum.photos/id/669/200/300.jpg?hmac=ypH3d7OM0ROvll045TKXPpwkg24nCbbWckekDHVyH0U',
+            'https://i.picsum.photos/id/293/200/300.jpg?hmac=P4TXoEffoQVY91UZoUFoLXlifBzZvUbL5nbkn03acdY',
+            'https://i.picsum.photos/id/434/200/300.jpg?hmac=OXYWBdR0QE1mGM2dKi1dktPcY5GckI3ClAgMsyszU-I',
+            'https://i.picsum.photos/id/353/200/300.jpg?hmac=dp_gN1fPfq1NcUZmNjRXfOwD3UH0D4B8A-jwvjByOyc',
+            'https://i.picsum.photos/id/505/200/300.jpg?hmac=sM40cBTZhT04SPBOcg3Oj_CJ1XVd3f4FX5u-tCusbDk',
+            'https://i.picsum.photos/id/104/200/300.jpg?hmac=KuTvTbtiNRu8sQFuXf6aAk2kbZFZerJdGKS4PN2niyU',
+            'https://i.picsum.photos/id/698/200/300.jpg?hmac=2Z_fr-yUH1ByQu36MAR319aTCndT4FjG1VBksAKGVKU',
+            'https://i.picsum.photos/id/560/200/300.jpg?hmac=Qw6Gj4Q7nEunQocIfP9eSZ12CmRwQjYRMHvKIsnf08Y',
+            'https://i.picsum.photos/id/1037/200/300.jpg?hmac=4eugJlD2Tm8e9ZZIDrSXnYPKNyVQ9Mm58HkQrLYBy1c',
+        ];
+
+        //funcao para ter um intervalo de .5s para executar o código dentro dele
+        setInterval(() => {
+            //irá gerar um número aleatório entre 1 e 9
+            let imagemAleatoria = Math.floor(Math.random() * 9);
+
+            //com o número aleatório gerado acima, buscar o elemento correspondente no array de imagens
+            elementoImagem.src = images[imagemAleatoria];
+
+            //500 significa 500ms ou .5s, 1000ms significa 1s(segundo)
+        }, 500)
+    </script>
+</body>
+
+</html>
