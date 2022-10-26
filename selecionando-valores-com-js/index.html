@@ -16,6 +16,14 @@
         <option value="azeite">Azeite</option>
     </select>
     <button id="button">Salvar</button>
+    <script>
+        let select = document.querySelector('#select');
+        let button = document.querySelector('#button');
+        console.log(button);
+        button.addEventListener('click', () => {
+            console.log(select.value);
+        })
+    </script>
 </body>
 
 </html>
