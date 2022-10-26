@@ -100,6 +100,9 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/carrosel-css-grid">
     <img src="https://user-images.githubusercontent.com/28737079/192892225-b94824f5-5721-49c9-ae9c-34eb73aa0a4c.jpg"  width="300"/>
 </a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botao-curtir-efeito-abertura">
+    <img src="https://user-images.githubusercontent.com/28737079/198004361-281e6d6f-2f45-4397-85bc-87778d998855.jpg"  width="300"/>
+</a>
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.

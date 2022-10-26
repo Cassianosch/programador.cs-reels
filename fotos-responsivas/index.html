@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards responsivos - @programador.cs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #212123;
+            margin: 5rem;
+        }
+
+        .fotos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        img {
+            border-radius: 10px;
+            padding: .4rem;
+        }
+
+        img:nth-child(1) {
+            background: linear-gradient(-229deg, #00DBDE, #FC00FF);
+        }
+
+        img:nth-child(2) {
+            background: linear-gradient(-229deg, #0093E9, #80D0C7);
+        }
+
+        img:nth-child(3) {
+            background: linear-gradient(-229deg, #50d990, #d4d054);
+        }
+
+        img:nth-child(4) {
+            background: linear-gradient(-229deg, #D9AFD9, #97D9E1);
+        }
+
+        img:nth-child(5) {
+            background: linear-gradient(-229deg, #FBAB7E, #F7CE68);
+        }
+
+        img:nth-child(6) {
+            background: linear-gradient(-229deg, #FFAFBD, #FFC3A0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fotos">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg">
+        <img src="https://randomuser.me/api/portraits/women/31.jpg">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg">
+        <img src="https://randomuser.me/api/portraits/women/32.jpg">
+        <img src="https://randomuser.me/api/portraits/men/44.jpg">
+        <img src="https://randomuser.me/api/portraits/women/42.jpg">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão curtiu com efeito abertura - @programador.cs</title>
+    <style>
+        * {
+            font-family: "Verdana", cursive;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-style);
+            background-color: #212123;
+        }
+
+        .conteudo {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 4px double #1878f2;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px #3b5998;
+            transition: all 1s;
+        }
+
+        .elemento__botao__interno {
+            background-color: #1878f2;
+            border-radius: 25px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+        }
+
+        h1 {
+            opacity: 0;
+            position: absolute;
+            left: 36%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.49em;
+            width: 100%;
+            margin: auto;
+            transition: all 1s;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        .elemento__botao__interno:hover h1 {
+            animation: 3s mostrarTexto both;
+        }
+
+        @keyframes mostrarTexto {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            color: #8B80F9;
+            transition: all 1s;
+        }
+
+        .elemento__botao__interno:hover img {
+            transform: rotate3d(0, 1, 0, 360deg);
+        }
+
+        .elemento__botao__interno:hover {
+            height: 250px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="conteudo">
+        <div class="elemento__botao__interno">
+            <h1>Curtiu!</h1>
+            <img src="./ic-curtiu.png" alt="Imagem polegar curtiu">
+        </div>
+    </div>
+
+
+</body>
+
+</html>
