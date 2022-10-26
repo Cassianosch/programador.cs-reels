@@ -28,14 +28,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            border: 4px solid #B1B2CF;
+            border: 4px double #1878f2;
             border-radius: 50%;
-            box-shadow: 0px 0px 20px #8B80F9;
+            box-shadow: 0px 0px 20px #3b5998;
             transition: all 1s;
         }
 
         .elemento__botao__interno {
-            background-color: #2B3241;
+            background-color: #1878f2;
             border-radius: 25px;
             position: absolute;
             top: 0;
@@ -48,14 +48,16 @@
         h1 {
             opacity: 0;
             position: absolute;
-            left: 70%;
-            top: 50%;
+            left: 36%;
+            top: 55%;
             transform: translate(-50%, -50%);
             color: white;
             font-size: 1.49em;
             width: 100%;
             margin: auto;
             transition: all 1s;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
         }
 
         .elemento__botao__interno:hover h1 {
@@ -89,7 +91,7 @@
         }
 
         .elemento__botao__interno:hover {
-            width: 165px;
+            height: 250px;
             cursor: pointer;
         }
     </style>
