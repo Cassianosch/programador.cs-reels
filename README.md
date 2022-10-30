@@ -7,6 +7,7 @@ Clique na imagem para ser redirecionado ao código:
 Click on the image to be redirected to the code:
 
 <p float="left">
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-stranger-things">
   <img src="https://user-images.githubusercontent.com/28737079/178617830-67ae662f-1607-4e72-b349-f62bd7a2f243.PNG" width="300" />
 </a>
@@ -103,6 +104,20 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botao-curtir-efeito-abertura">
     <img src="https://user-images.githubusercontent.com/28737079/198004361-281e6d6f-2f45-4397-85bc-87778d998855.jpg"  width="300"/>
 </a>
+
+<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/fotos-responsivas">
+    <img src="https://user-images.githubusercontent.com/28737079/198894427-32f3a748-bc1c-4a9e-8c8c-e155c213d755.jpg"  width="300"/>
+</a> -->
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/button-com-salto-alt">
+    <img src="https://user-images.githubusercontent.com/28737079/198894406-3acec46c-b36a-4f61-887f-d0bf73473aad.jpg"  width="300"/>
+</a>
+
+<!-- botao efeito 3D
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/button-com-salto">
+    <img src="https://user-images.githubusercontent.com/28737079/198894420-0958507c-1af1-4f22-a2ee-dfe194e6cae1.jpg"  width="300"/>
+</a> -->
+
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
