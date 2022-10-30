@@ -105,14 +105,13 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/198004361-281e6d6f-2f45-4397-85bc-87778d998855.jpg"  width="300"/>
 </a>
 
-<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/fotos-responsivas">
+<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/fotos-responsivas">
     <img src="https://user-images.githubusercontent.com/28737079/198894427-32f3a748-bc1c-4a9e-8c8c-e155c213d755.jpg"  width="300"/>
-</a>
+</a> -->
 
-<!-- botao neon - grid
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/button-com-salto-alt">
     <img src="https://user-images.githubusercontent.com/28737079/198894406-3acec46c-b36a-4f61-887f-d0bf73473aad.jpg"  width="300"/>
-</a> -->
+</a>
 
 <!-- botao efeito 3D
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/button-com-salto">
