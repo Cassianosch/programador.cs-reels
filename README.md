@@ -118,6 +118,10 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/198894420-0958507c-1af1-4f22-a2ee-dfe194e6cae1.jpg"  width="300"/>
 </a> -->
 
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-modo-claro-escuro-chartjs">
+    <img src="https://user-images.githubusercontent.com/28737079/199829229-1a20cf52-22ce-489a-958e-5202e87647ce.jpg"  width="300"/>
+</a>
+
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
