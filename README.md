@@ -122,9 +122,9 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/199854820-8fbc8b0a-28c0-4410-86f7-bf4458802c85.jpg"  width="300"/>
 </a>
 
-<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/carrosel-css-giratorio">
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/carrosel-css-giratorio">
     <img src="https://user-images.githubusercontent.com/28737079/199866388-0b43b8bb-54c1-49f3-b790-ddc22cf0e0b2png"  width="300"/>
-</a> -->
+</a>
 
 </p>
 
