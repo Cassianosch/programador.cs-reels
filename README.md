@@ -123,7 +123,7 @@ Click on the image to be redirected to the code:
 </a>
 
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/carrosel-css-giratorio">
-    <img src="https://user-images.githubusercontent.com/28737079/199866388-0b43b8bb-54c1-49f3-b790-ddc22cf0e0b2png"  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/199866388-0b43b8bb-54c1-49f3-b790-ddc22cf0e0b2.png"  width="300"/>
 </a>
 
 </p>
