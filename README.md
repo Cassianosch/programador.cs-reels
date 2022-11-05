@@ -125,6 +125,9 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/carrosel-css-giratorio">
     <img src="https://user-images.githubusercontent.com/28737079/199866388-0b43b8bb-54c1-49f3-b790-ddc22cf0e0b2.png"  width="300"/>
 </a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/bomba-nuclear">
+    <img src="https://user-images.githubusercontent.com/28737079/200124631-5294b7ec-d83c-4c95-a210-bf7bf517e3cc.jpg"  width="300"/>
+</a>
 
 </p>
 

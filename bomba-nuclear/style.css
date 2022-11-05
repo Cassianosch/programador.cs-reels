@@ -1,0 +1,55 @@
+body {
+  background-color: #212123;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.botao__bomba {
+  background-image: linear-gradient(
+    -120deg,
+    yellow 0,
+    yellow 10%,
+    #101 10%,
+    #101 20%,
+    yellow 20%,
+    yellow 30%,
+    #101 30%,
+    #101 40%,
+    yellow 40%,
+    yellow 50%,
+    #101 50%,
+    #101 60%,
+    yellow 60%,
+    yellow 70%,
+    #101 70%,
+    #101 80%,
+    yellow 80%,
+    yellow 90%,
+    #101 90%,
+    #101 100%
+  );
+  border: 5px solid #101;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 6px rgba(137, 128, 241, 0.25);
+}
+
+button {
+  font-family: "Audiowide";
+  color: #fff;
+  background-color: #000;
+  border: 2px solid rgb(137, 128, 241);
+  font-size: 20px;
+  display: inline-block;
+  padding: 0.4em 1em;
+  font-size: 200%;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
