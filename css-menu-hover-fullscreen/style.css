@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+nav a {
+  text-align: center;
+  text-decoration: none;
+}
+nav a span {
+  color: #333;
+  text-decoration: none;
+  font-size: 3em;
+  padding: 5px 20px;
+  display: inline-flex;
+  font-weight: 700;
+  transition: 0.5s;
+}
+nav:hover a span {
+  color: #0002;
+}
+nav a:hover span {
+  color: #000;
+  background: rgba(255, 255, 255, 1);
+}
+nav a span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: rgba(0, 0, 0, 0.1);
+  /* border-radius: 50%; */
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: letter-spacing 0.5s, left 0.5s;
+}
+nav a span:hover:before {
+  content: attr(data-texto);
+  opacity: 1;
+  left: 50%;
+  letter-spacing: 10px;
+  width: 1800px;
+  height: 1800px;
+}
+nav a:nth-child(6n + 1) span:before {
+  /* background: #81ecec; */
+  background: #ea738dff;
+}
+nav a:nth-child(6n + 2) span:before {
+  /* background: #ff7675; */
+  background: #fbeaeb;
+}
+nav a:nth-child(6n + 3) span:before {
+  /* background: #55efc4; */
+  background: #fee715ff;
+}
+nav a:nth-child(6n + 4) span:before {
+  /* background: #a29bfe; */
+  background: #e2d1f9;
+}
+nav a:nth-child(6n + 5) span:before {
+  /* background: #fd79a8; */
+  background: #ccf381;
+}
+nav a:nth-child(6n + 6) span:before {
+  /* background: #ffeaa7; */
+  background: #8aaae5;
+}
