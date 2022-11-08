@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com lâmpada no :hover - @programador.cs</title>
+    <style>
+        * {
+            font-family: "Verdana", cursive;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        html {
+            padding: 5rem;
+            background-color: #212123;
+            color: #EFEFEF;
+        }
+
+        .conteudo {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            gap: 4rem;
+        }
+
+        h2 {
+            opacity: .2;
+        }
+
+        .menu__geral {
+            flex: 1 0;
+            text-align: center;
+            position: relative;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+            letter-spacing: 1.4px;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            color: #fff;
+            padding: 8px 5px 9px 5px;
+            transition: all .5s ease;
+            position: relative;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+
+
+        }
+
+        a:hover {
+            transition: all .5s ease;
+            color: red;
+        }
+
+        a:before {
+            background-image: url("./ic-lampada.svg");
+            background-size: 100%;
+            height: 29px;
+            width: 40px;
+            top: -25px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            opacity: .8;
+        }
+
+        a:hover::before {
+            position: absolute;
+            content: '';
+            animation: imagemLampadinha .3s ease-in-out;
+        }
+
+        @keyframes imagemLampadinha {
+            0% {
+                opacity: 0;
+                height: 3px;
+                width: 3px;
+                top: 30px;
+            }
+
+            100% {
+                opacity: .8;
+                height: 29px;
+                width: 40px;
+                top: -25px;
+            }
+
+        }
+
+        a::after {
+            position: absolute;
+            content: '';
+            left: 4px;
+            bottom: 7px;
+            height: 1px;
+            width: 0;
+            padding: 0;
+            z-index: -1;
+            transition: all .5s ease;
+        }
+
+        a:hover::after {
+            background: rgba(255, 255, 255, 0.24);
+            opacity: 1;
+            width: 80%;
+            position: absolute;
+            content: '';
+            left: 4px;
+            bottom: 7px;
+            height: 1px;
+            width: 0;
+            padding: 0;
+            z-index: -1;
+            background: red;
+            transition: all .5s ease;
+            opacity: 1;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="conteudo">
+        <h2>MENU CSS</h2>
+        <nav class="menu__geral">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Sobre</a>
+                </li>
+                <li>
+                    <a href="#">PROGRAMADOR CS</a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+</body>
+
+</html>
