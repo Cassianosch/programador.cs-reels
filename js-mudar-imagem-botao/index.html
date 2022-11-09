@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito de troca imagem e botão com js - @programador.cs</title>
+    <style>
+        body {
+            background: #212123;
+            font-family: Verdana;
+        }
+
+        button {
+            all: unset;
+            padding: 1rem;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: .3s all ease;
+            margin-top: 2rem;
+            background-color: orangered;
+        }
+
+        img {
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="glitch">
+            <img class="js-imagem sol"
+                src="https://i.pinimg.com/originals/e1/3a/4d/e13a4d737425141353603f7a3edb73cd.jpg">
+        </div>
+        <button class="js-botao">Trocar Imagem</button>
+    </div>
+    <script>
+        let elementoBotao = document.querySelector('.js-botao');
+        let elementoImagem = document.querySelector('.js-imagem');
+        elementoBotao.addEventListener('click', function () {
+            if (elementoImagem.src === 'https://massago.ca/wp-content/uploads/2018/06/blog-post_rain.jpg') {
+                elementoImagem.src = 'https://i.pinimg.com/originals/e1/3a/4d/e13a4d737425141353603f7a3edb73cd.jpg';
+                elementoBotao.style.backgroundColor = 'orangered';
+            } else {
+                elementoImagem.src = 'https://massago.ca/wp-content/uploads/2018/06/blog-post_rain.jpg';
+                elementoBotao.style.backgroundColor = 'cornflowerblue';
+            }
+        });
+    </script>
+</body>
+
+</html>
