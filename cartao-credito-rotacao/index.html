@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Rotação - @programador.cs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        :root {
+            --cor-background: #f7f8fa;
+            --cor-branco: #fff;
+            --cor-texto: #241a52;
+            --cor-texto-fraco: #c4bfd4;
+            --cor-borda-input-desabilitado: #f2f1f6;
+            --cor-roxo-puro: #7e63ff;
+            --cor-placeholder: #837dff;
+            --cor-linear-1: #8dacff;
+            --cor-linear-2: #7c5dff;
+            --cor-background-desfocado: rgba(255, 255, 255, 0.15);
+            --cor-shadow-desfocado: rgba(0, 0, 0, 0.1);
+            --cor-borda-desfocado: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            background: #212123;
+        }
+
+
+        .imagem__background {
+            height: 100vh;
+            background-image: url('./imagens/ic-floresta.jpg');
+            background-size: 100% center;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: grid;
+            place-items: center;
+        }
+
+        .card__giratorio {
+            background-color: transparent;
+            width: 350px;
+            height: 220px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .card__giratorio-conteudo {
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card__giratorio:hover .card__giratorio-conteudo {
+            transform: rotateY(180deg);
+        }
+
+        .card__giratorio-conteudo--frente,
+        .card__giratorio-conteudo--traseira {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card__giratorio-conteudo--frente,
+        .card__giratorio-conteudo--traseira {
+            background-color: var(--cor-background-desfocado);
+            border-radius: 20px;
+            box-shadow: 0 4px 30px var(--cor-shadow-desfocado), inset 0 0 32px -11px white;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid var(--cor-borda-desfocado);
+        }
+
+        .logo-mastercadr {
+            width: 100px;
+            height: auto;
+            filter: drop-shadow(2px 2px 5px black);
+        }
+
+        .card__giratorio-conteudo--traseira .cartao__chip {
+            grid-area: cartao__chip;
+            width: 30px;
+        }
+
+        .card__giratorio-conteudo--traseira .cartao__logo-pc {
+            grid-area: cartao__logo-pc;
+            width: 50px;
+            height: auto;
+            filter: drop-shadow(2px 2px 5px black);
+        }
+
+        .card__giratorio-conteudo--traseira .cartao__numeral {
+            grid-area: cartao__numeral;
+            margin: 0;
+            font-weight: 100;
+            font-size: 1.3rem;
+        }
+
+        .card__giratorio-conteudo--traseira .cartao__validade {
+            grid-area: cartao__validade;
+            margin: 0;
+            font-weight: 100;
+            font-size: .85rem;
+        }
+
+        .card__giratorio-conteudo--traseira .cartao__nome-pessoa {
+            grid-area: cartao__nome-pessoa;
+            margin: 0;
+            font-weight: 100;
+            font-size: .85rem;
+        }
+
+        .card__giratorio-conteudo--traseira .cartao__conta-corrente {
+            grid-area: cartao__conta-corrente;
+            margin: 0;
+            font-weight: 100;
+            font-size: .85rem;
+        }
+
+        .card__giratorio-conteudo--traseira .cartao__logo-mastercadr {
+            grid-area: cartao__logo-mastercadr;
+            width: 50px;
+            height: auto;
+            filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .4));
+        }
+
+        .card__giratorio-conteudo--traseira {
+            color: white;
+            transform: rotateY(180deg);
+            padding: 10px;
+            display: grid;
+            text-align: left;
+            grid-template-columns: 30px 1fr 50px 50px 50px 50px;
+            grid-template-rows: 1fr 20px 20px 20px 20px;
+            grid-template-areas: ". cartao__chip . . cartao__logo-pc ."
+                ". cartao__numeral cartao__numeral cartao__numeral . ."
+                ". . . cartao__validade . ."
+                ". cartao__nome-pessoa cartao__nome-pessoa . . cartao__logo-mastercadr"
+                ". cartao__conta-corrente cartao__conta-corrente cartao__conta-corrente . cartao__logo-mastercadr";
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<main class="imagem__background">
+    <div class="card__giratorio">
+        <div class="card__giratorio-conteudo">
+            <div class="card__giratorio-conteudo--frente">
+                <img src="./imagens/ic-mastercard.png" alt="Logo mastercadr" class="logo-mastercadr">
+            </div>
+            <div class="card__giratorio-conteudo--traseira">
+                <img src="./imagens/ic-chip.png" alt="Chip cartão" class="cartao__chip">
+                <img src="./imagens/ic-logo.png" alt="Logo Programador CS" class="cartao__logo-pc">
+                <h2 class="cartao__numeral">4444 3333 2222 1111</h2>
+                <h3 class="cartao__validade">11/30</h3>
+                <h3 class="cartao__nome-pessoa">PROGRAMADOR CS</h3>
+                <h3 class="cartao__conta-corrente">0111 001 00011111-1</h3>
+                <img src="./imagens/ic-mastercard.png" alt="Logo mastercadr" class="cartao__logo-mastercadr">
+            </div>
+        </div>
+    </div>
+</main>
+
+</html>
