@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Botão com a cor perseguida - @programador.cs</title>
+</head>
+<style>
+    * {
+        font-family: "Verdana", sans-serif;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        letter-spacing: 0px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
+        margin: 0;
+    }
+
+    html {
+        padding: 3rem;
+        background-color: #212123;
+        color: #EFEFEF;
+    }
+
+    .botao__cor__perseguida {
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: #5782F5;
+        padding: 1.3rem 2.4rem;
+        border: none;
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        border-radius: 100px;
+    }
+
+    .botao__cor__perseguida span {
+        position: relative;
+        pointer-events: none;
+    }
+
+    .botao__cor__perseguida::before {
+        --size: 0;
+        content: "";
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        width: var(--size);
+        height: var(--size);
+        background: radial-gradient(circle closest-side, #EF3A7B, transparent);
+        transform: translate(-50%, -50%);
+        transition: width 0.2s ease, height 0.2s ease;
+    }
+
+    .botao__cor__perseguida:hover::before {
+        --size: 400px;
+    }
+</style>
+
+<body>
+    <button class="botao__cor__perseguida">
+        <span>>>>>> Programador CS <<<<< </span>
+    </button>
+    <script>
+        document.querySelector('.botao__cor__perseguida').onmousemove = (e) => {
+
+            const x = e.pageX - e.target.offsetLeft
+            const y = e.pageY - e.target.offsetTop
+
+            e.target.style.setProperty('--x', `${x}px`)
+            e.target.style.setProperty('--y', `${y}px`)
+
+        }
+    </script>
+</body>
+
+</html>
