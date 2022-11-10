@@ -137,6 +137,18 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/200449817-26aea741-24e1-4723-8c13-a70d0effab20.png"  width="300"/>
 </a>
 
+<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/cartao-credito-rotacao">
+    <img src="https://user-images.githubusercontent.com/28737079/201206407-87a5c270-d75d-4c2a-b29f-2084d102d942.jpg"  width="300"/>
+</a> -->
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-cards-com-hover">
+    <img src="https://user-images.githubusercontent.com/28737079/201206336-ec42cc1a-6ae9-40da-bb2c-c034087a94ed.jpg"  width="300"/>
+</a>
+
+<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botao-cor-perseguida">
+    <img src="https://user-images.githubusercontent.com/28737079/201209148-a218a23b-8e39-42cb-8847-eeb98fd57645.jpg"  width="300"/>
+</a> -->
+
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
