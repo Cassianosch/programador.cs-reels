@@ -113,10 +113,9 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/198894406-3acec46c-b36a-4f61-887f-d0bf73473aad.jpg"  width="300"/>
 </a>
 
-<!-- botao efeito 3D
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/button-com-salto">
     <img src="https://user-images.githubusercontent.com/28737079/198894420-0958507c-1af1-4f22-a2ee-dfe194e6cae1.jpg"  width="300"/>
-</a> -->
+</a>
 
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-modo-claro-escuro-chartjs">
     <img src="https://user-images.githubusercontent.com/28737079/199854820-8fbc8b0a-28c0-4410-86f7-bf4458802c85.jpg"  width="300"/>
@@ -137,9 +136,9 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/200449817-26aea741-24e1-4723-8c13-a70d0effab20.png"  width="300"/>
 </a>
 
-<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/cartao-credito-rotacao">
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/cartao-credito-rotacao">
     <img src="https://user-images.githubusercontent.com/28737079/201206407-87a5c270-d75d-4c2a-b29f-2084d102d942.jpg"  width="300"/>
-</a> -->
+</a>
 
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-cards-com-hover">
     <img src="https://user-images.githubusercontent.com/28737079/201206336-ec42cc1a-6ae9-40da-bb2c-c034087a94ed.jpg"  width="300"/>
