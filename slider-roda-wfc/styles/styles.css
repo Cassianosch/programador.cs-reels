@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap");
+:root {
+  --card-largura: 200px;
+  --card-altura: 300px;
+  --card-duracao-transicao: 800ms;
+  --card-transicao-tipo-saida: ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.787);
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+  border: none;
+}
+
+.conteudo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteudo__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+}
+.conteudo__background::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+  opacity: 0.8;
+}
+.conteudo__backgorund__imagem {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateX(var(--image-translate-offset, 0));
+  width: 100%;
+  height: 100%;
+  transition: transform 1000ms ease, opacity 1000ms ease;
+  overflow: hidden;
+}
+.conteudo__backgorund__imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.conteudo__backgorund__imagem.imagem--corrente {
+  opacity: 1;
+  --image-translate-offset: 0;
+}
+.conteudo__backgorund__imagem.imagem--anterior,
+.conteudo__backgorund__imagem.imagem--proxima {
+  opacity: 0;
+}
+.conteudo__backgorund__imagem.imagem--anterior {
+  --image-translate-offset: -25%;
+}
+.conteudo__backgorund__imagem.imagem--proxima {
+  --image-translate-offset: 25%;
+}
+
+.lista__cards {
+  position: absolute;
+  width: calc(3 * var(--card-largura));
+  height: auto;
+}
+.lista__cards__btn {
+  --btn-size: 35px;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+.lista__cards__btn.btn-esquerda {
+  left: -5%;
+}
+.lista__cards__btn.btn--direita {
+  right: -5%;
+}
+.lista__cards__btn .icone {
+  width: 100%;
+  height: 100%;
+}
+.lista__cards__btn .icone svg {
+  width: 100%;
+  height: 100%;
+}
+.lista__cards .conteudo__cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.card {
+  --card-translateY-offset: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateX(var(--card-translateX-offset))
+    translateY(var(--card-translateY-offset))
+    rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+  display: inline-block;
+  width: var(--card-largura);
+  height: var(--card-altura);
+  transition: transform var(--card-duracao-transicao)
+    var(--card-transicao-tipo-saida);
+  user-select: none;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+  transition: opacity var(--card-duracao-transicao)
+    var(--card-transicao-tipo-saida);
+  opacity: calc(1 - var(--opacity));
+}
+.imagem--card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.imagem--card img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card.card--corrente {
+  --current-card-rotation-offset: 0;
+  --card-translateX-offset: 0;
+  --card-rotation-offset: var(--current-card-rotation-offset);
+  --card-scale-offset: 1.2;
+  --opacity: 0.8;
+}
+.card.card--anterior {
+  --card-translateX-offset: calc(-1 * var(--card-largura) * 1.1);
+  --card-rotation-offset: 25deg;
+}
+.card.card--proximo {
+  --card-translateX-offset: calc(var(--card-largura) * 1.1);
+  --card-rotation-offset: -25deg;
+}
+.card.card--anterior,
+.card.card--proximo {
+  --card-scale-offset: 0.9;
+  --opacity: 0.4;
+}
+
+.listagem__informacoes {
+  position: absolute;
+  width: calc(3 * var(--card-largura));
+  height: var(--card-altura);
+  pointer-events: none;
+}
+.listagem__informacoes .conteudo__informacoes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.info {
+  margin-bottom: calc(var(--card-altura) / 8);
+  margin-left: calc(var(--card-largura) / 1.5);
+  transform: translateZ(2rem);
+  transition: transform var(--card-duracao-transicao)
+    var(--card-transicao-tipo-saida);
+}
+.info .texto {
+  position: relative;
+  font-family: "Poppins";
+  font-size: calc(var(--card-largura) * var(--texto-size-offset, 0.2));
+  white-space: nowrap;
+  color: #fff;
+  width: fit-content;
+}
+.info .nome,
+.info .localizacao {
+  texto-transform: uppercase;
+}
+.info .localizacao {
+  font-weight: 800;
+}
+.info .localizacao {
+  --mg-left: 40px;
+  --texto-size-offset: 0.12;
+  font-weight: 600;
+  margin-left: var(--mg r-left);
+  margin-bottom: calc(var(--mg-left) / 2);
+  padding-bottom: 0.8rem;
+}
+.info .localizacao::before,
+.info .localizacao::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  left: 0%;
+  transform: translate(calc(-1 * var(--mg-left)), -50%);
+}
+.info .localizacao::after {
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+}
+.info .descricao {
+  --texto-size-offset: 0.065;
+  font-weight: 500;
+}
+.info.informacoes__corrente {
+  opacity: 1;
+  display: block;
+}
+.info.informacoes__anterior,
+.info.informacoes__seguinte {
+  opacity: 0;
+  display: none;
+}
+
+.conteudo__carregamento {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 200;
+}
+
+.conteudo__carregamento .carregamento {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: 3px solid #009739;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  :root {
+    --card-largura: 250px;
+    --card-altura: 400px;
+  }
+}
