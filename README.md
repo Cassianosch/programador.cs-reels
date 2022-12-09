@@ -152,6 +152,10 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/204312378-abd3dd3c-0877-4934-91ba-bfacc687ab98.png"  width="300"/>
 </a>
 
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-roda-wfc">
+    <img src="https://user-images.githubusercontent.com/28737079/206733281-163b7920-355f-4482-978e-af5ef1701db2.jpg"  width="300"/>
+</a>
+
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
