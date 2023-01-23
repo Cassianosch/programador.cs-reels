@@ -160,6 +160,10 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/211218804-2c577721-e6b2-4ada-9d30-f4d7565607a3.jpg"  width="300"/>
 </a>
 
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/loader-css">
+    <img src="https://user-images.githubusercontent.com/28737079/214174505-b3d735b9-1b92-457b-b5c4-e79188712165.jpg"  width="300"/>
+</a>
+
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
