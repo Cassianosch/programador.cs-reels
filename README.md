@@ -165,7 +165,7 @@ Click on the image to be redirected to the code:
 </a>
 
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-redondo">
-    <img src="https://user-images.githubusercontent.com/28737079/215362400-0c037029-d4a0-45b1-b4e5-537f0b1710ef.jpg"  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/215362520-8c824c6e-e0e4-41e1-9df0-90915cf8c0b2.jpg"  width="300"/>
 </a>
 
 </p>
