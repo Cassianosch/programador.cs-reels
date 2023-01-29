@@ -1,0 +1,109 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #212123;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo-geral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo-geral-sliderGeral {
+  --larguraDoItem: 150px;
+  --alturaDoItem: 100px;
+  width: var(--larguraDoItem);
+  height: var(--alturaDoItem);
+  perspective: 1000px;
+}
+
+.sliderGeral {
+  --rotatey: 0;
+  font-size: 4rem;
+  position: relative;
+  transform: rotatey(var(--rotatey));
+  transform-style: preserve-3d;
+  user-select: none;
+  cursor: grab;
+}
+
+.sliderGeral-card {
+  opacity: 0.97;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: opacity 0.5s;
+}
+
+.sliderGeral-card:hover {
+  opacity: 1;
+}
+.sliderGeral-card h1 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.sliderGeral,
+.sliderGeral-card {
+  width: 100%;
+  height: 100%;
+}
+
+.sliderGeral-card:nth-child(1) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #0093e9, #80d0c7);
+}
+
+.sliderGeral-card:nth-child(2) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #00dbde, #fc00ff);
+}
+
+.sliderGeral-card:nth-child(3) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #50d990, #d4d054);
+}
+.sliderGeral-card:nth-child(4) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #cf91ff, #5782f5);
+}
+
+.sliderGeral-card:nth-child(5) {
+  --rotate: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #642b73, #c6426e);
+}
+
+.sliderGeral-card:nth-child(6) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #d9afd9, #97d9e1);
+}
+
+@media screen and (min-width: 576px) {
+  .conteudo-geral-sliderGeral {
+    --larguraDoItem: 250px;
+    --alturaDoItem: 200px;
+  }
+}
