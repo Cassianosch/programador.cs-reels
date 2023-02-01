@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #0093e9, #80d0c7);
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.carrosel-geral {
+  position: relative;
+  width: 23rem;
+  height: 23rem;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.conteudo-geral {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(calc(var(--compensacao) * 50deg))
+    scaleY(calc(1 + var(--abs-compensacao) * -0.4))
+    translateZ(calc(var(--abs-compensacao) * -30rem))
+    translateX(calc(var(--direcao) * -5rem));
+  filter: blur(calc(var(--abs-compensacao) * 1rem));
+  transition: all 0.3s ease-out;
+}
+
+.cartao {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: hsl(200deg, 40%, calc(100% - var(--abs-compensacao) * 50%));
+  border-radius: 1rem;
+  color: #9ca3af;
+  text-align: justify;
+  transition: all 0.3s ease-out;
+}
+
+/* .conteudo-geral:nth-child(1) .cartao {
+  background: linear-gradient(-229deg, #0093e9, #80d0c7);
+}
+
+.conteudo-geral:nth-child(2) .cartao {
+  background: linear-gradient(-229deg, #00dbde, #fc00ff);
+}
+
+.conteudo-geral:nth-child(3) .cartao {
+  background: linear-gradient(-229deg, #50d990, #d4d054);
+}
+.conteudo-geral:nth-child(4) .cartao {
+  background: linear-gradient(-229deg, #cf91ff, #5782f5);
+}
+
+.conteudo-geral:nth-child(5) .cartao {
+  background: linear-gradient(-229deg, #642b73, #c6426e);
+}
+
+.conteudo-geral:nth-child(6) .cartao {
+  background: linear-gradient(-229deg, #d9afd9, #97d9e1);
+} */
+
+.cartao h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.7em;
+  color: #1f2937;
+}
+.cartao p,
+.cartao h2 {
+  transition: all 0.3s ease-out;
+  opacity: var(--ativo);
+  user-select: none;
+}
+
+.navegacao {
+  color: white;
+  font-size: 5rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  z-index: 2;
+  cursor: pointer;
+  user-select: none;
+  background: unset;
+  border: unset;
+}
+.navegacao.esquerda {
+  transform: translateX(-100%) translatey(-50%);
+}
+.navegacao.direita {
+  right: 0;
+  transform: translateX(100%) translatey(-50%);
+}
