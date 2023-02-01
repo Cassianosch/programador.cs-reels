@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loaders CSS - @programador.cs</title>
+  <link rel="stylesheet" href="./estilo-geral.css">
+  <link rel="stylesheet" href="./estilo-redondo.css">
+  <link rel="stylesheet" href="./estilo-quadrado.css">
+  <link rel="stylesheet" href="./estilo-caracol.css">
+  <link rel="stylesheet" href="./estilo-tubos.css">
+  <link rel="stylesheet" href="./estilo-escadinha.css">
+  <link rel="stylesheet" href="./estilo-jogo-tabuleiro.css">
+
+</head>
+
+<body>
+  <div class="conteudo">
+    <div class="redondo">
+      <div class="circulo_1"></div>
+      <div class="circulo_2"></div>
+      <div class="circulo_3"></div>
+      <div class="circulo_4"></div>
+    </div>
+    <div class="quadrado">
+      <div class="caixa_1"></div>
+      <div class="caixa_2"></div>
+      <div class="caixa_3"></div>
+    </div>
+
+    <div class="escadinha">
+      <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+        <circle class="escadinha__anel escadinha__anel--a" cx="120" cy="120" r="105" fill="none" stroke="#000"
+          stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+        <circle class="escadinha__anel escadinha__anel--b" cx="120" cy="120" r="35" fill="none" stroke="#000"
+          stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+        <circle class="escadinha__anel escadinha__anel--c" cx="85" cy="120" r="70" fill="none" stroke="#000"
+          stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        <circle class="escadinha__anel escadinha__anel--d" cx="155" cy="120" r="70" fill="none" stroke="#000"
+          stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+      </svg>
+    </div>
+
+    <section class="tubos">
+      <div style="--i:0" class="tubo__interno">
+      </div>
+      <div style="--i:1" class="tubo__interno">
+      </div>
+      <div style="--i:2" class="tubo__interno">
+      </div>
+      <div style="--i:3" class="tubo__interno">
+      </div>
+      <div style="--i:4" class="tubo__interno">
+      </div>
+    </section>
+
+    <div class="escadinha">
+      <div class="circulo"></div>
+      <div class="circulo"></div>
+      <div class="circulo"></div>
+      <div class="sombrola"></div>
+      <div class="sombrola"></div>
+      <div class="sombrola"></div>
+    </div>
+
+    <div class="jogo-tabuleiro">
+      <div class="jogo-tabuleiro-square"></div>
+      <div class="jogo-tabuleiro-square"></div>
+      <div class="jogo-tabuleiro-square"></div>
+      <div class="jogo-tabuleiro-square"></div>
+      <div class="jogo-tabuleiro-square"></div>
+      <div class="jogo-tabuleiro-square"></div>
+      <div class="jogo-tabuleiro-square"></div>
+    </div>
+  </div>
+</body>
+
+</html>
