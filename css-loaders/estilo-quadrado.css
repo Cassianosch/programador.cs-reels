@@ -1,0 +1,41 @@
+.quadrado {
+  perspective: 1000px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.caixa_1,
+.caixa_2,
+.caixa_3 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.caixa_1 {
+  background-color: hotpink;
+  animation: animacaoRotacao 3s ease-in-out infinite;
+}
+
+.caixa_2 {
+  background-color: cornflowerblue;
+  animation: animacaoRotacao 2s ease-in-out infinite reverse;
+  transform: rotateY(90deg);
+}
+
+.caixa_3 {
+  background-color: yellowgreen;
+  animation: animacaoRotacao 4s ease-in-out infinite;
+  transform: rotateX(90deg);
+}
+
+@keyframes animacaoRotacao {
+  from {
+    transform: rotateX(0) rotateY(0);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}

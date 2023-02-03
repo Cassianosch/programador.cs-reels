@@ -1,0 +1,69 @@
+.redondo {
+  perspective: 500px;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto;
+}
+
+.circulo_1,
+.circulo_2,
+.circulo_3,
+.circulo_4 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circulo_1 {
+  background-color: hotpink;
+  animation: animacaoEscala 3s ease-in-out infinite alternate;
+}
+
+.circulo_2 {
+  background-color: cornflowerblue;
+  animation: animacaoRotacao 3s linear infinite;
+  animation-delay: 1s;
+}
+
+.circulo_3 {
+  background-color: yellowgreen;
+  animation: animacaoEscala 3s ease-in-out infinite alternate;
+  animation-delay: 2s;
+}
+
+.circulo_4 {
+  background-color: orangered;
+  animation: animacaoRotacaoEscala 4s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+@keyframes animacaoEscala {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes animacaoRotacao {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes animacaoRotacaoEscala {
+  from {
+    transform: rotateX(0deg) scale(1);
+  }
+
+  to {
+    transform: rotateX(360deg) scale(1.5);
+  }
+}
