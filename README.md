@@ -167,6 +167,12 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-redondo">
     <img src="https://user-images.githubusercontent.com/28737079/215362520-8c824c6e-e0e4-41e1-9df0-90915cf8c0b2.jpg"  width="300"/>
 </a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-react">
+    <img src="https://user-images.githubusercontent.com/28737079/217677874-ea2a1445-4831-4f80-b35d-36d2571605de.jpg"  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/loader-css">
+    <img src="https://user-images.githubusercontent.com/28737079/217677897-1ceaa659-c881-4937-92cc-020d49714217.jpg"  width="300"/>
+</a>
 
 </p>
 
