@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cards Hover com Efeito - @programador.cs</title>
+</head>
+<style>
+    * {
+        font-family: "Verdana", sans-serif;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        letter-spacing: 0px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
+        margin: 0;
+    }
+
+    html {
+        padding: 3rem;
+        background-color: #212123;
+        color: #EFEFEF;
+    }
+
+    .conteudo__geral {
+        display: flex;
+        perspective: 10px;
+        transform: perspective(300px) rotateX(20deg);
+        will-change: perspective;
+        perspective-origin: center center;
+        transition: all 1.3s ease-out;
+        justify-content: center;
+        transform-style: preserve-3d;
+    }
+
+    .conteudo__geral:hover {
+        perspective: 1000px;
+        transition: all 1.3s ease-in;
+        transform: perspective(10000px) rotateX(0deg);
+    }
+
+    .conteudo__geral:hover .titulo__elemento {
+        opacity: 1;
+    }
+
+    .conteudo__geral:hover>div {
+        opacity: 1;
+        transition-delay: 0s;
+    }
+
+    .conteudo__geral:hover .titulo__inicial {
+        opacity: 0;
+    }
+
+    .elemento__2,
+    .elemento__3,
+    .elemento__4,
+    .elemento__1,
+    .elemento__5 {
+        width: 200px;
+        height: 150px;
+        transform-style: preserve-3d;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+        opacity: 0;
+        transition: all .3s ease;
+        transition-delay: 1s;
+        position: relative;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #f3f5f724;
+        cursor: pointer;
+        background-blend-mode: color-burn;
+
+    }
+
+    .elemento__2:hover,
+    .elemento__3:hover,
+    .elemento__4:hover,
+    .elemento__1:hover,
+    .elemento__5:hover {
+        box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+        background-color: rgb(252, 252, 255, 0.5);
+    }
+
+    .titulo__elemento {
+        transform: translateY(30px);
+        opacity: 0;
+        transition: all .3s ease;
+        bottom: 0;
+        left: 5px;
+        position: absolute;
+        will-change: transform;
+        color: #fff;
+        text-shadow: 0 0 5px rgba(100, 100, 255, .6)
+    }
+
+    .elemento__fotos {
+        background-position-y: 15px;
+    }
+
+    .elemento__1 {
+        transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+        background-image: url('./ic-html.svg');
+    }
+
+    .elemento__2 {
+        transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+        background-image: url('./ic-css.svg');
+    }
+
+    .elemento__3 {
+        opacity: 1;
+        background-image: url('./ic-logo.png');
+        background-size: 100px;
+        background-position-y: 25px;
+    }
+
+    .elemento__4 {
+        transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+        background-image: url('./ic-js.svg');
+    }
+
+    .elemento__5 {
+        transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+        background-image: url('./ic-git.svg');
+    }
+
+    .titulo__inicial {
+        font-weight: 300;
+        font-size: 2rem;
+        color: #fff;
+        transition: all .6s ease;
+        width: 100%;
+        height: 100%;
+        background-color: #303050;
+        background-image: radial-gradient(circle at center top, #cce, #33a);
+        border-radius: 10px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="conteudo__geral">
+        <div class="elemento__fotos elemento__1">
+            <div class="titulo__elemento">HTML</div>
+        </div>
+        <div class="elemento__fotos elemento__2">
+            <div class="titulo__elemento">CSS</div>
+        </div>
+        <div class="elemento__fotos elemento__3">
+            <div class="titulo__inicial"><span>Passe o mouse</span></div>
+            <div class="titulo__elemento">Programador CS</div>
+        </div>
+        <div class="elemento__fotos elemento__4">
+            <div class="titulo__elemento">JS</div>
+        </div>
+        <div class="elemento__fotos elemento__5">
+            <div class="titulo__elemento">GIT</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
