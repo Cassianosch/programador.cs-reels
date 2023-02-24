@@ -173,6 +173,9 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/loader-css">
     <img src="https://user-images.githubusercontent.com/28737079/217677897-1ceaa659-c881-4937-92cc-020d49714217.jpg"  width="300"/>
 </a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-cards-hover-effects">
+    <img src="https://user-images.githubusercontent.com/28737079/221212428-8b37b8b3-2b9e-467e-a0b4-b71fdcd62105.jpg"  width="300"/>
+</a>
 
 </p>
 
