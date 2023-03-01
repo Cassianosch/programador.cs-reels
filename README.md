@@ -173,8 +173,11 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/loader-css">
     <img src="https://user-images.githubusercontent.com/28737079/217677897-1ceaa659-c881-4937-92cc-020d49714217.jpg"  width="300"/>
 </a>
-<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-cards-com-hover">
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-cards-hover-effect">
     <img src="https://user-images.githubusercontent.com/28737079/221212428-8b37b8b3-2b9e-467e-a0b4-b71fdcd62105.jpg"  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-the-last-of-us">
+    <img src="https://user-images.githubusercontent.com/28737079/222271744-1b4c54d5-4008-4811-9f58-7994a05df21f.jpg"  width="300"/>
 </a>
 
 </p>
