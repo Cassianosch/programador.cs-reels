@@ -170,8 +170,8 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-react">
     <img src="https://user-images.githubusercontent.com/28737079/217677874-ea2a1445-4831-4f80-b35d-36d2571605de.jpg"  width="300"/>
 </a>
-<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/loader-css">
-    <img src="https://user-images.githubusercontent.com/28737079/217677897-1ceaa659-c881-4937-92cc-020d49714217.jpg"  width="300"/>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-loaders">
+    <img src="https://user-images.githubusercontent.com/28737079/225671656-2ed36594-fd04-4d67-9fc1-4d59ef8ff5f9.png" width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-cards-hover-effect">
     <img src="https://user-images.githubusercontent.com/28737079/221212428-8b37b8b3-2b9e-467e-a0b4-b71fdcd62105.jpg"  width="300"/>
