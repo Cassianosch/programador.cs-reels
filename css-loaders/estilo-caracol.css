@@ -1,8 +1,8 @@
-.escadinha {
+.caracol {
   display: flex;
 }
 
-.escadinha svg {
+.caracol svg {
   margin: 0 auto;
 }
 
@@ -11,25 +11,25 @@
   height: 6em;
 }
 
-.escadinha__anel {
+.caracol__anel {
   animation: animacaoAnelA 2s linear infinite;
 }
 
-.escadinha__anel--a {
+.caracol__anel--a {
   stroke: #f42f25;
 }
 
-.escadinha__anel--b {
+.caracol__anel--b {
   animation-name: animacaoAnelB;
   stroke: #f49725;
 }
 
-.escadinha__anel--c {
+.caracol__anel--c {
   animation-name: animacaoAnelC;
   stroke: #255ff4;
 }
 
-.escadinha__anel--d {
+.caracol__anel--d {
   animation-name: animacaoAnelD;
   stroke: #f42582;
 }
