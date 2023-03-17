@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212123;
+  margin-top: 4rem;
+}
+
+.celular {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.celular img {
+  width: auto;
+  height: 500px;
+}
+
+.conteudo__principal {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo__interno {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.8rem;
+  height: 100%;
+  width: 100%;
+}
+
+.rodateto__ligacao {
+  width: 280px;
+  height: 90px;
+  border-radius: 1.2rem;
+  background: rgba(19, 19, 19, 0.836);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  padding: 1rem;
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0.2rem 0.5rem rgba(20, 20, 20, 0.322);
+  box-shadow: 0px 0.2rem 0.5rem rgba(20, 20, 20, 0.322);
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  -webkit-animation: saida-caixa-telefone 4s infinite;
+  animation: saida-caixa-telefone 4s infinite;
+  position: relative;
+}
+
+.rodateto__ligacao::before {
+  content: "";
+  background-color: #111111e3;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+  text-align: center;
+}
+
+.rodateto__ligacao--numero::after {
+  content: "3928";
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(20%, rgb(206, 206, 206)),
+    color-stop(40%, rgb(255, 255, 255)),
+    color-stop(60%, rgb(255, 255, 255)),
+    color-stop(80%, rgb(206, 206, 206))
+  );
+  background: linear-gradient(
+    to right,
+    rgb(206, 206, 206) 20%,
+    rgb(255, 255, 255) 40%,
+    rgb(255, 255, 255) 60%,
+    rgb(206, 206, 206) 80%
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: brilho-caixa-telefone 1.5s linear infinite;
+  animation: brilho-caixa-telefone 1.5s linear infinite;
+}
+
+.rodateto__ligacao--descricao {
+  font-weight: normal;
+  font-size: 14px;
+  color: #727272;
+}
+
+.caixa__botao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+}
+
+.botao__ligacao {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.botao__ligacao:hover {
+  cursor: auto;
+}
+
+.botao__ligacao .svg__botao__ligacao {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+}
+
+.desligar {
+  background-color: #ec5445;
+}
+
+.desligar .svg__botao__ligacao {
+  -webkit-transform: rotate(136deg);
+  -ms-transform: rotate(136deg);
+  transform: rotate(136deg);
+}
+
+.atender {
+  background-color: #68cd66;
+}
+
+.formulario__card {
+  width: 280px;
+  height: 350px;
+  border-radius: 1.2rem;
+  background-color: #fff;
+  padding: 1.3rem;
+  color: #212121;
+  text-align: center;
+  position: relative;
+}
+
+.formulario__card--titulo {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.2rem;
+}
+
+.formulario__card--descricao {
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+
+.formulario__card-input {
+  all: unset;
+}
+
+.formulario__card-caixa-rodape {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.formulario__card-input {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2rem;
+  text-align: start;
+  -webkit-transform: translateX(36px);
+  -ms-transform: translateX(36px);
+  transform: translateX(36px);
+  position: absolute;
+  z-index: 3;
+  background-color: transparent;
+}
+
+.formulario__card-input-background {
+  content: "";
+  width: 240px;
+  height: 60px;
+  margin: auto;
+  inset: 0;
+  bottom: 10px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 12px;
+  background-color: rgba(206, 206, 206, 0.664);
+}
+
+.call-again {
+  color: #5e5e5e;
+  font-size: 14px;
+}
+
+.call-again:hover {
+  cursor: pointer;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.botao__submit {
+  position: absolute;
+  width: 180px;
+  margin: auto;
+  color: white;
+  border: none;
+  background-color: #212121;
+  font-size: 1.2rem;
+  border-radius: 0.8rem;
+  padding: 0.8rem 3.5rem;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.botao__submit:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.botao__submit:active {
+  opacity: 0.9;
+  -webkit-transform: scale(95%);
+  -ms-transform: scale(95%);
+  transform: scale(95%);
+}
+
+@-webkit-keyframes saida-caixa-telefone {
+  0%,
+  15%,
+  100% {
+    color: #fff;
+    -webkit-transform: scale(72%);
+    transform: scale(72%);
+  }
+
+  16%,
+  98% {
+    color: rgba(255, 255, 255, 0.295);
+    -webkit-transform: scale(100%);
+    transform: scale(100%);
+  }
+}
+
+@keyframes saida-caixa-telefone {
+  0%,
+  15%,
+  100% {
+    color: #fff;
+    -webkit-transform: scale(72%);
+    transform: scale(72%);
+  }
+
+  16%,
+  98% {
+    color: rgba(255, 255, 255, 0.295);
+    -webkit-transform: scale(100%);
+    transform: scale(100%);
+  }
+}
+
+@-webkit-keyframes brilho-caixa-telefone {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes brilho-caixa-telefone {
+  to {
+    background-position: 200% center;
+  }
+}
