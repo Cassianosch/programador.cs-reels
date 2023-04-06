@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Botões verticais - @programador.cs</title>
+   <link rel="stylesheet" href="./style.css">
+
+   <style>
+      body {
+         margin: 2rem;
+         background-color: #212123;
+         box-sizing: border-box;
+         font-family: 'Verdana';
+      }
+
+      .conteudo {
+         width: 300px;
+         height: 254px;
+         border-radius: 4px;
+         background: #212123;
+         display: flex;
+         gap: 5px;
+         padding: .4em;
+      }
+
+      .conteudo p {
+         height: 100%;
+         flex: 1;
+         overflow: hidden;
+         cursor: pointer;
+         border-radius: 2px;
+         transition: all .5s;
+         background: #212121;
+         border: 1px solid #8B80F9;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .conteudo p:hover {
+         flex: 4;
+      }
+
+      .conteudo p span {
+         min-width: 17em;
+         padding: .5em;
+         text-align: center;
+         transform: rotate(90deg);
+         transition: all .5s;
+         text-transform: uppercase;
+         color: #8B80F9;
+         letter-spacing: .1em;
+      }
+
+      .conteudo p:hover span {
+         transform: rotate(0);
+         color: #efefef;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="conteudo">
+      <p><span>Passe o mouse</span></p>
+      <p><span>Programador CS</span></p>
+      <p><span>Passe o mouse</span></p>
+   </div>
+</body>
+
+</html>
