@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider com Efeito Deslizante - @programador.cs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="0" height="0" viewBox="0 0 1366 768" xml:space="preserve">
+        <defs>
+            <filter id="blur0">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0 0" />
+            </filter>
+            <filter id="blur1">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5 0" />
+            </filter>
+            <filter id="blur2">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="12 0" />
+            </filter>
+            <filter id="blur3">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20 0" />
+            </filter>
+            <filter id="blur4">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="35 1" />
+            </filter>
+            <filter id="blur5">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="50 1" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div class="carrosel">
+        <div>
+            <img src="./imagens/ic-1.jpg" />
+        </div>
+        <div>
+            <img src="./imagens/ic-2.jpg" />
+        </div>
+        <div>
+            <img src="./imagens/ic-3.jpg" />
+        </div>
+        <div>
+            <img src="./imagens/ic-4.jpg" />
+        </div>
+        <div>
+            <img src="./imagens/ic-5.jpg" />
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
