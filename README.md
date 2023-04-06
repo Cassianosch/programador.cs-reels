@@ -183,6 +183,38 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/225787182-e70c5c49-d6ab-43d8-a01d-cb86109b8824.jpg"  width="300"/>
 </a>
 
+<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/botoes-pascoa">
+    <img src=""  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/botoes-verticais-css">
+    <img src=""  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-borda-dancante-css">
+    <img src=""  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-redes-css">
+    <img src=""  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-usuario">
+    <img src=""  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botao-ultrapassando">
+    <img src=""  width="300"/>
+</a> -->
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/icones-sociais-css">
+    <img src="https://user-images.githubusercontent.com/28737079/230491843-92dcd034-ac69-478d-96a9-c302b8daaaca.jpg"  width="300"/>
+</a>
+
+<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/menu-mobile-rodape-css">
+    <img src=""  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-efeito-deslizante">
+    <img src=""  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/texto-efeito-kill-bill">
+    <img src=""  width="300"/>
+</a> -->
+
 </p>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
