@@ -1,0 +1,92 @@
+body {
+  /* font-family: "Gilroy ExtraBold", system-ui, sans-serif; */
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: linear-gradient(45deg, #50d990, #d4d054);
+  transform-style: preserve-3d;
+  transform: perspective(60rem);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo__menu--listagem {
+  font-size: 4.25rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotateX(-10deg) rotateY(20deg);
+}
+
+.conteudo__menu--listagem-item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+}
+.conteudo__menu--listagem-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 49%;
+  left: -10%;
+  right: -10%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: #ff2c75;
+  transform: scale(0);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  z-index: 1;
+}
+
+.texto__mascara {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: #ff2c75;
+  top: 0;
+  height: 49%;
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+.texto__mascara span {
+  display: block;
+}
+
+.texto__mascara + .texto__mascara {
+  top: 48.9%;
+  height: 51.1%;
+}
+.texto__mascara + .texto__mascara span {
+  transform: translateY(-49%);
+}
+
+.conteudo__menu--listagem-item:hover .texto__mascara,
+.conteudo__menu--listagem-item:active .texto__mascara {
+  color: #fff;
+  transform: skewX(12deg) translateX(5px);
+}
+.conteudo__menu--listagem-item:hover .texto__mascara + .texto__mascara,
+.conteudo__menu--listagem-item:active .texto__mascara + .texto__mascara {
+  transform: skewX(12deg) translateX(-5px);
+}
+.conteudo__menu--listagem-item:hover::before,
+.conteudo__menu--listagem-item:active::before {
+  transform: scale(1);
+}

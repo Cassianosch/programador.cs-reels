@@ -1,0 +1,194 @@
+body {
+  background-color: #212123;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: Verdana;
+}
+
+.cartao {
+  overflow: visible;
+  width: 190px;
+  height: 254px;
+}
+
+.conteudo {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.frenteira,
+.traseira {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.traseira {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.traseira::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #8b80f9,
+    #8b80f9,
+    #8b80f9,
+    #8b80f9,
+    transparent
+  );
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.traseira-conteudo {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.traseira-conteudo img {
+  width: 60px;
+  height: 60px;
+}
+
+.cartao:hover .conteudo {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.frenteira {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.frenteira .frenteira-conteudo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.frenteira-conteudo .distintivo {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.descricao {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.titulo {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo p {
+  width: 50%;
+}
+
+.cartao-rodape {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.frenteira .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circulos__dancante {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #8b80f9;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#rodape {
+  background-color: #efefef;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#direita {
+  background-color: #27c93f;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

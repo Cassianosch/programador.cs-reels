@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap);
+
+body {
+  background-color: #212123;
+}
+.conteudo {
+  display: grid;
+  font-family: Open Sans, sans-serif;
+  height: 100vh;
+  place-items: center;
+}
+.conteudo .card {
+  background: #212123;
+  border-radius: 10px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1rem;
+  width: 300px;
+}
+.conteudo .card .cabecalho {
+  background: #efefef;
+  height: 100px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.conteudo .card .corpo {
+  color: #959595;
+  display: flex;
+  flex-direction: column;
+}
+.conteudo .card .corpo .img__usuario {
+  align-self: center;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin-top: -45px;
+  max-width: 80px;
+}
+.conteudo .card .corpo .nome,
+.conteudo .card .corpo .tipo {
+  align-self: center;
+  margin: 0;
+}
+.conteudo .card .corpo .nome {
+  color: #efefef;
+}
+.conteudo .card .corpo .redes__sociais {
+  display: grid;
+  grid-template-rows: repeat(3, 35px);
+  justify-content: center;
+  margin-top: 1rem;
+}
+.conteudo .card .corpo .redes__sociais a {
+  align-items: center;
+  color: #959595;
+  display: flex;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.conteudo .card .corpo .redes__sociais a:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.conteudo .card .corpo .redes__sociais a img {
+  margin-right: 5px;
+  width: 30px;
+}

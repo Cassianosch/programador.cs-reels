@@ -1,0 +1,193 @@
+body {
+  background-color: #212123;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: Verdana;
+}
+
+.conteudo__menu__rodape {
+  border-radius: 6px;
+  width: 270px;
+  background: #fff;
+  padding: 0 4px;
+  box-shadow: 0 4px 12px -1px rgba(18, 22, 33, 0.08);
+  position: relative;
+}
+.conteudo__menu__rodape ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.conteudo__menu__rodape ul li {
+  position: relative;
+  flex-grow: 1;
+}
+.conteudo__menu__rodape ul li a {
+  cursor: pointer;
+  display: table;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.conteudo__menu__rodape ul li a div,
+.conteudo__menu__rodape ul li a span,
+.conteudo__menu__rodape ul li a svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  -webkit-backface-visibility: hidden;
+}
+.conteudo__menu__rodape ul li a div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -84%);
+}
+.conteudo__menu__rodape ul li a div span {
+  width: 20px;
+  bottom: 0;
+  left: 0;
+  transform-origin: 50% 50%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  background: #fff;
+  transform: scale(0.94);
+  transform-origin: 0 100%;
+  -webkit-animation: down 0.3s linear forwards;
+  animation: down 0.3s linear forwards;
+}
+.conteudo__menu__rodape ul li a div span svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.conteudo__menu__rodape ul li a div span:first-child {
+  height: 20px;
+}
+.conteudo__menu__rodape ul li a div span:first-child svg {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+  fill: #99a3ba;
+  stroke: #99a3ba;
+}
+.conteudo__menu__rodape ul li a div span:last-child {
+  height: 0;
+  z-index: 5;
+  transition: height 0.25s ease;
+}
+.conteudo__menu__rodape ul li a div span:last-child svg {
+  fill: #8b80f9;
+  stroke: #8b80f9;
+}
+.conteudo__menu__rodape ul li a strong {
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 28px;
+  color: #99a3ba;
+  transition: all 0.3s ease;
+}
+.conteudo__menu__rodape ul li a:hover div span:first-child svg {
+  fill: #6c7486;
+  stroke: #6c7486;
+}
+.conteudo__menu__rodape ul li.item__ativo a {
+  z-index: 5;
+}
+.conteudo__menu__rodape ul li.item__ativo a div span {
+  -webkit-animation: high 0.35s linear forwards 0.05s;
+  animation: high 0.35s linear forwards 0.05s;
+}
+.conteudo__menu__rodape ul li.item__ativo a div span:last-child {
+  height: 20px;
+  transition: height 0.3s ease 0.25s;
+}
+.conteudo__menu__rodape ul li.item__ativo a strong {
+  opacity: 0;
+  transform: scale(0.6);
+}
+.conteudo__menu__rodape em {
+  --offset: 0;
+  border-radius: 50%;
+  display: block;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  bottom: 13px;
+  left: 4px;
+  margin: 0 0 0 -3px;
+  z-index: 4;
+  transition: transform 0.4s ease;
+  background: #ed8607;
+  transform: translateX(var(--offset));
+}
+
+@-webkit-keyframes high {
+  0% {
+    transform: rotate(0deg) scale(0.94);
+  }
+  33% {
+    transform: rotate(8deg);
+  }
+  66% {
+    transform: rotate(8deg) translateY(-1px);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translateY(-1px);
+  }
+}
+
+@keyframes high {
+  0% {
+    transform: rotate(0deg) scale(0.94);
+  }
+  33% {
+    transform: rotate(8deg);
+  }
+  66% {
+    transform: rotate(8deg) translateY(-1px);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translateY(-1px);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    transform: rotate(0deg) scale(1) translateY(-1px);
+  }
+  33% {
+    transform: rotate(8deg);
+  }
+  66% {
+    transform: rotate(8deg) translateY(0);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.94) translateY(0);
+  }
+}
+@keyframes down {
+  0% {
+    transform: rotate(0deg) scale(1) translateY(-1px);
+  }
+  33% {
+    transform: rotate(8deg);
+  }
+  66% {
+    transform: rotate(8deg) translateY(0);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.94) translateY(0);
+  }
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
