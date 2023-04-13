@@ -183,36 +183,37 @@ Click on the image to be redirected to the code:
     <img src="https://user-images.githubusercontent.com/28737079/225787182-e70c5c49-d6ab-43d8-a01d-cb86109b8824.jpg"  width="300"/>
 </a>
 
+
 <!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/botoes-pascoa">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896068-f430e93e-1cd0-4947-940d-d1b8eaf0267e.png"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/botoes-verticais-css">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896148-a99aee7b-4306-44e1-af55-fa06ce336794.png"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-borda-dancante-css">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896303-b5ed8825-f7fc-4b55-8fa9-2eb459e842f3.png"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-redes-css">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896366-ce9517ef-325b-44ea-81db-6fb5ebcb4b53.png"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-usuario">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896427-391bcffa-21ab-4521-9677-a71899cdf76b.png"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botao-ultrapassando">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896515-d274da5d-c1ec-465b-a492-725219282b44.png"  width="300"/>
 </a> -->
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/icones-sociais-css">
     <img src="https://user-images.githubusercontent.com/28737079/230491843-92dcd034-ac69-478d-96a9-c302b8daaaca.jpg"  width="300"/>
 </a>
 
 <!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/menu-mobile-rodape-css">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896795-eea19989-a13d-4c21-bb0b-4709a94a7f38.png"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-efeito-deslizante">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896874-5eed0b12-ee34-4b76-9716-39e4fda02be4.PNG"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/texto-efeito-kill-bill">
-    <img src=""  width="300"/>
+    <img src="https://user-images.githubusercontent.com/28737079/231896952-23b7bfd5-51e9-42b2-b8c0-92f57554b599.PNG"  width="300"/>
 </a> -->
 
 </p>
