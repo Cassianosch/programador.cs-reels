@@ -50,7 +50,7 @@ body {
   height: 4px;
   border-radius: 4px;
   margin-top: -2px;
-  background: #ff2c75;
+  background: #8b80f9;
   transform: scale(0);
   transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
   z-index: 1;
@@ -60,7 +60,7 @@ body {
   display: block;
   position: absolute;
   overflow: hidden;
-  color: #ff2c75;
+  color: #8b80f9;
   top: 0;
   height: 49%;
   transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
