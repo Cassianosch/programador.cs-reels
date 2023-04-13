@@ -167,54 +167,66 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-redondo">
     <img src="https://user-images.githubusercontent.com/28737079/215362520-8c824c6e-e0e4-41e1-9df0-90915cf8c0b2.jpg"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-react">
     <img src="https://user-images.githubusercontent.com/28737079/217677874-ea2a1445-4831-4f80-b35d-36d2571605de.jpg"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-loaders">
     <img src="https://user-images.githubusercontent.com/28737079/225671656-2ed36594-fd04-4d67-9fc1-4d59ef8ff5f9.png" width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-cards-hover-effect">
     <img src="https://user-images.githubusercontent.com/28737079/221212428-8b37b8b3-2b9e-467e-a0b4-b71fdcd62105.jpg"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-the-last-of-us">
     <img src="https://user-images.githubusercontent.com/28737079/222271744-1b4c54d5-4008-4811-9f58-7994a05df21f.jpg"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/layout-confirmar-numero">
     <img src="https://user-images.githubusercontent.com/28737079/225787182-e70c5c49-d6ab-43d8-a01d-cb86109b8824.jpg"  width="300"/>
 </a>
 
-
-<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/botoes-pascoa">
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/botoes-pascoa">
     <img src="https://user-images.githubusercontent.com/28737079/231896068-f430e93e-1cd0-4947-940d-d1b8eaf0267e.png"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/botoes-verticais-css">
     <img src="https://user-images.githubusercontent.com/28737079/231896148-a99aee7b-4306-44e1-af55-fa06ce336794.png"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-borda-dancante-css">
     <img src="https://user-images.githubusercontent.com/28737079/231896303-b5ed8825-f7fc-4b55-8fa9-2eb459e842f3.png"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-redes-css">
     <img src="https://user-images.githubusercontent.com/28737079/231896366-ce9517ef-325b-44ea-81db-6fb5ebcb4b53.png"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-usuario">
     <img src="https://user-images.githubusercontent.com/28737079/231896427-391bcffa-21ab-4521-9677-a71899cdf76b.png"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botao-ultrapassando">
     <img src="https://user-images.githubusercontent.com/28737079/231896515-d274da5d-c1ec-465b-a492-725219282b44.png"  width="300"/>
-</a> -->
+</a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/icones-sociais-css">
     <img src="https://user-images.githubusercontent.com/28737079/230491843-92dcd034-ac69-478d-96a9-c302b8daaaca.jpg"  width="300"/>
 </a>
 
-<!-- <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/menu-mobile-rodape-css">
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/menu-mobile-rodape-css">
     <img src="https://user-images.githubusercontent.com/28737079/231896795-eea19989-a13d-4c21-bb0b-4709a94a7f38.png"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/slider-efeito-deslizante">
     <img src="https://user-images.githubusercontent.com/28737079/231896874-5eed0b12-ee34-4b76-9716-39e4fda02be4.PNG"  width="300"/>
 </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/texto-efeito-kill-bill">
     <img src="https://user-images.githubusercontent.com/28737079/231896952-23b7bfd5-51e9-42b2-b8c0-92f57554b599.PNG"  width="300"/>
-</a> -->
+</a> 
 
 </p>
 
