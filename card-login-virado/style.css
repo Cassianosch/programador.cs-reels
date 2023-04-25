@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+  background: linear-gradient(147deg, #0093e9, #80d0c7);
+}
+
+.conteudo {
+  text-align: center;
+  padding: 5rem;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.input__checkbox:checked + section label,
+.input__checkbox:not(:checked) + section label {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.input__checkbox:checked + section label:before,
+.input__checkbox:not(:checked) + section label:before {
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  content: "";
+  background-image: url("./ic-logo.png");
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  transition: all 0.5s ease;
+}
+
+.input__checkbox:checked + section label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+
+.caixa__label__checkbox {
+  text-align: center;
+  display: inline;
+  position: relative;
+}
+
+.caixa__label__checkbox::before,
+.caixa__label__checkbox::after {
+  position: absolute;
+  font-size: 26px;
+  font-weight: bold;
+  color: #efefef;
+}
+
+.caixa__label__checkbox::before {
+  content: "Login";
+  top: -21px;
+  left: -80px;
+}
+
+.caixa__label__checkbox::after {
+  content: "Cadastro";
+  top: -21px;
+  right: -135px;
+}
+
+.caixa__geral {
+  width: 440px;
+  height: 450px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.caixa__geral--interno {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 3.6s ease-out;
+}
+
+.caixa__geral--interno-rosto,
+.caixa__geral--interno-traseira {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-229deg, #fbab7e, #f7ce68);
+  position: absolute;
+  border-radius: 6px;
+  padding: 2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.caixa__geral--interno-traseira {
+  transform: rotateY(180deg);
+}
+
+.input__checkbox:checked ~ .caixa__geral .caixa__geral--interno {
+  transform: rotateY(180deg);
+}
+
+.caixa__geral--interno-rosto .caixa__interna,
+.caixa__geral--interno-traseira .caixa__interna {
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
+
+.caixa__geral--interno h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.caixa__geral--interno .caixa__login-input {
+  position: relative;
+}
+
+.caixa__geral--interno .caixa__login-input input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  outline: none;
+  background: transparent;
+}
+.caixa__geral--interno .caixa__login-input label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.caixa__geral--interno .caixa__login-input input:focus ~ label,
+.caixa__geral--interno .caixa__login-input input:valid ~ label {
+  top: -30px;
+  left: 0;
+  color: #8b80f9;
+  font-size: 12px;
+}
+
+.caixa__geral--interno form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #8b80f9;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.caixa__geral--interno a:hover {
+  background: #8b80f9;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #8b80f9, 0 0 25px #8b80f9, 0 0 50px #8b80f9,
+    0 0 100px #8b80f9;
+}
+
+.caixa__geral--interno a span {
+  position: absolute;
+  display: block;
+}
+
+.caixa__geral--interno a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8b80f9);
+  animation: animacaoBotao1 1s linear infinite;
+}
+
+@keyframes animacaoBotao1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.caixa__geral--interno a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #8b80f9);
+  animation: animacaoBotao2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animacaoBotao2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.caixa__geral--interno a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #8b80f9);
+  animation: animacaoBotao3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animacaoBotao3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.caixa__geral--interno a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #8b80f9);
+  animation: animacaoBotao4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animacaoBotao4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
