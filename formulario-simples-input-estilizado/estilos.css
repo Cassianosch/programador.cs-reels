@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+  background: linear-gradient(#8b80f9, #212123);
+}
+
+.conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.titulo__login {
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.conteudo__cartao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 300px;
+  flex-direction: column;
+  gap: 35px;
+  background: #212123;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(139, 128, 249, 0.6);
+  border-radius: 10px;
+}
+
+.caixa__input {
+  position: relative;
+  width: 250px;
+}
+
+.caixa__input input {
+  width: 100%;
+  padding: 20px 10px 15px 10px;
+  outline: none;
+  border: none;
+  color: #8b80f9;
+  font-size: .8rem;
+  background: transparent;
+  border-left: 2px solid #8b80f9;
+  border-bottom: 2px solid #8b80f9;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.caixa__input span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #8b80f9;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.caixa__input input:valid~span,
+.caixa__input input:focus~span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #fff;
+  letter-spacing: 0.2em;
+  color: #212123;
+  border: 2px;
+}
+
+.caixa__input input:valid,
+.caixa__input input:focus {
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+
+.btn__acessar {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}
+
+.btn__acessar:hover {
+  background: #8b80f9;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #8b80f9, 0 0 25px #8b80f9, 0 0 50px #8b80f9,
+    0 0 100px #8b80f9;
+}
+
