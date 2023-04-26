@@ -107,7 +107,7 @@ body {
   left: 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transition: all 3.6s ease-out;
+  transition: all .6s ease-out;
 }
 
 .caixa__geral--interno-rosto,
