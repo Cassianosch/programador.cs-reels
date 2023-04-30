@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Selector de texto Colorido - @programador.cs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            transition: .3s all ease;
+        }
+
+        *::selection {
+            background-color: #ED8607;
+            color: #8b80f9;
+        }
+
+        body {
+            background-color: #212123;
+            margin: 2rem;
+            color: #fff;
+            font-family: Verdana;
+        }
+
+        input {
+            height: 40px;
+            border: 1px solid #efefef;
+            background-color: #212123;
+            outline: none;
+            caret-color: #efefef;
+            color: #efefef;
+            padding-left: 10px;
+        }
+
+        input:invalid {
+            color: red;
+            box-shadow: 0 0 12px red;
+            border: 1px solid red;
+            caret-color: red;
+            animation: vibraAi .3s;
+        }
+
+
+        @keyframes vibraAi {
+            25% {
+                transform: translateX(3px);
+            }
+
+            50% {
+                transform: translateX(-3px);
+            }
+
+            75% {
+                transform: translateX(3px);
+            }
+
+            100% {
+                transform: translateX(-3px);
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <input type="text" pattern="[A-Za-z]*">
+</body>
+
+</html>
