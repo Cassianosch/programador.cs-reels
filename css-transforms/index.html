@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transforms - @programador.cs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            transition: .3s all ease;
+        }
+
+        body {
+            background-color: #212123;
+            margin: 2rem;
+        }
+
+        .quadrado {
+            width: 80px;
+            height: 80px;
+            background-color: #e52165;
+            border-radius: 10px;
+        }
+
+        .quadrado:hover {
+            transform: translate3d(20px, 20px, 20px);
+        }
+
+        .bolinha {
+            width: 80px;
+            height: 80px;
+            background-color: #12a4d9;
+            border-radius: 50%;
+            margin: 2rem 0;
+        }
+
+        .bolinha:hover {
+            transform: scale(150%);
+        }
+
+        .retangulo {
+            width: 120px;
+            height: 80px;
+            background-color: #8b80f9;
+            border-radius: 10px;
+        }
+
+        .retangulo:hover {
+            transform: rotate(80deg);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="quadrado"></div>
+    <div class="bolinha"></div>
+    <div class="retangulo"></div>
+</body>
+
+</html>
