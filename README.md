@@ -45,14 +45,15 @@ Click on the image to be redirected to the code:
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/ideias-de-botoes-para-CTA">
     <img src="https://user-images.githubusercontent.com/28737079/178973630-a3df21e4-cdc6-4594-bf2e-a070d7dec1b8.png"  width="300"/>
 </a>
-<p>
+<a>
     <img src="https://user-images.githubusercontent.com/28737079/179079455-6217b727-8cb7-42fe-8bda-c8d4f576f9f5.png" width="300"/>
 
 - [1](https://github.com/Cassianosch/programador.cs-reels/tree/master/checkbox-rouded)
 - [2](https://github.com/Cassianosch/programador.cs-reels/tree/master/button-checkbox)
 - [3, 4, 5](https://github.com/Cassianosch/programador.cs-reels/tree/master/loading-button-text-popping)
 - [6](https://github.com/Cassianosch/programador.cs-reels/tree/master/detalhe-fita)
-</p>
+  </a>
+
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/flexbox">
     <img src="https://user-images.githubusercontent.com/28737079/180332588-eaccefae-07c6-48af-bcb7-ee09185b3ebe.png"  width="300"/>
 </a>
@@ -226,9 +227,57 @@ Click on the image to be redirected to the code:
 
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/texto-efeito-kill-bill">
     <img src="https://user-images.githubusercontent.com/28737079/231896952-23b7bfd5-51e9-42b2-b8c0-92f57554b599.PNG"  width="300"/>
-</a> 
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/formulario-simples-input-estilizado">
+    <img src="https://user-images.githubusercontent.com/28737079/236776954-b11bdeaf-7b20-491a-96de-513ee160eb94.PNG"  width="300"/>
+</a>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/card-login-virado">
+    <img src="https://user-images.githubusercontent.com/28737079/236776958-34b753c7-6aa4-423f-a9dc-8461ac767605.PNG"  width="300"/>
+</a>
 
-</p>
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-input-validacao-vibratoria">
+    <img src="https://user-images.githubusercontent.com/28737079/236776962-68c750e3-5c24-4874-a14c-45ef6ae8421e.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-selector-texto">
+    <img src="https://user-images.githubusercontent.com/28737079/236776965-a9c8a037-c714-47e8-888c-bebd58c06160.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-transforms">
+    <img src="https://user-images.githubusercontent.com/28737079/236776968-9c6d14ae-34a3-49f7-abfc-0019fe72f52d.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/input-validacao-nativa">
+    <img src="https://user-images.githubusercontent.com/28737079/236776971-63c12ca0-89ac-4aff-adb8-963578b5a68e.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/item-efeito-exclusão">
+    <img src="https://user-images.githubusercontent.com/28737079/236776973-dde0e29b-7a53-4e83-8a83-1f3fcf5a6202.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/search-nativo-html">
+    <img src="https://user-images.githubusercontent.com/28737079/236776978-de518793-4113-446c-84a3-0a08c78c9589.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-todos-cursores">
+    <img src="https://user-images.githubusercontent.com/28737079/236776980-a5d34305-799f-4bf0-a743-ceaa905ebbcb.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-posicoes-elementos">
+    <img src="https://user-images.githubusercontent.com/28737079/236776984-f4d80bba-cdc3-4efb-b91c-91832b3f4c12.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botoes-variados-parte1">
+    <img src="https://user-images.githubusercontent.com/28737079/236776985-6c890105-222c-411c-a862-99f77efc03d7.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botoes-variados-parte2">
+    <img src="https://user-images.githubusercontent.com/28737079/236776987-4d046ac0-5412-4805-bd01-52823f47daae.PNG"  width="300"/>
+</a>
+
+<a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/css-botoes-variados-parte3">
+    <img src="https://user-images.githubusercontent.com/28737079/236776989-76bac67e-f092-46fc-ba1a-fcf2c4749a30.PNG"  width="300"/>
+</a>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
 - Os projetos dentro do repositório estão organizados em pastas com o mesmo título da postagem.
