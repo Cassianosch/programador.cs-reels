@@ -1,0 +1,205 @@
+.botao-1 .caixa__geral {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "elemento__detalhe---1 elemento__detalhe---2 elemento__detalhe---3"
+    "elemento__detalhe---4 elemento__detalhe---5 elemento__detalhe---6";
+  position: relative;
+  -webkit-perspective: 800;
+  perspective: 800;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.botao-1 .caixa__geral:active {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.botao-1 .sobreposto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.botao-1 .elemento__detalhe---1 {
+  grid-area: elemento__detalhe---1;
+}
+
+.botao-1 .elemento__detalhe---2 {
+  grid-area: elemento__detalhe---2;
+}
+
+.botao-1 .elemento__detalhe---3 {
+  grid-area: elemento__detalhe---3;
+}
+
+.botao-1 .elemento__detalhe---4 {
+  grid-area: elemento__detalhe---4;
+}
+
+.botao-1 .elemento__detalhe---5 {
+  grid-area: elemento__detalhe---5;
+}
+
+.botao-1 .elemento__detalhe---6 {
+  grid-area: elemento__detalhe---6;
+}
+
+.botao-1 .elemento__detalhe---1:hover ~ button {
+  -webkit-transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  -webkit-box-shadow: -2px -2px #18181888;
+  box-shadow: -2px -2px #18181888;
+}
+.botao-1 .elemento__detalhe---1:hover ~ button::after {
+  -webkit-animation: animacaoEntradaSaida 0.5s ease-in-out 0.3s;
+  animation: animacaoEntradaSaida 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.botao-1 .elemento__detalhe---3:hover ~ button {
+  -webkit-transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  -webkit-box-shadow: 2px -2px #18181888;
+  box-shadow: 2px -2px #18181888;
+}
+.botao-1 .elemento__detalhe---3:hover ~ button::after {
+  -webkit-animation: animacaoEntradaSaida 0.5s ease-in-out 0.3s;
+  animation: animacaoEntradaSaida 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.botao-1 .elemento__detalhe---4:hover ~ button {
+  -webkit-transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  -webkit-box-shadow: -2px 2px #18181888;
+  box-shadow: -2px 2px #18181888;
+}
+.botao-1 .elemento__detalhe---4:hover ~ button::after {
+  -webkit-animation: animacaoEntradaSaida 0.5s ease-in-out 0.3s;
+  animation: animacaoEntradaSaida 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.botao-1 .elemento__detalhe---6:hover ~ button {
+  -webkit-transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  -webkit-box-shadow: 2px 2px #18181888;
+  box-shadow: 2px 2px #18181888;
+}
+.botao-1 .elemento__detalhe---6:hover ~ button::after {
+  -webkit-animation: animacaoEntradaSaida 0.5s ease-in-out 0.3s;
+  animation: animacaoEntradaSaida 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.botao-1 .sobreposto:hover ~ button::before {
+  background: transparent;
+}
+
+.botao-1 .sobreposto:hover ~ button::after {
+  content: "Clique";
+  top: -150%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  font-size: 30px;
+  color: #776ed8;
+}
+
+.botao-1 button {
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #776ed8;
+  border-radius: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.botao-1 button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #8b80f9;
+  border-radius: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.botao-1 button::after {
+  content: "Passe o mouse";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@-webkit-keyframes animacaoEntradaSaida {
+  0% {
+    left: 45%;
+  }
+  25% {
+    left: 54%;
+  }
+  50% {
+    left: 48%;
+  }
+  75% {
+    left: 52%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes animacaoEntradaSaida {
+  0% {
+    left: 45%;
+  }
+  25% {
+    left: 54%;
+  }
+  50% {
+    left: 48%;
+  }
+  75% {
+    left: 52%;
+  }
+  100% {
+    left: 50%;
+  }
+}

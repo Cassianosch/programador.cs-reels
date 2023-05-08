@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validação Native - @programador.cs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #212123;
+            margin: 5rem;
+        }
+
+        input[type="number"] {
+            display: inline-block;
+            width: 250px;
+            padding: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            color: #212123;
+            outline: none;
+        }
+
+        input[type="number"]:out-of-range {
+            border: 3px solid #ff0000;
+            box-shadow: 0 2px 10px #ff0000;
+        }
+
+        input[type="number"]:in-range {
+            border: 3px solid #008000;
+            box-shadow: 0 2px 10px #008000;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" min="1" max="9" value="1" />
+</body>
+
+</html>

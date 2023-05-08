@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: Verdana;
+  background: linear-gradient(147deg, #0093e9, #80d0c7);
+}
+
+.elemento__geral {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.elemento__geral li {
+  white-space: nowrap;
+  position: relative;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  font-weight: bold;
+  color: #212533;
+  display: flex;
+}
+
+.elemento__geral li span {
+  display: block;
+  overflow: hidden;
+  transition: transform 0.3s ease 0.1s, opacity 0.5s ease 0.3s;
+}
+
+.elemento__geral li span:nth-child(1) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  height: 12px;
+  transform-origin: left bottom;
+}
+
+.elemento__geral li span:nth-child(2) {
+  position: relative;
+  transform-origin: left center;
+}
+
+.elemento__geral li:last-child {
+  margin-bottom: 0;
+}
+
+.elemento__geral li .faixa {
+  border-radius: 2px;
+  background: #f26175;
+  height: 2px;
+  margin: -1px 0 0 0;
+  top: 50%;
+  right: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.elemento__geral li .elemento__exclusao {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.elemento__geral li .elemento__exclusao svg {
+  display: block;
+  width: 20px;
+  fill: none;
+  height: 20px;
+  stroke: #f26175;
+  stroke-width: 1;
+  transition: all 0.3s ease;
+}
+
+.elemento__geral li .elemento__exclusao svg:hover {
+  stroke: #ff0000;
+}
+
+.elemento__geral li .elemento__exclusao svg circle {
+  stroke-dasharray: 64;
+  transition: all 0.3s ease;
+}
+
+.elemento__geral li .elemento__exclusao:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 2px;
+  background-image: url("./image/ic-lixeira.svg");
+  width: 18px;
+  height: 14px;
+  top: 2px;
+  left: 1px;
+  background-size: 100%;
+  transition: all 0.3s ease;
+}
+
+.elemento__geral li .elemento__exclusao.active svg circle {
+  stroke-dashoffset: 64;
+}
+
+.elemento__geral li .elemento__exclusao.active:before,
+.elemento__geral li .elemento__exclusao.active:after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.elemento__geral li .elemento__exclusao.active:after {
+  opacity: 0;
+}
+
+.elemento__geral li .elemento__exclusao:hover,
+.elemento__geral li .elemento__exclusao.hover {
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  -webkit-filter: grayscale(0%);
+  opacity: 1;
+}
+
+.elemento__geral li.faixa__cortadora span {
+  opacity: 0;
+}
+
+.elemento__geral li.faixa__cortadora span:nth-child(1) {
+  transform: rotate(-7deg) translate(0, -3px);
+}
+
+.elemento__geral li.faixa__cortadora span:nth-child(2) {
+  transform: rotate(7deg) translate(0, 2px);
+}
+
+.elemento__geral li.faixa__cortadora--externo .elemento__exclusao:before,
+.elemento__geral li.faixa__cortadora--externo .elemento__exclusao:after {
+  display: none;
+}

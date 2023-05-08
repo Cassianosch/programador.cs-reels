@@ -1,0 +1,16 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+@import "./botao-1.css";
+@import "./botao-2.css";
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 2rem;
+  background: #212123;
+  font-family: "Open Sans";
+}
+
+* {
+  box-sizing: border-box;
+}
