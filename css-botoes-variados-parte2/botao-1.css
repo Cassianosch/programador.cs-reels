@@ -1,0 +1,85 @@
+.botao-1 button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.botao-1 button span {
+  display: block;
+  margin-left: 0.3em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.botao-1 button svg {
+  display: block;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.botao-1 button:hover .icone__flexinha {
+  -webkit-animation: animacaoFlexinha 0.6s ease-in-out infinite alternate;
+  animation: animacaoFlexinha 0.6s ease-in-out infinite alternate;
+}
+
+.botao-1 button:hover svg {
+  -webkit-transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  -ms-transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.botao-1 button:hover span {
+  -webkit-transform: translateX(5em);
+  -ms-transform: translateX(5em);
+  transform: translateX(5em);
+}
+
+.botao-1 button:active {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+@-webkit-keyframes animacaoFlexinha {
+  from {
+    -webkit-transform: translateY(0.1em);
+    transform: translateY(0.1em);
+  }
+
+  to {
+    -webkit-transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
+  }
+}
+
+@keyframes animacaoFlexinha {
+  from {
+    -webkit-transform: translateY(0.1em);
+    transform: translateY(0.1em);
+  }
+
+  to {
+    -webkit-transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
+  }
+}
