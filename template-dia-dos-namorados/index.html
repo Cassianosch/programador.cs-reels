@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de namoro. Aceita ou aceita. - @programador.cs</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-primaria: #8B80F9;
+            --cor--secundaria: #414141;
+            --cor-primaria-escurecida: #726ace;
+            --cor-branca: #fff;
+            --cor-caixa: rgba(255, 255, 255, 0.5);
+            --cor-sombra-02: rgba(0, 0, 0, 0.2);
+            --cor-sombra-03: rgba(0, 0, 0, 0.3);
+            --cor-sombra-05: rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://source.unsplash.com/1600x900/?romantic,love');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: var(--cor-branca);
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-shadow: 0 2px 5px var(--cor-sombra-05);
+        }
+
+        .conteudo {
+            background-color: var(--cor-caixa);
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 5px 15px var(--cor-sombra-03);
+            width: 450px;
+            text-align: center;
+        }
+
+        .caixa__interno {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: var(--cor-primaria-escurecida);
+            border: none;
+            color: var(--cor-branca);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 8px;
+            cursor: pointer;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px var(--cor-sombra-02);
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--cor-primaria);
+            transform: translateY(-2px);
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const noButton = document.getElementById("botao-negativo");
+
+            noButton.addEventListener("mouseover", function () {
+                const x = Math.floor(Math.random() * (window.innerWidth - noButton.clientWidth));
+                const y = Math.floor(Math.random() * (window.innerHeight - noButton.clientHeight));
+                noButton.style.position = "absolute";
+                noButton.style.left = `${x}px`;
+                noButton.style.top = `${y}px`;
+            });
+        });
+
+        function eventoDeClique() {
+            window.location.href = "https://www.youtube.com/watch?v=orWnzqBA63w";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="conteudo">
+        <h1>Você quer namorar comigo?</h1>
+        <div class="caixa__interno">
+            <button onclick="eventoDeClique()">Sim</button>
+            <button id="botao-negativo">Não</button>
+        </div>
+    </div>
+</body>
+
+</html>
