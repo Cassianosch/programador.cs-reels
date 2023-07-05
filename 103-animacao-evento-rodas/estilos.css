@@ -1,0 +1,13 @@
+body {
+  background: #212123;
+}
+canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}

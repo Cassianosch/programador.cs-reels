@@ -1,0 +1,27 @@
+body {
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  /* background: linear-gradient(135deg, #295fd5, #9d8ce0); */
+  background: #212123;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.conteudo__geral {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.elemento__cartao {
+  width: 15vw;
+  height: 75vh;
+  background-position: center;
+  background-size: 75vh;
+  margin: 1vw;
+  border-radius: 3vw;
+  display: inline-block;
+  cursor: pointer;
+}

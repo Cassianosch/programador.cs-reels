@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Conversor Valores - @programador.cs</title>
+    <link rel="stylesheet" href="./estilos/estilos.css">
+</head>
+<!-- moeda -->
+<!-- https://docs.awesomeapi.com.br/api-de-moedas -->
+
+<body>
+    <main>
+        <section class="card__geral">
+            <article class="card__geral--interno rodateto">
+                <h3>Conversor de Moedas</h3>
+                <div class="caixa__inputs">
+                    <input type="number" class="card__input" placeholder="0" id="js-card1__rodateto__input__valor" />
+                    <ul class="card__listagem" id="js-card1__rodateto__listagem__tipos">
+                        <li data-value="BRL" title="Real" class="selecionado">BRL</li>
+                        <li data-value="USD" title="Dólar">USD</li>
+                        <li data-value="EUR" title="Euro">EUR</li>
+                        <li data-value="GBP" title="Libra">GBP</li>
+                        <li data-value="ARS" title="Peso Argentino">ARS</li>
+                    </ul>
+                </div>
+            </article>
+            <div class="card__alternar"></div>
+            <article class="card__geral--interno rodape">
+                <div class="caixa__inputs">
+                    <input type="number" class="card__input" placeholder="0" id="js-card2__rodape__input__valor" />
+                    <ul class="card__listagem" id="js-card2__rodape__listagem__tipos">
+                        <li data-value="BRL" title="Real">BRL</li>
+                        <li data-value="USD" title="Dólar" class="selecionado">USD</li>
+                        <li data-value="EUR" title="Euro">EUR</li>
+                        <li data-value="GBP" title="Libra">GBP</li>
+                        <li data-value="ARS" title="Peso Argentino">ARS</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <br />
+    </main>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

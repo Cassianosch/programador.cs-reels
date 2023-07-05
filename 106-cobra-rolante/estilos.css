@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: #212123;
+  color: #efefef;
+}
+
+body {
+  padding: 2em 2em 2em 17em;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+}
+
+.elemento__navegacao {
+  position: fixed;
+  left: 3em;
+  top: 5em;
+  padding: 1em;
+  width: 14em;
+  line-height: 2;
+}
+.elemento__navegacao ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.elemento__navegacao ul ul {
+  padding-left: 2em;
+}
+.elemento__navegacao li a {
+  display: inline-block;
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.elemento__navegacao li.visible > a {
+  color: #efefef;
+  transform: translate(5px);
+}
+
+.elemento__navegacao-cobrinha {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.elemento__navegacao-cobrinha path {
+  transition: all 0.3s ease;
+}
+
+.contents {
+  padding: 1em;
+  max-width: 800px;
+  font-size: 1.2em;
+  font-family: "Frank Ruhl Libre", sans-serif;
+}
+.contents img {
+  max-width: 100%;
+}
+.contents .code-block {
+  white-space: pre;
+  overflow: auto;
+  max-width: 100%;
+}
+.contents h2,
+.contents h3 {
+  padding-top: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,147 @@
+body {
+  background: #212123;
+}
+
+::selection {
+  background: #212123;
+}
+
+.caixa__geral {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.caixa__geral.elemento__ativo {
+}
+
+.caixa__geral .caixa__interna-input {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.caixa__geral.elemento__ativo .caixa__interna-input {
+  width: 450px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);
+}
+.caixa__geral .caixa__interna-input .elemento__input {
+  width: 100%;
+  height: 50px;
+  padding: 0px 70px 0 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Open Sans", Arial, Verdana;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #fff;
+  transform: translate(0, 60px);
+  transition: all 0.3s cubic-bezier(0, 0.105, 0.035, 1.57);
+  transition-delay: 0.3s;
+}
+.caixa__geral.elemento__ativo .caixa__interna-input .elemento__input {
+  opacity: 1;
+  transform: translate(0, 10px);
+}
+.caixa__geral .caixa__interna-input .icone__busca {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  float: right;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.caixa__geral.elemento__ativo .caixa__interna-input .icone__busca {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 30px;
+}
+.caixa__geral .caixa__interna-input .icone__busca span {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  transform: rotate(45deg);
+  transition: all 0.4s cubic-bezier(0.65, -0.6, 0.24, 1.65);
+}
+.caixa__geral.elemento__ativo .caixa__interna-input .icone__busca span {
+  transform: rotate(-45deg);
+}
+.caixa__geral .caixa__interna-input .icone__busca span::before,
+.caixa__geral .caixa__interna-input .icone__busca span::after {
+  position: absolute;
+  content: "";
+}
+.caixa__geral .caixa__interna-input .icone__busca span::before {
+  width: 4px;
+  height: 11px;
+  left: 9px;
+  top: 18px;
+  border-radius: 2px;
+  background: #fe5f55;
+}
+.caixa__geral .caixa__interna-input .icone__busca span::after {
+  width: 14px;
+  height: 14px;
+  left: 0px;
+  top: 0px;
+  border-radius: 16px;
+  border: 4px solid #fe5f55;
+}
+.caixa__geral .icone__fechar {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transition: all 0.3s cubic-bezier(0.285, -0.45, 0.935, 0.11);
+  transition-delay: 0.2s;
+}
+.caixa__geral.elemento__ativo .icone__fechar {
+  right: -50px;
+  transform: rotate(45deg);
+  transition: all 0.6s cubic-bezier(0, 0.105, 0.035, 1.57);
+  transition-delay: 0.5s;
+}
+.caixa__geral .icone__fechar::before,
+.caixa__geral .icone__fechar::after {
+  position: absolute;
+  content: "";
+  background: #fe5f55;
+  border-radius: 2px;
+}
+.caixa__geral .icone__fechar::before {
+  width: 5px;
+  height: 25px;
+  left: 10px;
+  top: 0px;
+}
+.caixa__geral .icone__fechar::after {
+  width: 25px;
+  height: 5px;
+  left: 0px;
+  top: 10px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto com Delineado - @programador.cs</title>
+    <style>
+        body {
+            margin: 2rem;
+            background-color: #212123;
+            box-sizing: border-box;
+            font-family: 'Verdana';
+        }
+
+        .botao {
+            text-decoration: none;
+            letter-spacing: 1px;
+            color: #fff;
+            outline: 2px solid #fff;
+            padding: 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.5s;
+            display: inline-block;
+            border-radius: 15px;
+        }
+
+        .botao:hover {
+            color: #212123;
+        }
+
+        .botao::before {
+            content: "";
+            z-index: -1;
+            height: 100%;
+            background-color: #fff;
+            transform: skewX(35deg);
+            transition: width 0.5s;
+            position: absolute;
+            top: 0;
+            left: -50px;
+            width: 0%;
+        }
+
+        .botao:hover::before {
+            width: 145%;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="botao">Saiba mais</a>
+</body>
+
+</html>

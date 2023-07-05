@@ -1,0 +1,110 @@
+.conteudo__geral {
+  height: 100vh;
+  width: 100vw;
+  max-height: 800px;
+  max-width: 1280px;
+  min-height: 600px;
+  min-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.elemento__interno-borda {
+  height: 300px;
+  width: 300px;
+  background: transparent;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.elemento__interno-borda:hover {
+  border: 1px solid #fff;
+  height: 290px;
+  width: 290px;
+}
+.cartao {
+  height: 300px;
+  width: 300px;
+  background: #808080;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 70px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cartao0 {
+  background: url("https://images.nightcafe.studio/jobs/kmg80queUey2KQfOjLfi/kmg80queUey2KQfOjLfi--1--mdb0l.jpg?tr=w-1600,c-at_max")
+    center center no-repeat;
+  background-size: 300px;
+}
+.cartao0:hover {
+  background: url("https://images.nightcafe.studio/jobs/kmg80queUey2KQfOjLfi/kmg80queUey2KQfOjLfi--1--mdb0l.jpg?tr=w-1600,c-at_max")
+    left center no-repeat;
+  background-size: 600px;
+}
+.cartao0:hover h2 {
+  opacity: 1;
+}
+.cartao0:hover .fa {
+  opacity: 1;
+}
+.cartao1 {
+  background: url("https://images.nightcafe.studio/jobs/NcvOQCDkbTFy1v8MdpBS/NcvOQCDkbTFy1v8MdpBS--1--gkw1n.jpg?tr=w-1600,c-at_max")
+    center center no-repeat;
+  background-size: 300px;
+}
+.cartao1:hover {
+  background: url("https://images.nightcafe.studio/jobs/NcvOQCDkbTFy1v8MdpBS/NcvOQCDkbTFy1v8MdpBS--1--gkw1n.jpg?tr=w-1600,c-at_max")
+    left center no-repeat;
+  background-size: 600px;
+}
+.cartao1:hover h2 {
+  opacity: 1;
+}
+.cartao1:hover .fa {
+  opacity: 1;
+}
+.cartao2 {
+  background: url("https://images.nightcafe.studio/jobs/x7DZ4xly2WzfDhDRZDHT/x7DZ4xly2WzfDhDRZDHT--1--67ntb.jpg?tr=w-1600,c-at_max")
+    center center no-repeat;
+  background-size: 300px;
+}
+.cartao2:hover {
+  background: url("https://images.nightcafe.studio/jobs/x7DZ4xly2WzfDhDRZDHT/x7DZ4xly2WzfDhDRZDHT--1--67ntb.jpg?tr=w-1600,c-at_max")
+    left center no-repeat;
+  background-size: 600px;
+}
+.cartao2:hover h2 {
+  opacity: 1;
+}
+.cartao2:hover .fa {
+  opacity: 1;
+}
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.fa {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.caixa__icones {
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  bottom: 10px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}

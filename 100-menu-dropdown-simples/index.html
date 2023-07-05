@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown Simples - @programador.cs</title>
+    <link rel="stylesheet" href="./estilos.css">
+
+</head>
+
+<body>
+    <div class="flex_linha js-conteudo-geral">
+        <div class="elemento__flex-linha" onclick="handleClick()" role="button" tabindex="0" aria-expanded="false"
+            aria-label="Open Menu">
+            <div class="elemento__titulo">MENU</div>
+            <svg width="32" height="32" viewBox="0 0 100 100" class="icon">
+                <path class="elemento__path-1">
+                    <animate class="animacao__1" attributeName="d" dur="0.35s" repeatCount="1" fill="freeze" />
+                </path>
+                <path class="elemento__path-2">
+                    <animate class="animacao__2" attributeName="d" dur="0.35s" repeatCount="1" fill="freeze" />
+                </path>
+                <path class="elemento__path-3">
+                    <animate class="animacao__3" attributeName="d" dur="0.35s" repeatCount="1" fill="freeze" />
+                </path>
+            </svg>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

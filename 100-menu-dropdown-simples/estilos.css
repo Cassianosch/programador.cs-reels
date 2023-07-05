@@ -1,0 +1,53 @@
+body {
+  align-items: center;
+  background: linear-gradient(
+      20deg,
+      rgba(23, 216, 178, 0.3),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(150deg, rgba(247, 255, 92, 0.3), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(330deg, rgba(83, 9, 71, 0.3), rgba(0, 0, 255, 0) 70.71%);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.flex_linha {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 1.5px 5.4px rgba(0, 0, 0, 0.054),
+    0px 3.7px 10.9px rgba(0, 0, 0, 0.068), 0px 7px 16.8px rgba(0, 0, 0, 0.074),
+    0px 12.5px 24.6px rgba(0, 0, 0, 0.076),
+    0px 23.4px 38.1px rgba(0, 0, 0, 0.08), 0px 56px 80px rgba(0, 0, 0, 0.1);
+  height: 76px;
+  margin-top: 16vh;
+  transition: height 400ms;
+  -webkit-tap-highlight-color: #00000010;
+}
+.flex_linha.active {
+  height: 400px;
+}
+.elemento__titulo {
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-top: 8px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.elemento__flex-linha {
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  transition: height 400ms;
+  width: 200px;
+}
+.icon {
+  fill: none;
+  margin-top: 0px;
+  stroke: #000;
+  stroke-width: 12;
+  stroke-linecap: square;
+  stroke-linejoin: round;
+}

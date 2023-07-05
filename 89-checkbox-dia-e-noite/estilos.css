@@ -1,0 +1,408 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --forma-primaria: cubic-bezier(0.4, -0.3, 0.6, 1.3);
+  --forma-com-easeg: var(--forma-primaria);
+  --forma-velocidade: 0.5s;
+  --forma-largura: clamp(200px, 45vmin, 500px);
+  --forma-calculo: 8 / 3;
+  --forma-raio: hsl(0 0% 100% / 0.5);
+  --cor-elemento__sol: hsl(47, 91%, 58%);
+  --cor-elemento__lua: hsl(212, 13%, 82%);
+  --elemento-cratera: hsl(221, 16%, 68%);
+  --cor-fundo-primario: hsl(219, 30%, 88%);
+  --forma-velocidade-astronauta: 10s;
+  --cor-primaria: hsl(219 30% 20%);
+}
+
+[data-dark-mode="true"] {
+  --cor-fundo-primario: hsl(219, 30%, 12%);
+  --cor-primaria: hsl(219 30% 98%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--cor-fundo-primario);
+  transition: background var(--forma-velocidade) var(--forma-com-easeg);
+  font-family: sans-serif, system-ui;
+}
+
+.trocador__de__status:first-of-type .elemento__nuvens path:first-of-type {
+  fill: var(--forma-raio);
+}
+
+.elemento__trocador {
+  -webkit-tap-highlight-color: transparent;
+  width: var(--forma-largura);
+  /* random attempts at tackling the overflow iOS issue */
+  z-index: 10;
+  will-change: transform;
+  isolation: isolate;
+  transform: translate3d(0, 0, 0);
+  /* End of workaround city   */
+  aspect-ratio: var(--forma-calculo);
+  border-radius: 100vh;
+  border: 0;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background var(--forma-velocidade) var(--forma-com-easeg);
+  --sky: hsl(204, 53%, 47%);
+  --night: hsl(229, 25%, 16%);
+  outline-color: transparent;
+  background: hsl(
+    calc(204 + (var(--dark, 0) * 25)) calc((53 - (var(--dark, 0) * 28)) * 1%)
+      calc((47 - (var(--dark, 0) * 31)) * 1%)
+  );
+  box-shadow: calc(var(--forma-largura) * 0) calc(var(--forma-largura) * 0.02)
+      calc(var(--forma-largura) * 0.01) calc(var(--forma-largura) * -0.0025)
+      hsl(210 10% 100% / 0.95),
+    calc(var(--forma-largura) * 0) calc(var(--forma-largura) * -0.02)
+      calc(var(--forma-largura) * 0.01) calc(var(--forma-largura) * -0.0025)
+      hsl(210 10% 10% / 0.2),
+    calc(var(--forma-largura) * 0) calc(var(--forma-largura) * 0.02)
+      calc(var(--forma-largura) * 0.5) 0 hsl(210 10% 100% / 0.15);
+}
+
+.elemento__trocador:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: calc(var(--forma-largura) * 0) calc(var(--forma-largura) * -0.025)
+      calc(var(--forma-largura) * 0.025) 0 hsl(210 10% 10% / 0.15) inset,
+    calc(var(--forma-largura) * 0) calc(var(--forma-largura) * 0.025)
+      calc(var(--forma-largura) * 0.025) 0 hsl(210 10% 10% / 0.65) inset;
+  border-radius: 100vh;
+}
+
+.toggle__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 100vh;
+  display: block;
+  -webkit-clip-path: inset(0 0 0 0 round 100vh);
+  clip-path: inset(0 0 0 0 round 100vh);
+}
+
+.trocador__de__status {
+  overflow: visible !important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  transition: translate var(--forma-velocidade) var(--forma-com-easeg);
+  translate: 0 calc(var(--dark, 0) * (100% - (3 / 8 * var(--forma-largura))));
+}
+
+[aria-pressed="false"] .trocador__de__status:last-of-type {
+  transition-timing-function: cubic-bezier(0.2, -0.6, 0.7, 1.6);
+}
+[aria-pressed="false"] .stars path {
+  transition-delay: 0s;
+}
+
+.stars path {
+  transform-box: fill-box;
+  transform-origin: 25% 50%;
+  scale: calc(0.25 + (var(--dark, 0) * 0.75));
+  transition: scale var(--forma-velocidade) calc(var(--forma-velocidade) * 0.5)
+    var(--forma-com-easeg);
+}
+
+.elemento__trocador-interno {
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 0%;
+  display: grid;
+  place-items: center;
+  padding: 3%;
+}
+
+.elemento__astrourso {
+  position: absolute;
+  width: 25%;
+}
+
+.elemento__trocador-interno-iniciar {
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  transition: translate var(--forma-velocidade) var(--forma-com-easeg);
+  translate: calc((var(--dark, 0) * -10%) + 5%) 0;
+  /* 	translate: calc((var(--dark, 0) * -18%) + 5%) 0; */
+}
+
+.elemento__sol {
+  background: var(--cor-elemento__sol);
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: calc(var(--forma-largura) * 0.01)
+      calc(var(--forma-largura) * 0.01) calc(var(--forma-largura) * 0.02) 0
+      hsl(210 10% 100% / 0.95) inset,
+    calc(var(--forma-largura) * -0.01) calc(var(--forma-largura) * -0.01)
+      calc(var(--forma-largura) * 0.02) 0 hsl(210 10% 20% / 0.5) inset;
+}
+.elemento__lua {
+  position: absolute;
+  inset: -1%;
+  border-radius: 50%;
+  background: var(--cor-elemento__lua);
+  transition: translate var(--forma-velocidade) ease-in-out;
+  translate: calc((100 - (var(--dark, 0) * 100)) * 1%) 0%;
+  box-shadow: calc(var(--forma-largura) * 0.01)
+      calc(var(--forma-largura) * 0.01) calc(var(--forma-largura) * 0.02) 0
+      hsl(210 10% 100% / 0.95) inset,
+    calc(var(--forma-largura) * -0.01) calc(var(--forma-largura) * -0.01)
+      calc(var(--forma-largura) * 0.02) 0 hsl(210 10% 10% / 0.95) inset;
+}
+
+.elemento__lua--elemento-crateraa {
+  position: absolute;
+  background: var(--elemento-cratera);
+  border-radius: 50%;
+  width: calc(var(--size, 10) * 1%);
+  aspect-ratio: 1;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+  box-shadow: calc(var(--forma-largura) * 0.01)
+      calc(var(--forma-largura) * 0.01) calc(var(--forma-largura) * 0.01) 0
+      hsl(210 10% 6% / 0.25) inset,
+    0 calc(var(--forma-largura) * 0.005) calc(var(--forma-largura) * 0.01) 0
+      hsl(210 10% 100% / 0.25);
+}
+
+.elemento__lua--elemento-crateraa:nth-of-type(1) {
+  --size: 18;
+  --x: 40;
+  --y: 15;
+}
+.elemento__lua--elemento-crateraa:nth-of-type(2) {
+  --size: 20;
+  --x: 65;
+  --y: 58;
+}
+.elemento__lua--elemento-crateraa:nth-of-type(3) {
+  --size: 34;
+  --x: 18;
+  --y: 40;
+}
+
+.elemento__trocador-interno-iniciar:before {
+  content: "";
+  z-index: -1;
+  width: 356%;
+  background: radial-gradient(hsl(0 0% 100% / 0.25) 40%, transparent 40.5%),
+    radial-gradient(hsl(0 0% 100% / 0.25) 56%, transparent 56.5%)
+      hsl(0 0% 100% / 0.25);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: translate var(--forma-velocidade) var(--forma-com-easeg);
+  translate: calc((50 - (var(--dark, 0) * 4)) * -1%) -50%;
+}
+
+.elemento__trocador-interno-iniciar:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: hsl(0 0% 0% / 0.5);
+  filter: blur(4px);
+  translate: 2% 4%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.caixa__elemento__trocador {
+  position: absolute;
+  inset: 0;
+  transition: translate var(--forma-velocidade) var(--forma-primaria);
+  translate: calc(
+      var(--dark, 0) * (var(--forma-largura) - (3 / 8 * var(--forma-largura)))
+    )
+    0;
+}
+
+[aria-pressed="true"] {
+  --dark: 1;
+}
+
+/* Fun stuff! */
+
+/* We have 11 stars */
+
+.stars g {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+.stars g:nth-of-type(3) {
+  -webkit-animation: animacaoPiscando 4s -2s infinite;
+  animation: animacaoPiscando 4s -2s infinite;
+}
+
+.stars g:nth-of-type(11) {
+  -webkit-animation: animacaoPiscando 6s -2s infinite;
+  animation: animacaoPiscando 6s -2s infinite;
+}
+
+.stars g:nth-of-type(9) {
+  -webkit-animation: animacaoPiscando 4s -1s infinite;
+  animation: animacaoPiscando 4s -1s infinite;
+}
+
+@-webkit-keyframes animacaoPiscando {
+  0%,
+  40%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+}
+
+@keyframes animacaoPiscando {
+  0%,
+  40%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+}
+
+.astrobear {
+  width: 12%;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transition: translate
+    calc(
+      var(--forma-velocidade) +
+        (
+          var(--dark, 0) *
+            (var(--forma-velocidade-astronauta) - var(--forma-velocidade))
+        )
+    )
+    calc(var(--forma-velocidade-astronauta) * (0.4 * var(--dark, 0))) linear;
+  translate: calc(var(--dark, 0) * 400%) calc(var(--dark, 0) * -350%);
+}
+
+.astrobear svg {
+  transform-origin: 50% 75%;
+  scale: var(--dark, 0);
+  rotate: calc(var(--dark, 0) * 360deg);
+  transition: rotate
+      calc(
+        var(--forma-velocidade) +
+          (
+            var(--dark, 0) *
+              (var(--forma-velocidade-astronauta) - var(--forma-velocidade))
+          )
+      )
+      calc(var(--forma-velocidade-astronauta) * 0.4) linear,
+    scale var(--forma-velocidade) ease-in-out;
+}
+
+.astrobear__container {
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  opacity: var(--dark, 0);
+  translate: 0 calc(-200% + (var(--dark, 0) * 200%));
+  transition: opacity var(--forma-velocidade) var(--forma-com-easeg),
+    translate var(--forma-velocidade) var(--forma-com-easeg);
+}
+
+.elemento__caixa__astronauta {
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  opacity: calc(1 - var(--dark, 0));
+  translate: 0 calc(var(--dark, 0) * 200%);
+  transition: opacity var(--forma-velocidade) var(--forma-com-easeg),
+    translate var(--forma-velocidade) var(--forma-com-easeg);
+}
+
+.elemento__astrourso {
+  width: 18%;
+  position: absolute;
+  top: 70%;
+  left: 100%;
+  transition: translate
+    calc(
+      var(--forma-velocidade) +
+        (
+          (1 - var(--dark, 0)) *
+            (
+              (var(--forma-velocidade-astronauta) * 0.5) -
+                var(--forma-velocidade)
+            )
+        )
+    )
+    calc(
+      (var(--forma-velocidade-astronauta) * 0.5) * ((1 - var(--dark, 0)) * 0.4)
+    )
+    linear;
+  translate: calc((0 - (1 - var(--dark, 0))) * (var(--forma-largura) + 100%))
+    calc((0 - (1 - var(--dark, 0))) * (200%));
+}
+
+.pilot {
+  rotate: 12deg;
+  -webkit-animation: animacaoVoando 4s infinite ease-in-out;
+  animation: animacaoVoando 4s infinite ease-in-out;
+}
+
+@-webkit-keyframes animacaoVoando {
+  50% {
+    translate: 0 -25%;
+  }
+}
+
+@keyframes animacaoVoando {
+  50% {
+    translate: 0 -25%;
+  }
+}
+
+.caixa__controles {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: sans-serif;
+  color: var(--cor-primaria);
+  transition: color var(--forma-velocidade) var(--forma-com-easeg);
+}
+
+[type="checkbox"] {
+  accent-color: var(--cor-primaria);
+  transition: accent-color var(--forma-velocidade) var(--forma-com-easeg);
+}
