@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #212123;
+}
+
+.caixa__formulario {
+  padding: 1rem;
+  border: 1px solid #8b80f9;
+  border-radius: 10px;
+}
+
+input {
+  border: 1px solid #b4adff;
+  height: 27px;
+  background-color: #2f3640;
+}
+
+input::placeholder {
+  color: #7c7c7c;
+  opacity: 1;
+  font-family: Verdana;
+}
+input[type="submit"] {
+  height: 30px;
+  font-size: 1.1em;
+  background: none;
+  border: none;
+  color: 212123;
+  position: relative;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #b4adff;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.input__nome {
+  flex: 1 0 130px;
+}
+
+.input__email {
+  flex: 1 0 130px;
+}
+
+.input__botao {
+  flex: 1 0 40px;
+}

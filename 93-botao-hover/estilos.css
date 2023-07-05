@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  margin: 0;
+  font-family: poppins, Helvetica, sans-serif;
+  font-weight: 400;
+  background: #212123;
+  color: white;
+}
+.conteudo__geral {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  text-align: center;
+  font-size: 0;
+}
+h2.title {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  font-size: 30px;
+}
+h2.title::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  left: calc(50% - 25px);
+  bottom: 0;
+  background: #222222;
+}
+
+/* Button Css */
+
+.botao {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  background: mediumseagreen;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+}
+
+/* Slide 1 */
+.botao.botao-efeito-1 {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+.botao.botao-efeito-1:hover {
+  box-shadow: inset 0 100px 0 0 #303439;
+}
+
+/* Slide 2 */
+.botao.botao-efeito-2 {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+.botao.botao-efeito-2:hover {
+  box-shadow: inset 0 -100px 0 0 #303439;
+}
+
+/* Slide 3 */
+.botao.botao-efeito-3 {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+.botao.botao-efeito-3:hover {
+  box-shadow: inset 200px 0 0 0 #303439;
+}
+/* Slide 4 */
+.botao.botao-efeito-4 {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+.botao.botao-efeito-4:hover {
+  box-shadow: inset -200px 0 0 0 #303439;
+}
+
+/* Slide 5 */
+.botao.botao-efeito-5 {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+.botao.botao-efeito-5:hover {
+  box-shadow: inset 0 0 0 50px #303439;
+}
+
+/* Slide 6 */
+.botao.botao-efeito-6 {
+  background: mediumseagreen;
+  box-shadow: inset 0 0 0 50px mediumseagreen;
+}
+.botao.botao-efeito-6:hover {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+
+/* Slide 7 */
+.botao.botao-efeito-7 {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+.botao.botao-efeito-7:hover {
+  box-shadow: inset 200px 50px 0 0 #303439;
+}
+
+/* Slide 8 */
+.botao.botao-efeito-8 {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+.botao.botao-efeito-8:hover {
+  box-shadow: inset -200px -50px 0 0 #303439;
+}
+
+/* Slide 9 */
+.botao.botao-efeito-9 {
+  box-shadow: inset 0 0 0 0 #303439;
+}
+.botao.botao-efeito-9:hover {
+  box-shadow: inset 0 0 200px 0 #303439;
+}
+
+/* Slide 10 */
+.botao.botao-efeito-10 {
+  background: #303439;
+  box-shadow: inset 0 0 200px 0 mediumseagreen;
+}
+.botao.botao-efeito-10:hover {
+  box-shadow: inset 0 0 0 0 mediumseagreen;
+}

@@ -1,0 +1,160 @@
+.conteudo__geral {
+  width: 100%;
+  height: 100vh;
+}
+.conteudo__geral .caixa__interna {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.conteudo__geral .caixa__interna .elemento__interno {
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  transition: 0.5s;
+  visibility: hidden;
+  position: relative;
+  padding: 50px 20px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.conteudo__geral .caixa__interna .elemento__interno:hover .bg {
+  opacity: 0.2;
+}
+.conteudo__geral .caixa__interna .elemento__interno:hover .caixa__card {
+  box-shadow: 0px 0px 50px #333;
+}
+.conteudo__geral .caixa__interna .elemento__interno.active {
+  opacity: 1;
+  visibility: visible;
+}
+.conteudo__geral .caixa__interna .elemento__interno .bg {
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  position: absolute;
+  transform: scale(1.03);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.conteudo__geral .caixa__interna .elemento__interno .blur {
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  filter: blur(5px);
+  position: absolute;
+  transform: scale(1.03);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.conteudo__geral .caixa__interna .elemento__interno .caixa__card {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: #ffffff;
+  transition: box-shadow 0.5s;
+  max-width: 300px;
+  overflow: hidden;
+  max-height: 450px;
+  border-radius: 10px;
+  transform: scale(1.03);
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: none;
+}
+.conteudo__geral .caixa__interna .elemento__interno .caixa__card .detalhe__luz {
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  border-radius: 10px;
+  background: radial-gradient(circle at 80px 40px, #fff, transparent);
+}
+.conteudo__geral
+  .caixa__interna
+  .elemento__interno
+  .caixa__card
+  .caixa__textos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-attachment: fixed;
+}
+.conteudo__geral .caixa__interna .elemento__interno .caixa__card h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 130px;
+  margin-bottom: 0px;
+}
+.conteudo__geral .caixa__interna .elemento__interno .caixa__card p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+.conteudo__geral .caixa__interna .elemento__interno .caixa__card:hover {
+  box-shadow: 0px 0px 70px #111;
+}
+.conteudo__geral
+  .caixa__interna
+  .elemento__interno
+  .caixa__card:hover
+  .detalhe__luz {
+  opacity: 0.4;
+}
+.conteudo__geral .navigations {
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+}
+.conteudo__geral .navigations .dots {
+  height: 20px;
+  padding: 10px 0px;
+  text-align: center;
+}
+.conteudo__geral .navigations .dots li {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.conteudo__geral .navigations .dots li + li {
+  margin-left: 10px;
+}
+.conteudo__geral .navigations .dots li:hover {
+  filter: blur(2px);
+}
+.conteudo__geral .navigations .dots li.active {
+  width: 15px;
+  height: 15px;
+}
+.conteudo__geral .navigations .dots li.active:hover {
+  filter: blur(0px);
+}

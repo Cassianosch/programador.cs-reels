@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Rotatório - @programador.cs</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Lobster", cursive;
+            background-color: #212123;
+            color: #fff;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .girando {
+            position: relative;
+            color: #6ab04c;
+            font-size: 118px;
+            filter: blur(2px) contrast(4);
+        }
+
+        .girando>div {
+            position: absolute;
+            width: var(--size);
+            height: var(--size);
+            background-color: #212123;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            overflow: hidden;
+            -webkit-animation: animacaoGirando 4s var(--delay) infinite ease-in-out;
+            animation: animacaoGirando 4s var(--delay) infinite ease-in-out;
+        }
+
+        .girando>div::after {
+            content: "Girando";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @-webkit-keyframes animacaoGirando {
+            0% {
+                transform: translate(-50%, -50%) rotateZ(-0deg);
+            }
+
+            50%,
+            100% {
+                transform: translate(-50%, -50%) rotateZ(-360deg);
+            }
+        }
+
+        @keyframes animacaoGirando {
+            0% {
+                transform: translate(-50%, -50%) rotateZ(-0deg);
+            }
+
+            50%,
+            100% {
+                transform: translate(-50%, -50%) rotateZ(-360deg);
+            }
+        }
+
+        .girando>div:nth-child(1) {
+            --size: 400px;
+            --delay: 2s;
+        }
+
+        .girando>div:nth-child(2) {
+            --size: 390.5px;
+            --delay: 1.9523809524s;
+        }
+
+        .girando>div:nth-child(3) {
+            --size: 381px;
+            --delay: 1.9047619048s;
+        }
+
+        .girando>div:nth-child(4) {
+            --size: 371.5px;
+            --delay: 1.8571428571s;
+        }
+
+        .girando>div:nth-child(5) {
+            --size: 362px;
+            --delay: 1.8095238095s;
+        }
+
+        .girando>div:nth-child(6) {
+            --size: 352.5px;
+            --delay: 1.7619047619s;
+        }
+
+        .girando>div:nth-child(7) {
+            --size: 343px;
+            --delay: 1.7142857143s;
+        }
+
+        .girando>div:nth-child(8) {
+            --size: 333.5px;
+            --delay: 1.6666666667s;
+        }
+
+        .girando>div:nth-child(9) {
+            --size: 324px;
+            --delay: 1.619047619s;
+        }
+
+        .girando>div:nth-child(10) {
+            --size: 314.5px;
+            --delay: 1.5714285714s;
+        }
+
+        .girando>div:nth-child(11) {
+            --size: 305px;
+            --delay: 1.5238095238s;
+        }
+
+        .girando>div:nth-child(12) {
+            --size: 295.5px;
+            --delay: 1.4761904762s;
+        }
+
+        .girando>div:nth-child(13) {
+            --size: 286px;
+            --delay: 1.4285714286s;
+        }
+
+        .girando>div:nth-child(14) {
+            --size: 276.5px;
+            --delay: 1.380952381s;
+        }
+
+        .girando>div:nth-child(15) {
+            --size: 267px;
+            --delay: 1.3333333333s;
+        }
+
+        .girando>div:nth-child(16) {
+            --size: 257.5px;
+            --delay: 1.2857142857s;
+        }
+
+        .girando>div:nth-child(17) {
+            --size: 248px;
+            --delay: 1.2380952381s;
+        }
+
+        .girando>div:nth-child(18) {
+            --size: 238.5px;
+            --delay: 1.1904761905s;
+        }
+
+        .girando>div:nth-child(19) {
+            --size: 229px;
+            --delay: 1.1428571429s;
+        }
+
+        .girando>div:nth-child(20) {
+            --size: 219.5px;
+            --delay: 1.0952380952s;
+        }
+
+        .girando>div:nth-child(21) {
+            --size: 210px;
+            --delay: 1.0476190476s;
+        }
+
+        .girando>div:nth-child(22) {
+            --size: 200.5px;
+            --delay: 1s;
+        }
+
+        .girando>div:nth-child(23) {
+            --size: 191px;
+            --delay: 0.9523809524s;
+        }
+
+        .girando>div:nth-child(24) {
+            --size: 181.5px;
+            --delay: 0.9047619048s;
+        }
+
+        .girando>div:nth-child(25) {
+            --size: 172px;
+            --delay: 0.8571428571s;
+        }
+
+        .girando>div:nth-child(26) {
+            --size: 162.5px;
+            --delay: 0.8095238095s;
+        }
+
+        .girando>div:nth-child(27) {
+            --size: 153px;
+            --delay: 0.7619047619s;
+        }
+
+        .girando>div:nth-child(28) {
+            --size: 143.5px;
+            --delay: 0.7142857143s;
+        }
+
+        .girando>div:nth-child(29) {
+            --size: 134px;
+            --delay: 0.6666666667s;
+        }
+
+        .girando>div:nth-child(30) {
+            --size: 124.5px;
+            --delay: 0.619047619s;
+        }
+
+        .girando>div:nth-child(31) {
+            --size: 115px;
+            --delay: 0.5714285714s;
+        }
+
+        .girando>div:nth-child(32) {
+            --size: 105.5px;
+            --delay: 0.5238095238s;
+        }
+
+        .girando>div:nth-child(33) {
+            --size: 96px;
+            --delay: 0.4761904762s;
+        }
+
+        .girando>div:nth-child(34) {
+            --size: 86.5px;
+            --delay: 0.4285714286s;
+        }
+
+        .girando>div:nth-child(35) {
+            --size: 77px;
+            --delay: 0.380952381s;
+        }
+
+        .girando>div:nth-child(36) {
+            --size: 67.5px;
+            --delay: 0.3333333333s;
+        }
+
+        .girando>div:nth-child(37) {
+            --size: 58px;
+            --delay: 0.2857142857s;
+        }
+
+        .girando>div:nth-child(38) {
+            --size: 48.5px;
+            --delay: 0.2380952381s;
+        }
+
+        .girando>div:nth-child(39) {
+            --size: 39px;
+            --delay: 0.1904761905s;
+        }
+
+        .girando>div:nth-child(40) {
+            --size: 29.5px;
+            --delay: 0.1428571429s;
+        }
+
+        .girando>div:nth-child(41) {
+            --size: 20px;
+            --delay: 0.0952380952s;
+        }
+
+        .girando>div:nth-child(42) {
+            --size: 10.5px;
+            --delay: 0.0476190476s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="girando">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto com Líquido - @programador.cs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #0c0c0c;
+        }
+
+        a {
+            position: relative;
+            padding: 20px 50px;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 200px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        a span {
+            position: relative;
+            color: #fff;
+            font-family: Arial;
+            letter-spacing: 8px;
+            z-index: 1;
+        }
+
+        a .aguado {
+            position: absolute;
+            top: -80px;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background: #0984e3;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+            transition: .5s;
+        }
+
+        a .aguado::after,
+        a .aguado::before {
+            content: '';
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -75%);
+            background: #000;
+        }
+
+        a .aguado::before {
+            border-radius: 45%;
+            background: rgba(20, 20, 20, 1);
+            animation: ondas 5s linear infinite;
+        }
+
+        a .aguado::after {
+            border-radius: 40%;
+            background: rgba(20, 20, 20, .5);
+            animation: ondas 10s linear infinite;
+        }
+
+        a:hover .aguado {
+            top: -120px;
+        }
+
+        @keyframes ondas {
+            0% {
+                transform: translate(-50%, -75%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -75%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">
+        <span>Líquido</span>
+        <div class="aguado"></div>
+    </a>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+:root {
+  --cor-fundo: #212123;
+  --cor-icones: #535c68;
+  --cor-fundo-icone1: #e4405f;
+  --cor-fundo-icone2: #ff0050;
+  --cor-fundo-icone3: #171515;
+  --cor-fundo-icone4: #cd201f;
+  --cor-fundo-icone5: #0077b5;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-fundo);
+  z-index: -10;
+}
+.lista__icones {
+  width: 100%;
+  max-width: 50rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.icone__elemento__geral {
+  list-style: none;
+}
+.elemento__interno__redirect {
+  display: inline-flex;
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--cor-icones);
+  width: 6rem;
+  height: 6rem;
+  transition: 0.5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+}
+.elemento__interno__redirect:hover {
+  color: #fff;
+}
+
+.elemento__interno__redirect i {
+  margin: auto;
+}
+.elemento__interno__redirect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+.elemento__interno__redirect:hover::before {
+  transform: scale(1);
+}
+.icone__elemento__geral:nth-child(1) a:hover:before {
+  background: var(--cor-fundo-icone1);
+}
+.icone__elemento__geral:nth-child(2) a:hover:before {
+  background: var(--cor-fundo-icone2);
+}
+.icone__elemento__geral:nth-child(3) a:hover:before {
+  background: var(--cor-fundo-icone3);
+}
+.icone__elemento__geral:nth-child(4) a:hover:before {
+  background: var(--cor-fundo-icone4);
+}
+.icone__elemento__geral:nth-child(5) a:hover:before {
+  background: var(--cor-fundo-icone5);
+}
