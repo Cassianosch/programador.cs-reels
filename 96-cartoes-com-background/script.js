@@ -80,13 +80,15 @@ $(".conteudo__geral .elemento__interno").each(function (i) {
     .find(".caixa__card")
     .css("background-image", "url(" + imags[i] + ")");
 
-  $(".navigations .dots").append(
+  $(".caixa__navegacao .elemento__navegacao-items").append(
     $("<li>", { class: i == 0 ? "active" : "", id: i }).on(
       "click",
       function () {
         var cSlide = $(".conteudo__geral #slide-" + $(this).attr("id"));
 
-        $(".navigations .dots li").removeClass("active");
+        $(".caixa__navegacao .elemento__navegacao-items li").removeClass(
+          "active"
+        );
         $(this).addClass("active");
 
         $(".conteudo__geral .elemento__interno").removeClass(

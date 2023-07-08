@@ -125,17 +125,17 @@
   .detalhe__luz {
   opacity: 0.4;
 }
-.conteudo__geral .navigations {
+.conteudo__geral .caixa__navegacao {
   bottom: 0px;
   width: 100%;
   position: absolute;
 }
-.conteudo__geral .navigations .dots {
+.conteudo__geral .caixa__navegacao .elemento__navegacao-items {
   height: 20px;
   padding: 10px 0px;
   text-align: center;
 }
-.conteudo__geral .navigations .dots li {
+.conteudo__geral .caixa__navegacao .elemento__navegacao-items li {
   width: 10px;
   height: 10px;
   cursor: pointer;
@@ -145,16 +145,16 @@
   display: inline-block;
   vertical-align: middle;
 }
-.conteudo__geral .navigations .dots li + li {
+.conteudo__geral .caixa__navegacao .elemento__navegacao-items li + li {
   margin-left: 10px;
 }
-.conteudo__geral .navigations .dots li:hover {
+.conteudo__geral .caixa__navegacao .elemento__navegacao-items li:hover {
   filter: blur(2px);
 }
-.conteudo__geral .navigations .dots li.active {
+.conteudo__geral .caixa__navegacao .elemento__navegacao-items li.active {
   width: 15px;
   height: 15px;
 }
-.conteudo__geral .navigations .dots li.active:hover {
+.conteudo__geral .caixa__navegacao .elemento__navegacao-items li.active:hover {
   filter: blur(0px);
 }
