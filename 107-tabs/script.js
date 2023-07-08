@@ -1,4 +1,3 @@
-// Acc
 $(document).on(
   "click",
   ".conteudo__geral .estrutura__grid-caixa div",

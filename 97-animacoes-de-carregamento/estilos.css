@@ -48,12 +48,6 @@ p {
   clear: both;
 }
 
-/* -----------------------------------------
-    =CSS3 Loading animations
-  -------------------------------------------- */
-
-/* =Elements style
-  ---------------------- */
 .caixa__elemento {
   float: left;
   width: 100px;
@@ -117,7 +111,7 @@ p {
 }
 
 .elemento__animacao__6--caixa-letras {
-  padding: 16px;
+  padding: 5px;
 }
 
 .elemento__animacao__6--letra {
@@ -163,8 +157,6 @@ p {
   background-color: #8b80f9;
 }
 
-/* =Animate the stuff
-  ------------------------ */
 .elemento__animacao-1 .elemento__animacao--detalhe:nth-last-child(1) {
   animation: loadingA 1.5s 1s infinite;
 }
@@ -239,6 +231,15 @@ p {
 }
 .letra__especifica10 {
   animation-delay: 1.56s;
+}
+.letra__especifica11 {
+  animation-delay: 1.68s;
+}
+.letra__especifica12 {
+  animation-delay: 1.8s;
+}
+.letra__especifica13 {
+  animation-delay: 1.92s;
 }
 
 .elemento__animacao-7 .elemento__animacao__7-detalhe-quadrado {
