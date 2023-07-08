@@ -10,8 +10,6 @@ canvas {
   vertical-align: bottom;
 }
 
-/* ---- particles.js container ---- */
-
 #js-particulas {
   position: absolute;
   width: 100%;
@@ -22,8 +20,6 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
 }
-
-/* ---- stats.js ---- */
 
 .count-particles {
   background: #000022;
