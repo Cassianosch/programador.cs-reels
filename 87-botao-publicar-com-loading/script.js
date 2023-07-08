@@ -1,23 +1,20 @@
-// Hold button with mouse / select with tab and hold spacebar
-
-let duration = 1600,
-  success = (button) => {
-    //Success function
-    button.classList.add("success");
+let duracao = 1600,
+  ativacao__sucesso = (button) => {
+    button.classList.add("ativacao__sucesso");
   };
 
 document.querySelectorAll(".caixa__geral").forEach((button) => {
-  button.style.setProperty("--duration", duration + "ms");
+  button.style.setProperty("--duracao", duracao + "ms");
   ["mousedown", "touchstart", "keypress"].forEach((e) => {
     button.addEventListener(e, (ev) => {
       if (
         e != "keypress" ||
         (e == "keypress" &&
           ev.which == 32 &&
-          !button.classList.contains("process"))
+          !button.classList.contains("ativacao__carregamento"))
       ) {
-        button.classList.add("process");
-        button.timeout = setTimeout(success, duration, button);
+        button.classList.add("ativacao__carregamento");
+        button.timeout = setTimeout(ativacao__sucesso, duracao, button);
       }
     });
   });
@@ -26,7 +23,7 @@ document.querySelectorAll(".caixa__geral").forEach((button) => {
       e,
       (ev) => {
         if (e != "keyup" || (e == "keyup" && ev.which == 32)) {
-          button.classList.remove("process");
+          button.classList.remove("ativacao__carregamento");
           clearTimeout(button.timeout);
         }
       },

@@ -24,11 +24,11 @@ body {
   --cor-primaria: #f6f8ff;
   --cor-de-fundo-primaria: #2b3044;
   --elemento__interno--icone: var(--cor-primaria);
-  --elemento__interno--barra-de-progresso-border: #646b8c;
-  --elemento__interno--barra-de-progresso-active: #fff;
-  --elemento__interno--barra-de-progresso-success: #5c86ff;
+  --elemento__interno--barra-de-progresso-borda: #646b8c;
+  --elemento__interno--barra-de-progresso-ativo: #fff;
+  --elemento__interno--barra-de-progresso-sucesso: #5c86ff;
   --elemento__interno--selecionador-stroke: var(
-    --elemento__interno--barra-de-progresso-active
+    --elemento__interno--barra-de-progresso-ativo
   );
   --shadow: rgba(0, 9, 61, 0.2);
   font-size: 16px;
@@ -58,7 +58,7 @@ body {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  background: var(--elemento__interno--barra-de-progresso-border);
+  background: var(--elemento__interno--barra-de-progresso-borda);
 }
 .caixa__geral > div:before {
   content: "";
@@ -107,7 +107,7 @@ body {
   stroke-dashoffset: 1;
   stroke-dasharray: var(--elemento__interno--barra-de-progresso-array, 0) 52;
   stroke-width: 16;
-  stroke: var(--elemento__interno--barra-de-progresso-active);
+  stroke: var(--elemento__interno--barra-de-progresso-ativo);
   transition: stroke-dasharray var(--duration) linear;
 }
 .caixa__geral > div svg.elemento__interno--selecionador {
@@ -126,33 +126,35 @@ body {
   stroke-dashoffset: var(--elemento__interno--selecionador-offset, 18);
   transition: stroke-dashoffset 0.4s ease 0.7s;
 }
-.caixa__geral:focus:not(.process),
-.caixa__geral:hover:not(.process) {
+.caixa__geral:focus:not(.ativacao__carregamento),
+.caixa__geral:hover:not(.ativacao__carregamento) {
   --shadow-y: 8px;
   --shadow-blur: 16px;
 }
-.caixa__geral:active:not(.success) {
+.caixa__geral:active:not(.ativacao__sucesso) {
   --scale: 0.96;
   --shadow-y: 4px;
   --shadow-blur: 8px;
 }
-.caixa__geral.process,
-.caixa__geral.success {
+.caixa__geral.ativacao__carregamento,
+.caixa__geral.ativacao__sucesso {
   --elemento__interno--barra-de-progresso-array: 52;
   --elemento__interno--icone-y: -4px;
   --elemento__interno--icone-scale: 0.6;
   --elemento__interno--icone-opacity: 0;
 }
-.caixa__geral.success {
-  --elemento__interno--barra-de-progresso-border: none;
+.caixa__geral.ativacao__sucesso {
+  --elemento__interno--barra-de-progresso-borda: none;
   --elemento__interno--barra-de-progresso-scale: 0.11;
   --elemento__interno--selecionador-stroke: var(
-    --elemento__interno--barra-de-progresso-success
+    --elemento__interno--barra-de-progresso-sucesso
   );
   --cor-de-fundo-primaria-scale: 0;
   --elemento__interno--selecionador-offset: 36;
 }
-.caixa__geral.success > div svg.elemento__interno--barra-de-progresso {
+.caixa__geral.ativacao__sucesso
+  > div
+  svg.elemento__interno--barra-de-progresso {
   -webkit-animation: elemento__interno--selecionador 0.3s linear forwards 0.4s;
   animation: elemento__interno--selecionador 0.3s linear forwards 0.4s;
 }
