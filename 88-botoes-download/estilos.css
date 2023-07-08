@@ -144,25 +144,25 @@ body .conteudo__geral .elemento__botao {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.elemento__botao.loading ul {
+.elemento__botao.ativacao__carregamento ul {
   -webkit-animation: text calc(var(--duration) * 1ms) linear forwards
     calc(var(--duration) * 0.065ms);
   animation: text calc(var(--duration) * 1ms) linear forwards
     calc(var(--duration) * 0.065ms);
 }
-.elemento__botao.loading > div:before {
+.elemento__botao.ativacao__carregamento > div:before {
   -webkit-animation: line calc(var(--duration) * 1ms) linear forwards
     calc(var(--duration) * 0.065ms);
   animation: line calc(var(--duration) * 1ms) linear forwards
     calc(var(--duration) * 0.065ms);
 }
-.elemento__botao.loading > div:after {
+.elemento__botao.ativacao__carregamento > div:after {
   -webkit-animation: background calc(var(--duration) * 1ms) linear forwards
     calc(var(--duration) * 0.065ms);
   animation: background calc(var(--duration) * 1ms) linear forwards
     calc(var(--duration) * 0.065ms);
 }
-.elemento__botao.loading > div svg {
+.elemento__botao.ativacao__carregamento > div svg {
   -webkit-animation: svg calc(var(--duration) * 1ms) linear forwards
     calc(var(--duration) * 0.065ms);
   animation: svg calc(var(--duration) * 1ms) linear forwards
