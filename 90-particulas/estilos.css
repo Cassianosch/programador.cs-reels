@@ -9,7 +9,6 @@ canvas {
   display: block;
   vertical-align: bottom;
 }
-
 #js-particulas {
   position: absolute;
   width: 100%;
@@ -20,8 +19,7 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
 }
-
-.count-particles {
+.contador__particulas {
   background: #000022;
   position: absolute;
   top: 48px;
@@ -36,21 +34,17 @@ canvas {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
-
-.js-count-particles {
+.js-contador__particulas {
   font-size: 1.1em;
 }
-
-#stats,
-.count-particles {
+#status,
+.contador__particulas {
   -webkit-user-select: none;
 }
-
-#stats {
+#status {
   border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
-
-.count-particles {
+.contador__particulas {
   border-radius: 0 0 3px 3px;
 }
