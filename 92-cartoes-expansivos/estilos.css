@@ -82,9 +82,6 @@ button {
   width: 32px;
   background: #e73700;
 }
-
-/******* Middle section CSS Start ******/
-/* -------- Landing page ------- */
 .conteudo__geral {
   padding: 60px 50px;
 }
@@ -156,9 +153,6 @@ button {
   position: relative;
   z-index: 5;
 }
-/******** Middle section CSS End *******/
-
-/***** responsive css Start ******/
 
 @media (min-width: 992px) and (max-width: 1199px) {
   h2 {

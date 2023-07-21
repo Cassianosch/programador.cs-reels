@@ -1,11 +1,11 @@
-const BUTTON = document.querySelector("button");
-const SYNC = document.querySelector("#elemento__checkbox");
+const elBotao = document.querySelector("button");
+const elCheckbox = document.querySelector("#elemento__checkbox");
 
-const TOGGLE = () => {
-  const IS_PRESSED = BUTTON.matches("[aria-pressed=true]");
-  if (SYNC.checked)
-    document.body.setAttribute("data-dark-mode", IS_PRESSED ? false : true);
-  BUTTON.setAttribute("aria-pressed", IS_PRESSED ? false : true);
+const mudarCorBackground = () => {
+  const foiClicado = elBotao.matches("[aria-pressed=true]");
+  if (elCheckbox.checked)
+    document.body.setAttribute("data-modo-escuro", foiClicado ? false : true);
+  elBotao.setAttribute("aria-pressed", foiClicado ? false : true);
 };
 
-BUTTON.addEventListener("click", TOGGLE);
+elBotao.addEventListener("click", mudarCorBackground);

@@ -22,7 +22,6 @@ body {
   height: 52px;
   width: 190px;
 }
-
 .elemento__rodape {
   border-radius: 26px;
   background: #eabbbb;
@@ -31,7 +30,6 @@ body {
   position: absolute;
   width: 100%;
 }
-
 .elemento__cobertura-geral {
   background-color: #3743a4;
   border: 1px solid #3743a4;

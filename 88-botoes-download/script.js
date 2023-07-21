@@ -1,5 +1,5 @@
 document.querySelectorAll(".elemento__botao").forEach((elemento__botao) => {
-  let duration = 3000,
+  let duracao = 3000,
     svg = elemento__botao.querySelector("svg"),
     svgPath = new Proxy(
       {
@@ -20,7 +20,7 @@ document.querySelectorAll(".elemento__botao").forEach((elemento__botao) => {
       }
     );
 
-  elemento__botao.style.setProperty("--duration", duration);
+  elemento__botao.style.setProperty("--duration", duracao);
 
   svgPath.y = 20;
   svgPath.smoothing = 0;
@@ -28,18 +28,18 @@ document.querySelectorAll(".elemento__botao").forEach((elemento__botao) => {
   elemento__botao.addEventListener("click", (e) => {
     e.preventDefault();
 
-    if (!elemento__botao.classList.contains("loading")) {
-      elemento__botao.classList.add("loading");
+    if (!elemento__botao.classList.contains("ativacao__carregamento")) {
+      elemento__botao.classList.add("ativacao__carregamento");
 
       gsap.to(svgPath, {
         smoothing: 0.3,
-        duration: (duration * 0.065) / 1000,
+        duration: (duracao * 0.065) / 1000,
       });
 
       gsap.to(svgPath, {
         y: 12,
-        duration: (duration * 0.265) / 1000,
-        delay: (duration * 0.065) / 1000,
+        duration: (duracao * 0.265) / 1000,
+        delay: (duracao * 0.065) / 1000,
         ease: Elastic.easeOut.config(1.12, 0.4),
       });
 
@@ -49,7 +49,7 @@ document.querySelectorAll(".elemento__botao").forEach((elemento__botao) => {
           [8, 19],
           [21, 6],
         ]);
-      }, duration / 2);
+      }, duracao / 2);
     }
   });
 });

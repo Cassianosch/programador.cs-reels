@@ -19,7 +19,7 @@
   --cor-primaria: hsl(219 30% 20%);
 }
 
-[data-dark-mode="true"] {
+[data-modo-escuro="true"] {
   --cor-fundo-primario: hsl(219, 30%, 12%);
   --cor-primaria: hsl(219 30% 98%);
 }
@@ -41,12 +41,10 @@ body {
 .elemento__trocador {
   -webkit-tap-highlight-color: transparent;
   width: var(--forma-largura);
-  /* random attempts at tackling the overflow iOS issue */
   z-index: 10;
   will-change: transform;
   isolation: isolate;
   transform: translate3d(0, 0, 0);
-  /* End of workaround city   */
   aspect-ratio: var(--forma-calculo);
   border-radius: 100vh;
   border: 0;
@@ -55,8 +53,8 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: background var(--forma-velocidade) var(--forma-com-easeg);
-  --sky: hsl(204, 53%, 47%);
-  --night: hsl(229, 25%, 16%);
+  --cor-ceu: hsl(204, 53%, 47%);
+  --cor-noite: hsl(229, 25%, 16%);
   outline-color: transparent;
   background: hsl(
     calc(204 + (var(--dark, 0) * 25)) calc((53 - (var(--dark, 0) * 28)) * 1%)
@@ -291,7 +289,7 @@ body {
   }
 }
 
-.astrobear {
+.elemento__astronaura-interno {
   width: 12%;
   position: absolute;
   top: 100%;
@@ -308,7 +306,7 @@ body {
   translate: calc(var(--dark, 0) * 400%) calc(var(--dark, 0) * -350%);
 }
 
-.astrobear svg {
+.elemento__astronaura-interno svg {
   transform-origin: 50% 75%;
   scale: var(--dark, 0);
   rotate: calc(var(--dark, 0) * 360deg);
@@ -324,7 +322,7 @@ body {
     scale var(--forma-velocidade) ease-in-out;
 }
 
-.astrobear__container {
+.elemento__astronauta {
   position: absolute;
   overflow: hidden;
   inset: 0;

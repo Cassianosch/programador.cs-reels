@@ -1,15 +1,15 @@
 .elemento__botao_saida {
   --elemento__botao--conjunto-duration: 100ms;
   --transform-elemento__botao--conjunto: none;
-  --walking-duration: 100ms;
+  --duracao--caminhada: 100ms;
   --transform-elemento__botao--braco1: none;
-  --transform-wrist1: none;
+  --transform-pulso1: none;
   --transform-elemento__botao--braco2: none;
-  --transform-wrist2: none;
+  --transform-pulso2: none;
   --transform-elemento__botao--perna1: none;
-  --transform-calf1: none;
+  --transform-parturilha1: none;
   --transform-elemento__botao--perna2: none;
-  --transform-calf2: none;
+  --transform-parturilha2: none;
   background: none;
   border: 0;
   color: #f4f7ff;
@@ -147,14 +147,14 @@ svg {
 .calf1,
 .elemento__botao--perna2,
 .calf2 {
-  transition: transform calc(var(--walking-duration) * 1ms) ease-in-out;
+  transition: transform calc(var(--duracao--caminhada) * 1ms) ease-in-out;
 }
 .elemento__botao--braco1 {
   transform: var(--transform-elemento__botao--braco1);
   transform-origin: 52% 45%;
 }
 .wrist1 {
-  transform: var(--transform-wrist1);
+  transform: var(--transform-pulso1);
   transform-origin: 59% 55%;
 }
 .elemento__botao--braco2 {
@@ -162,7 +162,7 @@ svg {
   transform-origin: 47% 43%;
 }
 .wrist2 {
-  transform: var(--transform-wrist2);
+  transform: var(--transform-pulso2);
   transform-origin: 35% 47%;
 }
 .elemento__botao--perna1 {
@@ -170,7 +170,7 @@ svg {
   transform-origin: 47% 64.5%;
 }
 .calf1 {
-  transform: var(--transform-calf1);
+  transform: var(--transform-parturilha1);
   transform-origin: 55.5% 71.5%;
 }
 .elemento__botao--perna2 {
@@ -178,7 +178,7 @@ svg {
   transform-origin: 43% 63%;
 }
 .calf2 {
-  transform: var(--transform-calf2);
+  transform: var(--transform-parturilha2);
   transform-origin: 41.5% 73%;
 }
 @keyframes spin {

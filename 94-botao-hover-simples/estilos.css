@@ -99,7 +99,6 @@ button:hover .elemento__circulo .elemento__icone.elemento__flexa {
 button:hover .elemento__texto {
   color: #fff;
 }
-
 @supports (display: grid) {
   body {
     display: grid;
