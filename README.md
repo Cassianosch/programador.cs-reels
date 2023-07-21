@@ -290,7 +290,7 @@ Click on the image to be redirected to the code:
     <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/28737079/251297059-9b0db3be-2f78-4685-b8ee-6a9a025cc908.PNG"  width="300"/>
 </a>
 <a href="https://github.com/Cassianosch/programador.cs-reels/tree/master/109-card-barbie">
-    <img src=""  width="300"/>
+    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/28737079/255213050-44a01e5b-379a-4801-808a-f24ae6ed7e2b.jpg"  width="300"/>
 </a>
 
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
