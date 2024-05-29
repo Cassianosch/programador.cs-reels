@@ -1,0 +1,103 @@
+/* This is an example, feel free to delete this code */
+.tooltip__2 {
+  position: relative;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.tooltip__2 .borde-back {
+  width: 60px;
+  height: 60px;
+  background-color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.tooltip__2 .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  cursor: pointer;
+}
+
+.tooltip__2 .tooltip {
+  position: absolute;
+  top: -2;
+  left: -45px;
+  transform: translateX(-32%);
+  width: 160px;
+  height: 52px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s;
+  border-radius: 50px;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 16px;
+  color: #fff;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 800px;
+}
+
+.tooltip__2 .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6rem;
+  width: 0.6rem;
+  right: -0.2rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  background: var(--background);
+}
+
+.tooltip__2:hover .tooltip {
+  left: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: -10;
+}
+.tooltip__2:hover {
+  transform: translateX(-50px);
+  transition: 0.5s linear;
+}

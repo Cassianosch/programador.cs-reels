@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap");
+
+body {
+  font-family: "Nunito", cursive;
+  color: #efefef;
+  text-align: center;
+  padding: 4em 0;
+}
+
+.conteudo__geral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.telefone {
+  position: relative;
+  z-index: 2;
+  width: 18rem;
+  height: 17rem;
+  background-color: inherit;
+  -webkit-box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.menu {
+  font-size: 80%;
+  opacity: 0.4;
+  padding: 0.8rem 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.bateria {
+  width: 0.85rem;
+  height: 0.45rem;
+  background-color: black;
+}
+
+.sinal {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6.8px 7.2px 6.8px;
+  border-color: transparent transparent black transparent;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin: 0.12rem 0.5rem;
+}
+
+.conteudo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+  -webkit-transform: translateY(5%);
+  -ms-transform: translateY(5%);
+  transform: translateY(5%);
+}
+
+.circulo {
+  position: relative;
+  border-radius: 100%;
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  margin: auto;
+}
+
+.sol-crescente {
+  position: absolute;
+  border-radius: 100%;
+  right: 0;
+  width: 6rem;
+  height: 6rem;
+  background: white;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transition: -webkit-transform 0.6s
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1),
+    -webkit-transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+label,
+.toggle {
+  height: 2.8rem;
+  border-radius: 100px;
+}
+
+label {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  position: relative;
+  margin: 1.8rem 0 4rem 0;
+  cursor: pointer;
+}
+
+.toggle {
+  position: absolute;
+  width: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform 0.3s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.names {
+  font-size: 90%;
+  color: black;
+  width: 65%;
+  margin-left: 17.5%;
+  margin-top: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dark {
+  opacity: 0.5;
+}
+
+.hora {
+  color: black;
+}
+[type="checkbox"] {
+  display: none;
+}
+[type="checkbox"]:checked + .app .toggle {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  background-color: #34323d;
+}
+
+[type="checkbox"]:checked + .app .dark {
+  opacity: 1;
+  color: white;
+}
+
+[type="checkbox"]:checked + .app .light {
+  opacity: 1;
+  color: white;
+}
+[type="checkbox"]:checked + .app .body {
+  color: white;
+}
+
+[type="checkbox"]:checked + .app .body .telefone {
+  background-color: #26242e;
+}
+[type="checkbox"]:checked + .app .sol-crescente {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  background: #26242e;
+}
+
+[type="checkbox"]:checked + .app .circulo {
+  background: linear-gradient(40deg, #8983f7, #a3dafb 70%);
+}
+
+[type="checkbox"]:checked + .app .main-circulo {
+  background: linear-gradient(40deg, #8983f7, #a3dafb 70%);
+}
+
+[type="checkbox"]:checked + .hora {
+  color: white;
+}
+
+[type="checkbox"] + .app .body .telefone .menu .hora {
+  position: relative;
+}
+
+[type="checkbox"]:checked + .app .body .telefone .menu .hora {
+  color: white;
+}
+
+[type="checkbox"] + .app .body .telefone .menu .hora::after {
+  content: "AM";
+  position: absolute;
+  top: 0;
+  right: -22px;
+}
+
+[type="checkbox"]:checked + .app .body .telefone .menu .hora::after {
+  content: "PM";
+}
+
+[type="checkbox"]:checked + .app .body .telefone .menu .icones .sinal {
+  border-color: transparent transparent white transparent;
+}
+
+[type="checkbox"] + .app .body .telefone .menu .icones .bateria {
+  position: relative;
+}
+
+[type="checkbox"]:checked + .app .body .telefone .menu .icones .bateria {
+  background-color: white;
+}
+
+[type="checkbox"] + .app .body .telefone .menu .icones .bateria::after {
+  content: "";
+  width: 12px;
+  height: 7px;
+  background-color: green;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.8;
+}
+[type="checkbox"]:checked + .app .body .telefone .menu .icones .bateria::after {
+  content: "";
+  background-color: red;
+  width: 6px;
+  opacity: 0.5;
+}
+
+[type="checkbox"]:checked + .app .body {
+  border-radius: 40px;
+}
+
+.menu {
+  font-size: 80%;
+  opacity: 0.4;
+  padding: 0.8rem 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

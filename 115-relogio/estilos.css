@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --base: 0;
+  --seconds: 0;
+  --minutes: 0;
+  --hours: 0;
+  --h: 75px;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: #222222;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+main {
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+main:after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.9) 44%,
+    rgba(0, 0, 0, 0) 48%,
+    rgba(0, 0, 0, 0) 53%,
+    rgba(0, 0, 0, 0.9) 57%
+  );
+}
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  height: 70px;
+  width: 70px;
+  background-color: #444;
+  color: #fff600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  height: 70px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff600;
+}
+
+.s-p {
+  translate: 0 calc(var(--h) * -9 + var(--seconds-p) * var(--h));
+  transition: 0.5s ease-in;
+}
+
+.s-a {
+  translate: 0 calc(var(--h) * -9 + var(--seconds-a) * var(--h));
+  transition: 0.5s ease-in;
+}
+
+.m-p {
+  translate: 0 calc(var(--h) * -9 + var(--minutes-p) * var(--h));
+  transition: 0.5s ease-in;
+}
+
+.m-a {
+  translate: 0 calc(var(--h) * -9 + var(--minutes-a) * var(--h));
+  transition: 0.5s ease-in;
+}
+
+.h-p {
+  translate: 0 calc(var(--h) * -9 + var(--hours-p) * var(--h));
+  transition: 0.5s ease-in;
+}
+
+.h-a {
+  translate: 0 calc(var(--h) * -9 + var(--hours-a) * var(--h));
+  transition: 0.5s ease-in;
+}

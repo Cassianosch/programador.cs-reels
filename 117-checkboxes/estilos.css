@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import "./estilo_1.css";
+@import "./estilo_2.css";
+@import "./estilo_3.css";
+
+body {
+  font-family: "Nunito", cursive;
+  color: #efefef;
+  text-align: center;
+  background-color: #212123;
+}
+
+.conteudo__geral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 200px;
+}
