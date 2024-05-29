@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import "./loader_1.css";
+@import "./loader_2.css";
+@import "./loader_3.css";
+
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Indie Flower", cursive;
+  background-color: #212123;
+  color: #efefef;
+  text-align: center;
+  padding: 4em 0;
+}
+
+.estrutura__grid {
+  display: flex;
+}
