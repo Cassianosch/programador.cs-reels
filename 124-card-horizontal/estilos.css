@@ -1,0 +1,195 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__geral {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.6%;
+  background: #fff;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+}
+.card__geral a {
+  color: inherit;
+}
+.card__geral a:hover {
+  color: #5ad67d;
+}
+.card__geral:hover .foto__geral {
+  transform: scale(1.3) rotate(3deg);
+}
+.card__geral .meta {
+  position: relative;
+  z-index: 0;
+  height: 200px;
+}
+.card__geral .foto__geral {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+}
+.card__geral .detalhes,
+.card__geral .detalhes ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+.card__geral .detalhes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  margin: auto;
+  transition: left 0.2s;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.card__geral .detalhes a {
+  -webkit-text-decoration: dotted underline;
+  text-decoration: dotted underline;
+}
+.card__geral .detalhes ul li {
+  display: inline-block;
+}
+.card__geral .detalhes .autor:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "";
+}
+.card__geral .detalhes .data:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "";
+}
+.card__geral .detalhes .tags ul:before {
+  font-family: FontAwesome;
+  content: "";
+  margin-right: 10px;
+}
+.card__geral .detalhes .tags li {
+  margin-right: 2px;
+}
+.card__geral .detalhes .tags li:first-child {
+  margin-left: -4px;
+}
+.card__geral .descricao {
+  padding: 1rem;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.card__geral .descricao h1,
+.card__geral .descricao h2 {
+  font-family: Poppins, sans-serif;
+}
+.card__geral .descricao h1 {
+  line-height: 1;
+  margin: 0;
+  font-size: 1.7rem;
+}
+.card__geral .descricao h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  margin-top: 5px;
+}
+.card__geral .descricao .leia__mais {
+  text-align: right;
+}
+.card__geral .descricao .leia__mais a {
+  color: #5ad67d;
+  display: inline-block;
+  position: relative;
+}
+.card__geral .descricao .leia__mais a:after {
+  content: "";
+  font-family: FontAwesome;
+  margin-left: -10px;
+  opacity: 0;
+  vertical-align: middle;
+  transition: margin 0.3s, opacity 0.3s;
+}
+.card__geral .descricao .leia__mais a:hover:after {
+  margin-left: 5px;
+  opacity: 1;
+}
+.card__geral p {
+  position: relative;
+  margin: 1rem 0 0;
+}
+.card__geral p:first-of-type {
+  margin-top: 1.25rem;
+}
+.card__geral p:first-of-type:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background: #5ad67d;
+  width: 35px;
+  top: -0.75rem;
+  border-radius: 3px;
+}
+.card__geral:hover .detalhes {
+  left: 0%;
+}
+@media (min-width: 640px) {
+  .card__geral {
+    flex-direction: row;
+    max-width: 700px;
+  }
+  .card__geral .meta {
+    flex-basis: 40%;
+    height: auto;
+  }
+  .card__geral .descricao {
+    flex-basis: 60%;
+  }
+  .card__geral .descricao:before {
+    transform: skewX(-3deg);
+    content: "";
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .card__geral.alt {
+    flex-direction: row-reverse;
+  }
+  .card__geral.alt .descricao:before {
+    left: inherit;
+    right: -10px;
+    transform: skew(3deg);
+  }
+  .card__geral.alt .detalhes {
+    padding-left: 25px;
+  }
+}
