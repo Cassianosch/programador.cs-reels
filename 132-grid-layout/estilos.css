@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  background-color: #f5f6f7;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+body {
+  padding: 10px;
+  margin: 0.3rem;
+  border-radius: 5px;
+}
+
+.layout-geral {
+  display: grid;
+  justify-self: center;
+  gap: 2px;
+  grid-template-rows: 40px 40px auto 60px 60px 40px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "sidebar" "main" "dados" "estatisticas" "footer";
+  height: 90vh;
+}
+
+@media (min-width: 480px) {
+  .layout-geral {
+    display: grid;
+    grid-template-rows: 40px auto 80px 40px;
+    grid-template-columns: 160px auto auto;
+    grid-template-areas:
+      "header header header"
+      "sidebar main main"
+      "sidebar dados estatisticas"
+      "footer footer footer";
+  }
+}
+
+header {
+  grid-area: header;
+  background-color: #c08bfd;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #c08bfd;
+}
+
+nav {
+  grid-area: sidebar;
+  background-color: #f6c356;
+}
+
+main {
+  grid-area: main;
+  background-color: #b2ee94;
+}
+
+.dados {
+  grid-area: dados;
+  background-color: #ff8983;
+  width: 100%;
+}
+
+.estatisticas {
+  grid-area: estatisticas;
+  background-color: #99c2fe;
+  width: 100%;
+}
+
+.centralizar-tudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
