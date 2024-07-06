@@ -1,0 +1,85 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+
+@layer banner__geral {
+  fieldset {
+    grid-template-columns:
+      var(--col-1, 1fr)
+      var(--col-2, 1fr)
+      var(--col-3, 1fr)
+      var(--col-4, 1fr)
+      var(--col-5, 1fr);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: grid-template-columns 2s var(--ease-spring-5);
+    }
+
+    &:has(label:nth-child(1) > input:checked) {
+      --col-1: 5fr;
+      --col-2: 3fr;
+    }
+    &:has(label:nth-child(2) > input:checked) {
+      --col-1: 2fr;
+      --col-2: 5fr;
+      --col-3: 2fr;
+    }
+    &:has(label:nth-child(3) > input:checked) {
+      --col-2: 2fr;
+      --col-3: 5fr;
+      --col-4: 2fr;
+    }
+    &:has(label:nth-child(4) > input:checked) {
+      --col-3: 2fr;
+      --col-4: 5fr;
+      --col-5: 2fr;
+    }
+    &:has(label:nth-child(5) > input:checked) {
+      --col-4: 3fr;
+      --col-5: 5fr;
+    }
+
+    > label {
+      background-image: var(--_img);
+      background-position: center;
+      background-size: auto 125%;
+    }
+  }
+}
+
+@layer banner__geral.conteudo {
+  html {
+    background: var(--gradient-9);
+    block-size: 100%;
+  }
+
+  body {
+    min-block-size: 100%;
+    display: grid;
+    place-content: center;
+    padding: var(--size-5);
+    gap: var(--size-5);
+  }
+
+  fieldset {
+    inline-size: 80vw;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 50vh;
+    gap: var(--size-3);
+    border: none;
+
+    > label {
+      cursor: pointer;
+      border-radius: var(--radius-4);
+
+      &:focus-within {
+        outline: 1px solid green;
+        outline-offset: 5px;
+      }
+
+      > input {
+        opacity: 0;
+      }
+    }
+  }
+}
