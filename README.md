@@ -293,6 +293,26 @@ Click on the image to be redirected to the code:
     <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/28737079/255213050-44a01e5b-379a-4801-808a-f24ae6ed7e2b.jpg"  width="300"/>
 </a>
 
+### Demos 134–150 (links diretos)
+
+- [134 — botão ripple](https://github.com/Cassianosch/programador.cs-reels/tree/master/134-botao-ripple)
+- [135 — card flip 3D](https://github.com/Cassianosch/programador.cs-reels/tree/master/135-card-flip-3d)
+- [136 — texto gradiente animado](https://github.com/Cassianosch/programador.cs-reels/tree/master/136-texto-gradiente-animado)
+- [137 — toggle de tema suave](https://github.com/Cassianosch/programador.cs-reels/tree/master/137-toggle-tema-suave)
+- [138 — menu hamburger em CSS](https://github.com/Cassianosch/programador.cs-reels/tree/master/138-menu-hamburger-css)
+- [139 — skeleton loading](https://github.com/Cassianosch/programador.cs-reels/tree/master/139-skeleton-loading)
+- [140 — badge de notificação](https://github.com/Cassianosch/programador.cs-reels/tree/master/140-badge-notificacao)
+- [141 — scroll reveal](https://github.com/Cassianosch/programador.cs-reels/tree/master/141-scroll-reveal)
+- [142 — input com label flutuante](https://github.com/Cassianosch/programador.cs-reels/tree/master/142-input-float-label)
+- [143 — barra de progresso animada](https://github.com/Cassianosch/programador.cs-reels/tree/master/143-barra-progresso-animada)
+- [144 — avatares sobrepostos](https://github.com/Cassianosch/programador.cs-reels/tree/master/144-avatars-sobrepostos)
+- [145 — toast de notificação](https://github.com/Cassianosch/programador.cs-reels/tree/master/145-toast-notificacao)
+- [146 — cards empilhados](https://github.com/Cassianosch/programador.cs-reels/tree/master/146-cards-empilhados)
+- [147 — grid responsivo](https://github.com/Cassianosch/programador.cs-reels/tree/master/147-grid-responsivo-magico)
+- [148 — botão magnético](https://github.com/Cassianosch/programador.cs-reels/tree/master/148-botao-magnetico)
+- [149 — accordion suave](https://github.com/Cassianosch/programador.cs-reels/tree/master/149-accordion-suave)
+- [150 — banner parallax em CSS](https://github.com/Cassianosch/programador.cs-reels/tree/master/150-banner-parallax-css)
+
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
 - Os projetos dentro do repositório estão organizados em pastas com o mesmo título da postagem.
 - Sinta-se livre utilizar os códigos.

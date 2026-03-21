@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>138 — Menu hamburger em CSS — @programador.cs</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <a class="logo" href="#">programador.cs</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menu">
+        <label for="nav-toggle" class="burger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="drawer" aria-label="Principal">
+            <a href="#">Início</a>
+            <a href="#">Projetos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+        <label for="nav-toggle" class="backdrop" aria-hidden="true"></label>
+    </header>
+    <main class="hero">
+        <h1>Menu lateral puro CSS</h1>
+        <p>O tracinho vira X e o painel desliza da direita. Marque o checkbox com Tab para testar acessibilidade.</p>
+    </main>
+</body>
+
+</html>

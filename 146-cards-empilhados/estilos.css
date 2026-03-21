@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1.25rem 3rem;
+  background: radial-gradient(circle at 50% 0%, #312e81, #020617 55%);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #e5e7eb;
+}
+
+.deck {
+  position: relative;
+  width: min(100%, 280px);
+  height: 220px;
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  max-width: 260px;
+  padding: 1.25rem 1.15rem;
+  border-radius: 1rem;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  transform: translate(-50%, -50%) translateY(calc(var(--i) * -8px)) rotate(calc(var(--i) * -4deg));
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+  z-index: calc(10 + var(--i));
+}
+
+.card h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.88;
+  line-height: 1.45;
+}
+
+.deck:hover .card {
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+}
+
+.deck:hover .card:nth-child(1) {
+  transform: translate(-50%, -50%) translate(-85%, -12%) rotate(-12deg);
+}
+
+.deck:hover .card:nth-child(2) {
+  transform: translate(-50%, -50%) translate(0, -18%) rotate(0deg);
+}
+
+.deck:hover .card:nth-child(3) {
+  transform: translate(-50%, -50%) translate(85%, -12%) rotate(12deg);
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  text-align: center;
+  max-width: 22rem;
+}
+
+@media (max-width: 400px) {
+  .deck:hover .card:nth-child(1) {
+    transform: translate(-50%, -50%) translate(-40%, -8%) rotate(-10deg);
+  }
+
+  .deck:hover .card:nth-child(3) {
+    transform: translate(-50%, -50%) translate(40%, -8%) rotate(10deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .deck:hover .card:nth-child(n) {
+    transform: translate(-50%, -50%);
+  }
+}

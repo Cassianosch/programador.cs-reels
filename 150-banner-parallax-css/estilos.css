@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #0c0a09;
+}
+
+body {
+  margin: 0;
+  background: #fafaf9;
+}
+
+.hero {
+  position: relative;
+  min-height: min(78dvh, 560px);
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(120deg, rgba(15, 23, 42, 0.85), rgba(79, 70, 229, 0.45)),
+    url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transform: scale(1.02);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 36rem;
+  text-align: center;
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.45rem, 4.5vw, 2.1rem);
+  line-height: 1.2;
+}
+
+.hero code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.88em;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.35rem;
+}
+
+.lede {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+.content {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  line-height: 1.65;
+  color: #44403c;
+}
+
+.content p {
+  margin: 0 0 1rem;
+}
+
+.content code {
+  font-size: 0.9em;
+  background: #e7e5e4;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+/* iOS costuma não aplicar fixed em backgrounds — fallback suave */
+@supports (-webkit-touch-callout: none) {
+  .hero__media {
+    background-attachment: scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__media {
+    background-attachment: scroll;
+  }
+}

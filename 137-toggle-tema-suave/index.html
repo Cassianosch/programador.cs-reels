@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>137 — Toggle de tema suave — @programador.cs</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+    <div class="panel">
+        <header>
+            <h1>Modo claro / escuro</h1>
+            <p>Transição suave com variáveis CSS — sem JavaScript.</p>
+        </header>
+        <label class="switch" title="Alternar tema">
+            <input type="checkbox" class="switch__input" id="theme" aria-label="Alternar entre tema claro e escuro">
+            <span class="switch__track" aria-hidden="true">
+                <span class="switch__thumb"></span>
+            </span>
+            <span class="switch__icons" aria-hidden="true">
+                <span>☀️</span>
+                <span>🌙</span>
+            </span>
+        </label>
+        <article class="card">
+            <h2>Conteúdo de exemplo</h2>
+            <p>O fundo, texto e sombras mudam juntos graças ao <code>:has()</code> no <code>html</code>.</p>
+        </article>
+    </div>
+</body>
+
+</html>
