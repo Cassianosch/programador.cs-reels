@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: #f4f4f5;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #18181b;
+}
+
+.form {
+  width: min(100%, 380px);
+  padding: 2rem 1.5rem;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.form h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.35rem;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 1.35rem;
+}
+
+.field__input {
+  width: 100%;
+  padding: 1.1rem 0.85rem 0.55rem;
+  font-size: 1rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.65rem;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field__input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  background: #fff;
+}
+
+.field__label {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #71717a;
+  pointer-events: none;
+  transition:
+    transform 0.2s ease,
+    font-size 0.2s ease,
+    color 0.2s ease,
+    top 0.2s ease;
+  background: linear-gradient(#fff, #fff) no-repeat;
+  background-size: 100% 50%;
+  background-position: 0 100%;
+  padding: 0 0.15rem;
+}
+
+/* sobe o label com foco ou texto */
+.field__input:focus + .field__label,
+.field__input:not(:placeholder-shown) + .field__label {
+  top: 0.45rem;
+  transform: translateY(0);
+  font-size: 0.72rem;
+  color: #6366f1;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 0.65rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}

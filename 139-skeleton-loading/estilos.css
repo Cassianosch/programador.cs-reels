@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --sk-base: #e2e8f0;
+  --sk-shine: #f8fafc;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.page {
+  padding: 2rem 1.25rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.4rem, 4vw, 1.85rem);
+}
+
+.lead {
+  margin: 0 0 1.75rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.sk {
+  border-radius: 0.65rem;
+  background: linear-gradient(
+    90deg,
+    var(--sk-base) 0%,
+    var(--sk-shine) 50%,
+    var(--sk-base) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.sk--thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 0.85rem;
+  border-radius: 0.75rem;
+}
+
+.sk--line {
+  height: 0.75rem;
+  margin-bottom: 0.55rem;
+}
+
+.sk--w80 {
+  width: 80%;
+}
+
+.sk--w60 {
+  width: 60%;
+}
+
+.sk--w40 {
+  width: 40%;
+  margin-bottom: 0;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.card--loaded img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+  margin-bottom: 0.85rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+.card--loaded h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.card--loaded p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sk {
+    animation: none;
+    background: var(--sk-base);
+  }
+}

@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fafafa;
+  color: #171717;
+}
+
+.intro {
+  min-height: 55dvh;
+  display: grid;
+  place-content: center;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  background: linear-gradient(180deg, #dbeafe, #fafafa 90%);
+}
+
+.intro h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+}
+
+.intro p {
+  margin: 0;
+  max-width: 28rem;
+  color: #404040;
+  line-height: 1.55;
+}
+
+code {
+  font-size: 0.88em;
+  background: #e5e5e5;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.35rem;
+}
+
+.stack {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reveal {
+  padding: 1.5rem 1.25rem;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal:nth-child(2) {
+  transition-delay: 0.05s;
+}
+
+.reveal:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.reveal:nth-child(4) {
+  transition-delay: 0.15s;
+}
+
+.foot {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: #737373;
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

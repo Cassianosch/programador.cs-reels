@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>139 — Skeleton loading — @programador.cs</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+    <div class="page">
+        <h1>Placeholders “skeleton”</h1>
+        <p class="lead">Simulam layout enquanto os dados carregam — só animação em CSS.</p>
+        <div class="grid">
+            <article class="card">
+                <div class="sk sk--thumb" aria-hidden="true"></div>
+                <div class="sk sk--line sk--w80"></div>
+                <div class="sk sk--line sk--w60"></div>
+                <div class="sk sk--line sk--w40"></div>
+            </article>
+            <article class="card card--loaded">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=240&fit=crop" alt="Paisagem"
+                    width="400" height="240" loading="lazy">
+                <h2>Conteúdo real</h2>
+                <p>Compare com o card ao lado: mesmo grid, conteúdo final.</p>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>
