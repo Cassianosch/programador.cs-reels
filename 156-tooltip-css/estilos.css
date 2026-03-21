@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f1f5f9;
+  font-family: system-ui, sans-serif;
+  color: #0f172a;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.tip {
+  position: relative;
+  width: 3.25rem;
+  height: 3.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  background: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease;
+}
+
+.tip:hover {
+  transform: translateY(-2px);
+}
+
+.tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  white-space: nowrap;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  background: #1e293b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 10;
+}
+
+/* posições */
+.tip[data-dir="top"]::after {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+}
+
+.tip[data-dir="bottom"]::after {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+}
+
+.tip[data-dir="left"]::after {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+}
+
+.tip[data-dir="right"]::after {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+}
+
+/* show */
+.tip:hover::after,
+.tip:focus-visible::after {
+  opacity: 1;
+}
+
+.tip[data-dir="top"]:hover::after,
+.tip[data-dir="top"]:focus-visible::after {
+  transform: translateX(-50%) translateY(0);
+}
+
+.tip[data-dir="bottom"]:hover::after,
+.tip[data-dir="bottom"]:focus-visible::after {
+  transform: translateX(-50%) translateY(0);
+}
+
+.tip[data-dir="left"]:hover::after,
+.tip[data-dir="left"]:focus-visible::after {
+  transform: translateY(-50%) translateX(0);
+}
+
+.tip[data-dir="right"]:hover::after,
+.tip[data-dir="right"]:focus-visible::after {
+  transform: translateY(-50%) translateX(0);
+}
+
+.note {
+  margin: 0;
+  max-width: 28rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.55;
+}
+
+code {
+  font-size: 0.88em;
+  background: #e2e8f0;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tip::after {
+    transition: none;
+  }
+
+  .tip {
+    transition: none;
+  }
+}

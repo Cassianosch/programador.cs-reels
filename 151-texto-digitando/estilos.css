@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: #0a0a0a;
+  color: #e4e4e7;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+.wrap {
+  text-align: center;
+  max-width: 90vw;
+}
+
+.type {
+  margin: 0;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  min-height: 1.3em;
+  display: inline;
+  border-right: 3px solid #a78bfa;
+  padding-right: 4px;
+  animation: blink 0.72s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.sub {
+  margin: 1.25rem 0 0;
+  font-size: 0.88rem;
+  color: #71717a;
+  font-family: system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .type {
+    animation: none;
+    border-color: #a78bfa;
+  }
+}

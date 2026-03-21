@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>157 — Galeria com lightbox — @programador.cs</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+    <h1>Galeria</h1>
+    <div class="grid" id="grid">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop" alt="Montanha" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop" alt="Floresta" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=300&fit=crop" alt="Praia" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1518173946687-a1e0e8d7e4c0?w=400&h=300&fit=crop" alt="Oceano" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop" alt="Areia" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=300&fit=crop" alt="Estrelas" loading="lazy">
+    </div>
+
+    <dialog class="lightbox" id="lightbox">
+        <img class="lightbox__img" id="lbImg" src="" alt="">
+        <button type="button" class="lightbox__close" id="lbClose" aria-label="Fechar">&times;</button>
+    </dialog>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

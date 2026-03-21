@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>153 — Tabs responsivas — @programador.cs</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+    <div class="tabs-wrap">
+        <nav class="tabs" role="tablist" aria-label="Seções">
+            <button class="tab is-active" role="tab" aria-selected="true" aria-controls="p1" id="t1">HTML</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="p2" id="t2">CSS</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="p3" id="t3">JS</button>
+        </nav>
+        <div class="panels">
+            <section class="panel is-active" role="tabpanel" id="p1" aria-labelledby="t1">
+                <h2>HTML</h2>
+                <p>Estrutura semântica da página: headings, listas, formulários, imagens e links.</p>
+            </section>
+            <section class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+                <h2>CSS</h2>
+                <p>Cores, tipografia, layout com Flexbox e Grid, transições e animações.</p>
+            </section>
+            <section class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+                <h2>JavaScript</h2>
+                <p>Manipulação do DOM, eventos, fetch, promises e interatividade real.</p>
+            </section>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

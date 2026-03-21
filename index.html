@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>programador.cs — Reels em código</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── reset ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body, h1, h2, p { margin: 0; }
+
+    /* ── tokens ── */
+    :root {
+      --bg: #050508;
+      --surface: #111116;
+      --surface-hover: #1a1a22;
+      --border: rgba(255,255,255,.06);
+      --border-hover: rgba(255,255,255,.12);
+      --text: #e4e4e7;
+      --muted: #71717a;
+      --accent: #818cf8;
+      --accent-glow: rgba(129,140,248,.15);
+      --radius: .85rem;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    /* ── base ── */
+    body {
+      min-height: 100dvh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── header ── */
+    .header {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(5,5,8,.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header__inner {
+      max-width: 1120px; margin: 0 auto;
+      padding: .85rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: .65rem;
+    }
+    .brand {
+      font-weight: 800; font-size: 1.15rem; letter-spacing: -.02em;
+      background: linear-gradient(135deg, #a78bfa, #38bdf8);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .brand span { color: var(--muted); font-weight: 500; font-size: .85rem; background: none; -webkit-text-fill-color: var(--muted); }
+    .ig-link {
+      color: var(--muted); text-decoration: none; font-size: .82rem;
+      transition: color .2s;
+    }
+    .ig-link:hover { color: var(--accent); }
+
+    /* ── toolbar ── */
+    .toolbar {
+      max-width: 1120px; margin: 0 auto;
+      padding: 1.25rem 1.25rem .35rem;
+      display: flex; flex-wrap: wrap; gap: .65rem; align-items: center;
+    }
+    .search {
+      flex: 1; min-width: 200px;
+      padding: .6rem .85rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: .92rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .search::placeholder { color: var(--muted); }
+    .search:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .count {
+      font-size: .82rem; color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    /* ── tags ── */
+    .tags {
+      max-width: 1120px; margin: 0 auto;
+      padding: .65rem 1.25rem;
+      display: flex; flex-wrap: wrap; gap: .35rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    .tag {
+      padding: .3rem .7rem; border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent; color: var(--muted);
+      font-size: .75rem; font-weight: 600; font-family: inherit;
+      cursor: pointer; white-space: nowrap;
+      transition: all .2s;
+    }
+    .tag:hover { border-color: var(--border-hover); color: var(--text); }
+    .tag.is-active {
+      background: var(--accent); border-color: var(--accent);
+      color: #050508;
+    }
+
+    /* ── grid ── */
+    .grid {
+      max-width: 1120px; margin: 0 auto;
+      padding: .85rem 1.25rem 3rem;
+      display: grid; gap: .65rem;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    /* ── card ── */
+    .card {
+      display: flex; flex-direction: column;
+      padding: 1rem 1.1rem;
+      border-radius: var(--radius);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      text-decoration: none; color: inherit;
+      transition: transform .22s cubic-bezier(.22,1,.36,1),
+                  border-color .22s,
+                  box-shadow .22s,
+                  background .22s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-hover);
+      background: var(--surface-hover);
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+    }
+    .card__num {
+      font-size: .68rem; font-weight: 700;
+      color: var(--accent); letter-spacing: .08em;
+      text-transform: uppercase; margin-bottom: .3rem;
+    }
+    .card__title {
+      font-size: .95rem; font-weight: 600; line-height: 1.35;
+      margin-bottom: .4rem;
+    }
+    .card__tags {
+      margin-top: auto; padding-top: .4rem;
+      display: flex; flex-wrap: wrap; gap: .3rem;
+    }
+    .card__tag {
+      font-size: .65rem; font-weight: 600;
+      padding: .15rem .4rem; border-radius: 999px;
+      background: rgba(129,140,248,.1); color: var(--accent);
+    }
+
+    /* ── empty state ── */
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center; padding: 4rem 1rem;
+      color: var(--muted);
+    }
+    .empty span { font-size: 2rem; display: block; margin-bottom: .5rem; }
+
+    /* ── fade-in ── */
+    .card { animation: rise .35s ease both; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card { animation: none; }
+      .card:hover { transform: none; }
+    }
+
+    @media (max-width: 500px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <div class="brand">programador.cs <span>— reels em código</span></div>
+    <a class="ig-link" href="https://instagram.com/programador.cs" target="_blank" rel="noopener">@programador.cs</a>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input class="search" type="search" id="search" placeholder="Buscar projeto…" autocomplete="off">
+  <span class="count" id="count"></span>
+</div>
+
+<div class="tags" id="tags"></div>
+
+<main class="grid" id="grid"></main>
+
+<script>
+const PROJECTS = [
+  { folder: "base-inicial-projetos-web", title: "Base inicial projetos web", tags: ["template"] },
+  { folder: "bomba-nuclear", title: "Bomba nuclear", tags: ["animação", "css"] },
+  { folder: "botao-borda-linear", title: "Botão borda linear", tags: ["botão", "css"] },
+  { folder: "botoes-pascoa", title: "Botões Páscoa", tags: ["botão", "css"] },
+  { folder: "botoes-verticais-css", title: "Botões verticais CSS", tags: ["botão", "css"] },
+  { folder: "button-checkbox", title: "Button checkbox", tags: ["botão", "form"] },
+  { folder: "button-com-loader", title: "Button com loader", tags: ["botão", "animação"] },
+  { folder: "button-com-salto", title: "Botão com salto", tags: ["botão", "animação"] },
+  { folder: "button-com-salto-alt", title: "Botão com salto alt", tags: ["botão", "animação"] },
+  { folder: "caixa-borda-arco-iris", title: "Caixa borda arco-íris", tags: ["css", "animação"] },
+  { folder: "calculadora", title: "Calculadora", tags: ["javascript", "projeto"] },
+  { folder: "card-borda-dancante-css", title: "Card borda dançante", tags: ["card", "animação"] },
+  { folder: "card-guardioes", title: "Card Guardiões", tags: ["card", "css"] },
+  { folder: "card-login-virado", title: "Card login virado", tags: ["card", "form"] },
+  { folder: "card-redes-css", title: "Card redes sociais", tags: ["card", "css"] },
+  { folder: "card-rotacao", title: "Card rotação", tags: ["card", "animação"] },
+  { folder: "card-stranger-things", title: "Card Stranger Things", tags: ["card", "css"] },
+  { folder: "card-the-last-of-us", title: "Card The Last of Us", tags: ["card", "css"] },
+  { folder: "card-usuario", title: "Card usuário", tags: ["card", "css"] },
+  { folder: "cards-efeito-vento", title: "Cards efeito vento", tags: ["card", "animação"] },
+  { folder: "cards-estilo-twitter", title: "Cards estilo Twitter", tags: ["card", "layout"] },
+  { folder: "carrosel-css-giratorio", title: "Carrossel CSS giratório", tags: ["slider", "animação"] },
+  { folder: "carrosel-css-grid", title: "Carrossel CSS grid", tags: ["slider", "css"] },
+  { folder: "cartao-credito-rotacao", title: "Cartão crédito rotação", tags: ["card", "animação"] },
+  { folder: "checkbox-rouded", title: "Checkbox arredondado", tags: ["form", "css"] },
+  { folder: "color-background-text", title: "Cor de fundo no texto", tags: ["texto", "css"] },
+  { folder: "colunas-responsivas", title: "Colunas responsivas", tags: ["layout", "css"] },
+  { folder: "css-botao-cor-perseguida", title: "Botão cor perseguida", tags: ["botão", "animação"] },
+  { folder: "css-botao-curtir-efeito-abertura", title: "Botão curtir efeito abertura", tags: ["botão", "animação"] },
+  { folder: "css-botao-ultrapassando", title: "Botão ultrapassando", tags: ["botão", "animação"] },
+  { folder: "css-botoes-variados-parte1", title: "Botões variados pt.1", tags: ["botão", "css"] },
+  { folder: "css-botoes-variados-parte2", title: "Botões variados pt.2", tags: ["botão", "css"] },
+  { folder: "css-botoes-variados-parte3", title: "Botões variados pt.3", tags: ["botão", "css"] },
+  { folder: "css-cards-com-hover", title: "Cards com hover", tags: ["card", "hover"] },
+  { folder: "css-cards-hover-effect", title: "Cards hover effect", tags: ["card", "hover"] },
+  { folder: "css-cursor-imagem", title: "Cursor imagem", tags: ["css", "cursor"] },
+  { folder: "css-efeito-hover-progressivo", title: "Efeito hover progressivo", tags: ["hover", "animação"] },
+  { folder: "css-input-validacao-vibratoria", title: "Input validação vibratória", tags: ["form", "animação"] },
+  { folder: "css-loaders", title: "CSS loaders", tags: ["loading", "animação"] },
+  { folder: "css-menu-hover-fullscreen", title: "Menu hover fullscreen", tags: ["menu", "animação"] },
+  { folder: "css-menu-lampada", title: "Menu lâmpada", tags: ["menu", "css"] },
+  { folder: "css-modo-claro-escuro-chartjs", title: "Modo claro/escuro Chart.js", tags: ["tema", "javascript"] },
+  { folder: "css-posicoes-elementos", title: "Posições de elementos", tags: ["css", "layout"] },
+  { folder: "css-scroll-snap", title: "CSS scroll snap", tags: ["css", "scroll"] },
+  { folder: "css-selection", title: "CSS ::selection", tags: ["css", "texto"] },
+  { folder: "css-selector-texto", title: "CSS seletor de texto", tags: ["css", "texto"] },
+  { folder: "css-texto-glitch", title: "Texto glitch", tags: ["texto", "animação"] },
+  { folder: "css-texto-neon", title: "Texto neon", tags: ["texto", "animação"] },
+  { folder: "css-todos-cursores", title: "Todos os cursores CSS", tags: ["css", "cursor"] },
+  { folder: "css-transforms", title: "CSS transforms", tags: ["css", "animação"] },
+  { folder: "detalhe-fita", title: "Detalhe fita", tags: ["css", "layout"] },
+  { folder: "dicionario-online", title: "Dicionário online", tags: ["javascript", "projeto"] },
+  { folder: "efeito-pulsante", title: "Efeito pulsante", tags: ["animação", "css"] },
+  { folder: "efeito-troca-imagens", title: "Efeito troca imagens", tags: ["animação", "css"] },
+  { folder: "entrevistas", title: "Perguntas de entrevistas", tags: ["estudo", "javascript"] },
+  { folder: "fifa-wc-2022", title: "FIFA World Cup 2022", tags: ["projeto", "css"] },
+  { folder: "flexbox", title: "Flexbox (aulas)", tags: ["layout", "estudo"] },
+  { folder: "formulario-login-botao-dancante", title: "Formulário login botão dançante", tags: ["form", "animação"] },
+  { folder: "formulario-simples-html-js", title: "Formulário simples HTML + JS", tags: ["form", "javascript"] },
+  { folder: "formulario-simples-input-estilizado", title: "Formulário input estilizado", tags: ["form", "css"] },
+  { folder: "fotos-responsivas", title: "Fotos responsivas", tags: ["layout", "imagem"] },
+  { folder: "fullscreen-slider", title: "Fullscreen slider", tags: ["slider", "layout"] },
+  { folder: "glitch-effect", title: "Glitch effect", tags: ["texto", "animação"] },
+  { folder: "grafico-chartjs", title: "Gráfico Chart.js", tags: ["javascript", "projeto"] },
+  { folder: "icones-flutuantes", title: "Ícones flutuantes", tags: ["animação", "css"] },
+  { folder: "icones-sociais-css", title: "Ícones sociais CSS", tags: ["css", "hover"] },
+  { folder: "ideias-de-botoes-para-CTA", title: "Ideias de botões CTA", tags: ["botão", "css"] },
+  { folder: "input-validacao-nativa", title: "Input validação nativa", tags: ["form", "html"] },
+  { folder: "item-efeito-exclusão", title: "Item efeito exclusão", tags: ["animação", "javascript"] },
+  { folder: "js-mudar-imagem-botao", title: "Mudar imagem com botão", tags: ["javascript", "imagem"] },
+  { folder: "layout-confirmar-numero", title: "Layout confirmar número", tags: ["layout", "form"] },
+  { folder: "loader-css", title: "Loader CSS", tags: ["loading", "animação"] },
+  { folder: "loading-button-text-popping", title: "Loading button text popping", tags: ["botão", "loading"] },
+  { folder: "logo-stranger-things", title: "Logo Stranger Things", tags: ["texto", "css"] },
+  { folder: "menu-mobile-rodape-css", title: "Menu mobile rodapé", tags: ["menu", "layout"] },
+  { folder: "mesa-dj-ratinho", title: "Mesa DJ Ratinho", tags: ["javascript", "projeto"] },
+  { folder: "pagina-login", title: "Página de login", tags: ["form", "layout"] },
+  { folder: "projeto-conversor-valores-pt1", title: "Conversor valores pt.1", tags: ["javascript", "projeto"] },
+  { folder: "projeto-conversor-valores-pt2", title: "Conversor valores pt.2", tags: ["javascript", "projeto"] },
+  { folder: "projeto-conversor-valores-pt3", title: "Conversor valores pt.3", tags: ["javascript", "projeto"] },
+  { folder: "relogio-embacado", title: "Relógio embaçado", tags: ["javascript", "animação"] },
+  { folder: "search-com-html-puro", title: "Search com HTML puro", tags: ["html", "form"] },
+  { folder: "search-nativo-html", title: "Search nativo HTML", tags: ["html", "form"] },
+  { folder: "selecionando-valores-com-js", title: "Selecionando valores com JS", tags: ["javascript", "form"] },
+  { folder: "slider-efeito-deslizante", title: "Slider efeito deslizante", tags: ["slider", "animação"] },
+  { folder: "slider-produtos-simples", title: "Slider produtos simples", tags: ["slider", "javascript"] },
+  { folder: "slider-react", title: "Slider React", tags: ["slider", "react"] },
+  { folder: "slider-redondo", title: "Slider redondo", tags: ["slider", "css"] },
+  { folder: "slider-roda-wfc", title: "Slider roda WFC", tags: ["slider", "javascript"] },
+  { folder: "template-dia-dos-namorados", title: "Template Dia dos Namorados", tags: ["template", "css"] },
+  { folder: "texto-background-animado", title: "Texto background animado", tags: ["texto", "animação"] },
+  { folder: "texto-com-delineado", title: "Texto com delineado", tags: ["texto", "css"] },
+  { folder: "texto-efeito-kill-bill", title: "Texto efeito Kill Bill", tags: ["texto", "animação"] },
+  { folder: "titulo-efeito-espacamento", title: "Título efeito espaçamento", tags: ["texto", "animação"] },
+  { folder: "79-icones-de-redes-sociais-efeito", num: 79, title: "Ícones redes sociais efeito", tags: ["css", "hover"] },
+  { folder: "80-botao-carrinho-de-compras", num: 80, title: "Botão carrinho de compras", tags: ["botão", "javascript"] },
+  { folder: "81-texto-rotatorio", num: 81, title: "Texto rotatório", tags: ["texto", "animação"] },
+  { folder: "82-botao-com-liquido", num: 82, title: "Botão com líquido", tags: ["botão", "animação"] },
+  { folder: "83-botao-com-skew", num: 83, title: "Botão com skew", tags: ["botão", "css"] },
+  { folder: "84-cartoes-visuais-foto", num: 84, title: "Cartões visuais com foto", tags: ["card", "imagem"] },
+  { folder: "85-menus-selecionaveis", num: 85, title: "Menus selecionáveis", tags: ["menu", "css"] },
+  { folder: "86-input-de-busca-com-efeito", num: 86, title: "Input de busca com efeito", tags: ["form", "animação"] },
+  { folder: "87-botao-publicar-com-loading", num: 87, title: "Botão publicar com loading", tags: ["botão", "loading"] },
+  { folder: "88-botoes-download", num: 88, title: "Botões download", tags: ["botão", "animação"] },
+  { folder: "89-checkbox-dia-e-noite", num: 89, title: "Checkbox dia e noite", tags: ["form", "animação"] },
+  { folder: "90-particulas", num: 90, title: "Partículas", tags: ["animação", "javascript"] },
+  { folder: "91-botao-efeito-clique", num: 91, title: "Botão efeito clique", tags: ["botão", "animação"] },
+  { folder: "92-cartoes-expansivos", num: 92, title: "Cartões expansivos", tags: ["card", "animação"] },
+  { folder: "93-botao-hover", num: 93, title: "Botão hover", tags: ["botão", "hover"] },
+  { folder: "94-botao-hover-simples", num: 94, title: "Botão hover simples", tags: ["botão", "hover"] },
+  { folder: "95-cartoes-magicos", num: 95, title: "Cartões mágicos", tags: ["card", "animação"] },
+  { folder: "96-cartoes-com-background", num: 96, title: "Cartões com background", tags: ["card", "css"] },
+  { folder: "97-animacoes-de-carregamento", num: 97, title: "Animações de carregamento", tags: ["loading", "animação"] },
+  { folder: "98-botao-animacao-logout", num: 98, title: "Botão animação logout", tags: ["botão", "animação"] },
+  { folder: "99-monstro-perseguidor", num: 99, title: "Monstro perseguidor", tags: ["javascript", "animação"] },
+  { folder: "100-menu-dropdown-simples", num: 100, title: "Menu dropdown simples", tags: ["menu", "css"] },
+  { folder: "101-cartoes-borrados", num: 101, title: "Cartões borrados", tags: ["card", "css"] },
+  { folder: "102-cartoes-expansiveis", num: 102, title: "Cartões expansíveis", tags: ["card", "javascript"] },
+  { folder: "103-animacao-evento-rodas", num: 103, title: "Animação evento rodas", tags: ["animação", "javascript"] },
+  { folder: "104-formulario-expansivo", num: 104, title: "Formulário expansivo", tags: ["form", "animação"] },
+  { folder: "105-menu-sanfona", num: 105, title: "Menu sanfona", tags: ["menu", "css"] },
+  { folder: "106-cobra-rolante", num: 106, title: "Cobra rolante", tags: ["animação", "javascript"] },
+  { folder: "107-tabs", num: 107, title: "Tabs", tags: ["layout", "javascript"] },
+  { folder: "108-livro-aberto", num: 108, title: "Livro aberto", tags: ["animação", "css"] },
+  { folder: "109-card-barbie", num: 109, title: "Card Barbie", tags: ["card", "css"] },
+  { folder: "110-loaders", num: 110, title: "Loaders", tags: ["loading", "animação"] },
+  { folder: "111-loaders", num: 111, title: "Loaders (parte 2)", tags: ["loading", "animação"] },
+  { folder: "112-card", num: 112, title: "Card", tags: ["card", "css"] },
+  { folder: "113-botoes-selecionaveis", num: 113, title: "Botões selecionáveis", tags: ["botão", "css"] },
+  { folder: "114-carrossel-3d", num: 114, title: "Carrossel 3D", tags: ["slider", "animação"] },
+  { folder: "115-relogio", num: 115, title: "Relógio", tags: ["javascript", "projeto"] },
+  { folder: "116-tooltips", num: 116, title: "Tooltips", tags: ["css", "hover"] },
+  { folder: "117-checkboxes", num: 117, title: "Checkboxes", tags: ["form", "css"] },
+  { folder: "118-botoes-cta", num: 118, title: "Botões CTA", tags: ["botão", "css"] },
+  { folder: "119-form-login", num: 119, title: "Form login", tags: ["form", "layout"] },
+  { folder: "120-cards", num: 120, title: "Cards", tags: ["card", "css"] },
+  { folder: "121-input-busca", num: 121, title: "Input busca", tags: ["form", "css"] },
+  { folder: "122-botao-brilhante", num: 122, title: "Botão brilhante", tags: ["botão", "animação"] },
+  { folder: "123-card-simples", num: 123, title: "Card simples", tags: ["card", "css"] },
+  { folder: "124-card-horizontal", num: 124, title: "Card horizontal", tags: ["card", "layout"] },
+  { folder: "125-card-passantes", num: 125, title: "Card passantes", tags: ["card", "animação"] },
+  { folder: "126-parallax", num: 126, title: "Parallax", tags: ["scroll", "css"] },
+  { folder: "127-formulario-lanterna", num: 127, title: "Formulário lanterna", tags: ["form", "animação"] },
+  { folder: "128-formulario-espaco", num: 128, title: "Formulário espaço", tags: ["form", "css"] },
+  { folder: "129-formulario-com-bordas", num: 129, title: "Formulário com bordas", tags: ["form", "css"] },
+  { folder: "130-botao-3d", num: 130, title: "Botão 3D", tags: ["botão", "css"] },
+  { folder: "131-checkbox", num: 131, title: "Checkbox", tags: ["form", "css"] },
+  { folder: "132-grid-layout", num: 132, title: "Grid layout", tags: ["layout", "css"] },
+  { folder: "133-banner-popping", num: 133, title: "Banner popping", tags: ["layout", "animação"] },
+  { folder: "134-botao-ripple", num: 134, title: "Botão ripple", tags: ["botão", "animação"] },
+  { folder: "135-card-flip-3d", num: 135, title: "Card flip 3D", tags: ["card", "animação"] },
+  { folder: "136-texto-gradiente-animado", num: 136, title: "Texto gradiente animado", tags: ["texto", "animação"] },
+  { folder: "137-toggle-tema-suave", num: 137, title: "Toggle tema suave", tags: ["tema", "css"] },
+  { folder: "138-menu-hamburger-css", num: 138, title: "Menu hamburger CSS", tags: ["menu", "css"] },
+  { folder: "139-skeleton-loading", num: 139, title: "Skeleton loading", tags: ["loading", "css"] },
+  { folder: "140-badge-notificacao", num: 140, title: "Badge notificação", tags: ["css", "animação"] },
+  { folder: "141-scroll-reveal", num: 141, title: "Scroll reveal", tags: ["scroll", "javascript"] },
+  { folder: "142-input-float-label", num: 142, title: "Input float label", tags: ["form", "css"] },
+  { folder: "143-barra-progresso-animada", num: 143, title: "Barra progresso animada", tags: ["animação", "javascript"] },
+  { folder: "144-avatars-sobrepostos", num: 144, title: "Avatares sobrepostos", tags: ["layout", "css"] },
+  { folder: "145-toast-notificacao", num: 145, title: "Toast notificação", tags: ["javascript", "animação"] },
+  { folder: "146-cards-empilhados", num: 146, title: "Cards empilhados", tags: ["card", "hover"] },
+  { folder: "147-grid-responsivo-magico", num: 147, title: "Grid responsivo mágico", tags: ["layout", "css"] },
+  { folder: "148-botao-magnetico", num: 148, title: "Botão magnético", tags: ["botão", "javascript"] },
+  { folder: "149-accordion-suave", num: 149, title: "Accordion suave", tags: ["layout", "html"] },
+  { folder: "150-banner-parallax-css", num: 150, title: "Banner parallax CSS", tags: ["scroll", "css"] },
+  { folder: "151-texto-digitando", num: 151, title: "Efeito máquina de escrever", tags: ["texto", "javascript"] },
+  { folder: "152-card-glassmorphism", num: 152, title: "Card glassmorphism", tags: ["card", "css"] },
+  { folder: "153-tabs-responsivas", num: 153, title: "Tabs responsivas", tags: ["layout", "javascript"] },
+  { folder: "154-timeline-vertical", num: 154, title: "Timeline vertical", tags: ["layout", "css"] },
+  { folder: "155-contador-animado", num: 155, title: "Contador animado", tags: ["javascript", "animação"] },
+  { folder: "156-tooltip-css", num: 156, title: "Tooltips CSS puro", tags: ["css", "hover"] },
+  { folder: "157-galeria-lightbox", num: 157, title: "Galeria com lightbox", tags: ["javascript", "imagem"] },
+  { folder: "158-botao-confetti", num: 158, title: "Botão com confetti", tags: ["botão", "animação"] },
+  { folder: "159-drag-drop-lista", num: 159, title: "Drag and drop lista", tags: ["javascript", "layout"] },
+  { folder: "160-loading-criativo", num: 160, title: "Loadings criativos", tags: ["loading", "animação"] },
+];
+
+const grid = document.getElementById("grid");
+const searchEl = document.getElementById("search");
+const countEl = document.getElementById("count");
+const tagsEl = document.getElementById("tags");
+
+// build tag set
+const allTags = [...new Set(PROJECTS.flatMap(p => p.tags))].sort();
+let activeTag = null;
+
+allTags.forEach(t => {
+  const btn = document.createElement("button");
+  btn.className = "tag";
+  btn.textContent = t;
+  btn.addEventListener("click", () => {
+    activeTag = activeTag === t ? null : t;
+    tagsEl.querySelectorAll(".tag").forEach(b => b.classList.toggle("is-active", b.textContent === activeTag));
+    render();
+  });
+  tagsEl.appendChild(btn);
+});
+
+function render() {
+  const q = searchEl.value.toLowerCase().trim();
+  const filtered = PROJECTS.filter(p => {
+    const matchSearch = !q || p.title.toLowerCase().includes(q) || p.folder.toLowerCase().includes(q) || p.tags.some(t => t.includes(q));
+    const matchTag = !activeTag || p.tags.includes(activeTag);
+    return matchSearch && matchTag;
+  });
+
+  grid.innerHTML = "";
+
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="empty"><span>🔍</span>Nenhum projeto encontrado.</div>`;
+    countEl.textContent = "0 projetos";
+    return;
+  }
+
+  countEl.textContent = `${filtered.length} projeto${filtered.length > 1 ? "s" : ""}`;
+
+  filtered.forEach((p, i) => {
+    const a = document.createElement("a");
+    a.className = "card";
+    a.href = `./${p.folder}/index.html`;
+    a.style.animationDelay = `${Math.min(i * 25, 400)}ms`;
+    a.innerHTML = `
+      ${p.num != null ? `<span class="card__num">#${p.num}</span>` : `<span class="card__num">—</span>`}
+      <h2 class="card__title">${p.title}</h2>
+      <div class="card__tags">${p.tags.map(t => `<span class="card__tag">${t}</span>`).join("")}</div>
+    `;
+    grid.appendChild(a);
+  });
+}
+
+searchEl.addEventListener("input", render);
+render();
+</script>
+</body>
+</html>

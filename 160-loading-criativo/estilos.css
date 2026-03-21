@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  padding: 2rem 1.25rem 3rem;
+  background: #09090b;
+  color: #e4e4e7;
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 2rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+}
+
+.grid {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cell p {
+  margin: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #71717a;
+}
+
+/* 1 — barras dançantes */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 36px;
+}
+
+.bars span {
+  width: 5px;
+  border-radius: 3px;
+  background: #6366f1;
+  animation: bar-dance 1s ease-in-out infinite;
+}
+
+.bars span:nth-child(1) { animation-delay: 0s; }
+.bars span:nth-child(2) { animation-delay: 0.1s; }
+.bars span:nth-child(3) { animation-delay: 0.2s; }
+.bars span:nth-child(4) { animation-delay: 0.3s; }
+.bars span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes bar-dance {
+  0%, 100% {
+    height: 10px;
+  }
+  50% {
+    height: 36px;
+  }
+}
+
+/* 2 — anel giratório */
+.ring {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid rgba(99, 102, 241, 0.2);
+  border-top-color: #a78bfa;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 3 — pontos pulsantes */
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #22d3ee;
+  animation: dot-pulse 1.2s ease-in-out infinite;
+}
+
+.dots span:nth-child(2) { animation-delay: 0.15s; }
+.dots span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes dot-pulse {
+  0%, 80%, 100% {
+    transform: scale(0.4);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 4 — cubo giratório */
+.cube {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #f97316, #ec4899);
+  animation: cube-spin 1.4s ease-in-out infinite;
+}
+
+@keyframes cube-spin {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bars span,
+  .ring,
+  .dots span,
+  .cube {
+    animation: none;
+  }
+
+  .ring {
+    border-color: #a78bfa;
+  }
+
+  .dots span {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .bars span {
+    height: 20px;
+  }
+}

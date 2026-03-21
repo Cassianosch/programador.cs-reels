@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  padding: 2.5rem 1.25rem 4rem;
+  background: #020617;
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 2rem;
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 520px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, #6366f1, #a855f7, #ec4899);
+  border-radius: 999px;
+}
+
+.tl-item {
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+}
+
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+
+.tl-dot {
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #6366f1;
+  border: 3px solid #020617;
+  box-shadow:
+    0 0 0 3px #6366f1,
+    0 0 16px rgba(99, 102, 241, 0.4);
+}
+
+.tl-item:nth-child(2) .tl-dot {
+  background: #a855f7;
+  box-shadow:
+    0 0 0 3px #a855f7,
+    0 0 16px rgba(168, 85, 247, 0.4);
+}
+
+.tl-item:nth-child(3) .tl-dot {
+  background: #ec4899;
+  box-shadow:
+    0 0 0 3px #ec4899,
+    0 0 16px rgba(236, 72, 153, 0.4);
+}
+
+.tl-item:nth-child(4) .tl-dot {
+  background: #f97316;
+  box-shadow:
+    0 0 0 3px #f97316,
+    0 0 16px rgba(249, 115, 22, 0.4);
+}
+
+.tl-body {
+  padding: 1rem 1.15rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tl-date {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin-bottom: 0.35rem;
+}
+
+.tl-body h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.tl-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+@media (min-width: 640px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tl-item {
+    width: 50%;
+    padding-left: 2.5rem;
+  }
+
+  .tl-item:nth-child(odd) {
+    margin-left: 50%;
+  }
+
+  .tl-item:nth-child(odd) .tl-dot {
+    left: -8px;
+  }
+
+  .tl-item:nth-child(even) {
+    padding-left: 0;
+    padding-right: 2.5rem;
+    text-align: right;
+  }
+
+  .tl-item:nth-child(even) .tl-dot {
+    left: auto;
+    right: -8px;
+  }
+}
