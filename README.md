@@ -313,6 +313,19 @@ Click on the image to be redirected to the code:
 - [149 — accordion suave](https://github.com/Cassianosch/programador.cs-reels/tree/master/149-accordion-suave)
 - [150 — banner parallax em CSS](https://github.com/Cassianosch/programador.cs-reels/tree/master/150-banner-parallax-css)
 
+### Demos 151–160 (links diretos)
+
+- [151 — efeito máquina de escrever](https://github.com/Cassianosch/programador.cs-reels/tree/master/151-texto-digitando)
+- [152 — card glassmorphism](https://github.com/Cassianosch/programador.cs-reels/tree/master/152-card-glassmorphism)
+- [153 — tabs responsivas](https://github.com/Cassianosch/programador.cs-reels/tree/master/153-tabs-responsivas)
+- [154 — timeline vertical](https://github.com/Cassianosch/programador.cs-reels/tree/master/154-timeline-vertical)
+- [155 — contador animado](https://github.com/Cassianosch/programador.cs-reels/tree/master/155-contador-animado)
+- [156 — tooltips em CSS puro](https://github.com/Cassianosch/programador.cs-reels/tree/master/156-tooltip-css)
+- [157 — galeria com lightbox](https://github.com/Cassianosch/programador.cs-reels/tree/master/157-galeria-lightbox)
+- [158 — botão com confetti](https://github.com/Cassianosch/programador.cs-reels/tree/master/158-botao-confetti)
+- [159 — drag and drop lista](https://github.com/Cassianosch/programador.cs-reels/tree/master/159-drag-drop-lista)
+- [160 — loadings criativos](https://github.com/Cassianosch/programador.cs-reels/tree/master/160-loading-criativo)
+
 - Neste repositório será inserido os códigos dos reels postados no perfil do instagram.
 - Os projetos dentro do repositório estão organizados em pastas com o mesmo título da postagem.
 - Sinta-se livre utilizar os códigos.

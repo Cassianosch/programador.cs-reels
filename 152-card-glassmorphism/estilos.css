@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: #0f0f1a;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #e2e8f0;
+  overflow: hidden;
+}
+
+.blobs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  animation: drift 14s ease-in-out infinite alternate;
+}
+
+.blob--1 {
+  width: 380px;
+  height: 380px;
+  background: #6366f1;
+  top: -10%;
+  left: -5%;
+}
+
+.blob--2 {
+  width: 300px;
+  height: 300px;
+  background: #ec4899;
+  bottom: -8%;
+  right: -5%;
+  animation-delay: -4s;
+  animation-duration: 18s;
+}
+
+.blob--3 {
+  width: 250px;
+  height: 250px;
+  background: #22d3ee;
+  top: 40%;
+  left: 55%;
+  animation-delay: -8s;
+  animation-duration: 16s;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.12);
+  }
+  100% {
+    transform: translate(-25px, 25px) scale(0.95);
+  }
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 340px);
+  padding: 2rem 1.5rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.card__icon {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin: 0 0 1.25rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  opacity: 0.88;
+}
+
+code {
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.3rem;
+}
+
+.card__btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #0f0f1a;
+  background: linear-gradient(135deg, #a78bfa, #38bdf8);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px rgba(167, 139, 250, 0.3);
+}
+
+.card__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(167, 139, 250, 0.45);
+}
+
+.card__btn:active {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}
